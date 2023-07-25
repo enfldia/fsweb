@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
-    <style>
-        /* 크기는 CSS로 작성한다. */
-        img {width: 100px;}
-    </style>
+   
 </head>
 <body>
     <h1>하이퍼링크</h1>
@@ -19,15 +16,15 @@
         http://127.0.0.1:5500/50_html/10_링크.html
         
         <a href="URL" tharget="_blank">
-        <태그 속성="값">
-
+        <태그 속성="값" [선택속성="값"]>
+        
     -->
     
 
     <!-- 현재 페이지(임시 페이지): # -->
     <a href="#">텍스트
     <a href="#"><!-- <#top>으로 작성하기도 함 -->
-        <img src="assets/images/coca.png" width="100" alt="코카콜라">
+        <img src="assets/images/coca.png" alt="코카콜라">
 
     <!-- 현재 창: _self -->
 
@@ -54,17 +51,30 @@
             "사이트에서 프로토콜 처리를 요청할 수 있음" 체크 확인
          2. 설정>홈>기본 앱>메일: 크롬
          3.G메일 로그인
-           모든 이메일 링크를 열도록 허용!
+           모든 이메일 링크를 열도록 허용
+         4.설정후 mailto:메일 주소 작성
      -->
      <a href="mailto:hong@gmail.com">hong@gmail.com</a>
 
     <hr>
-
+    <!-- 
+        <a href="값">
+            값: URL, tel, mail, 파일 (html, jpg, pdf)
+        
+     -->
+    <!-- 상대 경로 지정(코드가 작성된 파일이 기준) -->
     <!-- 같은 폴더: 파일명만 기록한다. -->
     <a href="09_이미지.html">09_이미지.html</a>
     <!-- 하위 폴더: 폴더/파일명 -->
-    <a href="assets/pic_trulli.jpg">트룰리</a>
+    <a href="assets/trulli.jpg">트룰리</a>
     <!-- 상위 폴더: ../파일명 -->
     <a href="../workplace.jpg">작업</a>
+
+    <!-- 루트(/)경로 -->
+    <!-- 코드가 작성된 파일과 관계 없이 작업 영역 폴더로 부터 연결할 파일의 위치를 지정 -->
+    <!-- 경로 지정은 "/xxx" 로 /로 시작한다. -->
+    <a href="/50_html/09_이미지.html">09_이미지.html</a>
+    <a href="/50_html/assets/trulli.jpg">트롤리.html</a>
+    <a href="/workplace.jpg">작업.html</a>
 </body>
 </html>

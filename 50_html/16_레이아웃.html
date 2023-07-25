@@ -17,6 +17,8 @@
         아래내용을 숙지한 후 지우고 반복 연습해 봅니다.
      -->
     <h2>HTML5 시맨틱 코딩</h2>
+    <!-- 글로벌 속성(선택 속성): id, class, title, ... -->
+    <!-- id와  calss는 CSS와 연결된다. -->
     <div class="wrap">
         <header>
             헤더
@@ -34,15 +36,17 @@
                     <h3>아티클</h3>
                 </article>
             </section>
-        </div>
+        </div><!-- //.container -->
+        <!-- 클래스 속성이 container인 div의 종료 태그 -->
         <footer>
             푸터
         </footer>
-    </div>
+    </div><!-- //.wrap -->
+    <!-- 클래스 속성이 wrap인 div의 종료 태그(표현 방식이 정해진 건 아니다.) -->
 
     <!-- id와 class의 값은 임의로 정함 -->
     <!-- 
-        이름 규칙: 
+        (속성값)이름 규칙: 
             1. 첫 글자는 영문자, _, -
             2. 두 번째 문자부터는 영문자, _, -, 숫자
             3. 대소문자 구별한다.
@@ -51,14 +55,14 @@
     <!-- class속성은 중복 사용 가능 -->
     <h2>div 코딩</h2>
     <div class="wrap">
-        <div id="header">
+        <div class="header">
             헤더
         </div>
         <div class="container">
-            <div id="nav">
+            <div class="nav">
                 내비게이션
             </div>
-            <div id="content">
+            <div class="section">
                 <h2>섹션</h2>
                 <div class="article">
                     <h3>아티클</h3>
@@ -66,11 +70,11 @@
                 <div class="article">
                     <h3>아티클</h3>
                 </div>
-            </div>
-        </div>
-        <div id="footer">
+            </div><!-- //.section -->
+        </div><!-- //.container -->
+        <div class="footer">
             푸터
         </div>
-    </div>
+    </div><!-- //.wrap -->
 </body>
 </html>

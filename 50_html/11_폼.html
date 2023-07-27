@@ -10,64 +10,202 @@
 
 <body>
     <h1>폼</h1>
+
+    <!-- 
+    <form>: 폼 요소 그룹핑
+        <fieldset>: 그룹핑
+                <legend>: 필드셋으로 그룹핑한 콘텐츠의 제목
+                    
+        <label>: 라벨링태그 안쪽 내용을 누를 경우 입력 기능을 설정
+
+        <input>: 한 줄 텍스트 입력, 버튼, ...[타입이 여러가지]
+                    -input은 빈태그
+
+        <button>: 버튼
+
+        <textarea> 여러 줄 텍스트 입력[타입이 없음]
+        
+        <select>: 목록   [select안에는 <option>가 하나 이상있어야 한다.]
+            <option>
+            <optgroup>
+        
+            <datalist>: 콤보 = 목록 + 입력 [목록에 데이터가 없을 경우 직접 입력 가능]
+     -->
+
+     <!-- 
+            <input type="값">
+            type의 속성 값   text, password, hidden
+                            submit, reset. button,
+                            image, file
+                            search, email, tel, url
+      -->
+     
     <p>폼(양식)? 검색 창, 로그인 창, 회원가입, 게시판</p>
     <!-- 서버 프로그래밍언어: php, jsp, asp -->
     <!-- 자동 완성 기능:  autocomplete="on" -->
-    <form action="action_page.php" method="get">
+    <h2>검색</h2>
+    <form action="search.jsp" method="get">
+        <!--method의 값 종류 get[공개], post[비공개] ...혹은 생략하면 get 방식으로 됨  -->
 
         <fieldset>
             <legend>검색 창</legend>
             <!-- 검색 입력 상자 -->
-            구글 검색:
-            
+            <input type="search" name="search">
             <!-- 검색 버튼 -->
-
+            <input type="submit" value="검색">
+            <!--input안 value의 값은 sumtit으로 생성되는 버튼에 들어가는 단어의 값 -->
         </fieldset>
+    
+    </form>
 
-        <fieldset>
-            <legend>로그인</legend>
-
+    <h2>로그인</h2>
+    <form action="ligin.jsp" method="post">
             <!-- 아이디 -->
-            아이디:
+            <label for="user_id">아이디</label>:
+            <input type="text" id="user_id" name="user_id" placeholder="아이디를 입력하세요">
             <!-- 패스워드 -->
-            패스워드:
-
+            <label for="user_pw">패스워드</label>:
+            <input type="password" id="user_pw" name="user_pw"placeholder="패스워드를 입력하세요">
             <!-- 로그인 버튼 -->
+            <input type="submit" value="로그인">
+           
+    </form>
 
-        </fieldset>
-
-        <fieldset>
-            <legend>회원 가입</legend>
-            
+    <h2>회원가입</h2>
+    <form action="member.jsp" method="post">
             <!-- 이용 약관 -->
             <div>
                 <!-- 체크박스 -->
-                ooo 이용약관 동의(필수)
+                <input type="checkbox" id="chk1">
+                <label for="chk1">ooo 이용약관 동의(필수)</label>
             </div>
 
             <div>
                 <!-- 글상자 -->
-                여러분을 환영합니다. ooo 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 -중략-
+                <!-- column(열), row(행) -->
+                <textarea name="" id="" cols="30" rows="10" readonly>
+                    여러분을 환영합니다. ooo 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 -중략-
+                </textarea> 
+                <!-- readonly 읽기 전용으로 사용자가 수정 방지.[속성과 값이 값을 경우 값을 생략 가능하다] -->
             </div>
 
             <div>
                 <!-- text 입력 상자 -->
-                생년월일
+                <label for="brith">생년월일</label>
+                <!-- value는 초기값이면서 서버로 전송될 데이터 -->
+                <input type="text" name='birth_year' id="brith" value="1998">
+                
+                
                 <!-- 목록 상자 -->
-                월
+                <select name="list">
+                    <option value="">월</option>
+                    <optgroup label="겨울">
+                        <option value="dec">12</option>
+                        <option value="jan">1</option>
+                        <option value="feb">2</option>
+                    </optgroup>
+                    <optgroup label="봄">
+                        <option value="mar">3</option>
+                        <option value="apr">4</option>
+                        <option value="may" selected>5</option>
+                    </optgroup>
+                    <optgroup label="여름">
+                        <option value="jun">6</option>
+                        <option value="jul">7</option>
+                        <option value="aug">8</option>
+                    </optgroup>
+                    <optgroup label="가을">
+                        <option value="sep">9</option>
+                        <option value="oct">10</option>
+                        <option value="nov">11</option>
+                    </optgroup>
+                </select>
+                <!-- [셀렉 태그]옵션 태그를 사용시 선택한 옵션 값이 아닌 value 값으로 서버로 전송 된다. -->
+                <!-- selected: 옵션 태그 중 기본 선택으로 나오게 하는 속성 -->
+                
                 <!-- text 입력 상자 -->
+                
+                <input type="text" name="day" placeholder="일">
+                <!--placeholder: input 칸에 속성 값을 흐릿하게 보여주며 값을 입력시 사라지고,값이 없을 경우 다시 보여진다. -->
             </div>
 
             <div>
                 <!-- 이메일 -->
-                본인 확인 이메일<span>(선택)</span>
+                본인 확인 이메일
+                <input type="text" name="user_id2">@
+                <input type="text" name="user_domain" list="mail">
+                <!-- 
+                    input의 list는 datalis의 id와 연동된다.
+                    daialist 는 text처럼 데이터 입력도 가능한다.
+                 -->
+                <datalist id="mail">
+                    <option value="naver.com">naver.com</option>
+                    <option value="google.com">google.com</option>
+                    <option value="daum.net">daum.net</option>
+                </datalist>
+
+                <!-- 이메일 -->
+                <br>
+                <input type="email" name="user_email">
             </div>
 
             <div>
                 <!-- 전화번호 -->
                 휴대전화
+                <label for="user_tel">휴대전화</label>
+                <!--
+                     폼의 유효성 검사가 필요하다[사용자가 잘못 된 값을 입력하지 않도록]
+                     html5.0 으로 바뀌면서 태그 자체에서 어느정도 가능해졌다.
+                 -->
+                <input type="tel" id="user_tel" name="user_tel">
             </div>
-        </fieldset>
+           
+            <!-- 관심 프로그램 체크 -->
+            <!-- 체크박스는 여러 개의 항목 중 여러개 선택 가능 -->
+            <label><input type="checkbox" name="language1" value="html">HTML</label>
+            <!-- label로 input을 감싸안아도 가능하지만  -->
+            <input type="checkbox" id="css" name="language2" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="jav" name="language3" value="js">
+            <label for="jav">javascript</label>
+
+            
+            
+            
+            <hr>
+            
+            <!-- 동의 여부 확인 -->
+            <!-- 라디오버튼은 어러 개의 항목 중 1개 선택 가능 -->
+            <!-- 라디오버튼은 같은 name을 쓴다. -->
+            <input type="radio" id="agreed" name="agree" value="y">
+            <label for="agreed">동의함.</label>
+            <input type="radio" id="disagreed" name="agree" value="n">
+            <label for="disagreed">동의하지 않음.</label>  
+           
+           
+           
+            <!-- 전송 버튼 -->
+            <!--  -->
+            <!-- <input type="submit" value="가입하기"> -->
+            <button type="submit">가입하기</button>
+
+
+
+            <h3>검색 연습</h3>
+            <fieldset>
+                <legend>필드셋으로 그룹핑한 콘텐츠의 제목</legend>
+                <input type="search" name="search2">
+                <button>검색</button>
+                <input type="submit" value="검색" name="cearch2">
+                <!-- 버튼 태그로 '검색' 버튼 키를 만들거나 인풋 타입 서브밋으로 '검색' 키를 만들 수 있다. -->
+            </fieldset>
+
+            <h3>로그인 연습</h3>
+              <label for="user_id2">아이디:</label>
+              <input type="text" id="user_id2" name="user_id2">
+            <label for="pasword_1">패스워드</label>
+            <input type="text" id="pasword_1" name="pasword_2
+            ">
     </form>
 </body>
 

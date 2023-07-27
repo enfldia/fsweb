@@ -1,80 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>와이어프레임</title>
-    <link rel="stylesheet" href="css/16_레이아웃.css">
-</head>
-<body>
-    <div class="wrap">
-        <header>
-            <h1>로고</h1>
-            <nav>내비게이션</nav>
-        </header>
-        <div class="slide">이미지 슬라이드</div>
-        <div class="contents">
-                <div class="notice">공지사항</div>
-                <div class="gallery">갤러리</div>
-                <div class="shortcut">바로가기</div>
-        </div>
-        <footer>
-            <div class="logi">로고</div>
-            <div class="bmenu">하단메뉴</div>
-            <div class="copy">저작권</div>
-        </footer>
-    </div><!-- //.wrap -->
-</body>
-</html>
+블록레벨 요소에는
+h, p, hr, ul, li, ol, dr, dd, dt, div, form, fieldset, header, footer, section, article, aside, nav, main
 
-<!-- <!DOCTYPE html>
-<html lang=”ko”>
+인라인 요소
+b, strong, em, i, sub, sup, ins,del,small,mark, a, img, span, input, button, label, select, datalist, textarea
 
-    <head>
-        <meta charset=”UFT-8”>
-        <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
-        <title>내비게이션<title>
-            <link rel="stylesheet" href="css/16_레이아웃.css">
-    </head>
+h: 제목
+p: 단락 (paragrahp)
+hr: 호리존 수평선이 그어진다.
+ul: 순서가 없는 목록 (최소 한개의 li가 자식으로 있어야 한다) 
+ol: 순서가 있는 목록 (최소 한개의 li가 자식으로 있어야 한다.)
+li: ul, ol 의 자식에 해당 되는 블록레벨 요소.
+dl: 정의 목록 (최소 한개의 dt, dd가 자식으로 있어야 한다.)
+dt: 단어
+dd: 설명
+div: (디비전) 블럭요소 그룹핑
+header: 해더에 해당 되는 블럭요소.로고나 글로벌 네비가 들어간다. 
+footer:  저작권, SNS, 바텀네비게이션, 패밀리사이트, ...
+section: 콘텐츠가 들어가는 블럭요소
+article: 독립된 콘텐츠의 블럭요소
+address:주소 블럭요소
+aside: 본문 외의 내용
+nav: 중요한 네비게이션(하나만 쓴다,주로 GNB에 사용)
+main: 메인의 블럭요소이며 하나만 쓴다.
+form: 폼 요소들을 그룹핑함 (최소 한개의 폼 요소가 자식으로 있어야한다.)
+fieldset: 폼요소를 그룹핑하며 박스를 만든다.
+    legend: fieldset의 제목
 
-    <body>
-    <nav id=”gnb”>
-        <ul class=”main”>
-            <li>
-                <a herf=”#”>회사소개</a>
-                <ul class=”sub”>
-                    <li><a herf=”#”>기업정보</a></li>               
-                    <li><a herf=”#”>지속가능경영</a></li>               
-                    <li><a herf=”#”>R&D</a></li>               
-                    <li><a herf=”#”>투자정보</a></li>               
-                </ul>
-            </li>
-            <li>
-                <a herf=”#”>사업분야</a>
-                <ul class=”sub”>
-                    <li><a herf=”#”>토목</a></li>               
-                    <li><a herf=”#”>플랜트</a></li>               
-                    <li><a herf=”#”>건축</a></li>               
-                    <li><a herf=”#”>주택</a></li>
-                    <li><a herf=”#”>개발</a></li>
-                    <li><a herf=”#”>Project MAp</a></li>
-                    <li><a herf=”#”>Masterworks</a></li>               
-                </ul>
-            </li>        
-            <li>
-                <a herf=”#”>홍보센터</a>
-                <ul class=”sub”>
-                    <li><a herf=”#”>공고</a></li>               
-                    <li><a herf=”#”>CL/ BL /50주년 엠플럼</a></li>               
-                    <li><a herf=”#”>정대우가 간다</a></li>               
-                    <li><a herf=”#”>브로슈어</a></li>
-                    <li><a herf=”#”>기업광고</a></li>
-                    <li><a herf=”#”>홍보영상</a></li>
-                    <li><a herf=”#”>사보 대우건설인</a></li>               
-                </ul>
-            </li>        
-            <li><a herf=”#”>뉴스룸</a></li>        
-        </ul><!--//.main-->
-    </nav>
-    </body>
-</html> -->
+
+b: 볼드(두꺼운)
+stong: 강조(두꺼운)
+em: 기울어짐(강조)
+i: 기울어짐 
+sub: 상단 작은 글씨
+sup: 하단 작은 글씨
+small: 작은 글씨
+ins: 밑줄
+del:글자에 줄그음
+mark:형관팬 마크 
+a: 하이퍼 링크
+img: 이미지
+span: 인라인요소 그룹핑
+input: text, email, checkbox, radio, passwrod, submit, hidden, button, tel, ulr, search ,reset ...의 요소들로 입력한 내용을 입력 받는다.
+butten: 버튼
+label: 속성 for의 값과 같은 값을 가지는 id 속성의 태그가 클린된다.
+checkbox: 다수를 선택 할 수 있는 박스를 만들어냄
+radio: 다수 또는 한가지만 선택되게 할때 사용하는 동그란 모양의 요소.
+section: 자식 요소(option)으로 목록을 만들고 선택한다.
+datalist: 자식 요소(option) 중 선택하거나, 없을 경우 내용을 작성할 수 있다
+textarea: 말칸으로 cols(행), rows(열)으로 나타나는 텍스트를 조절할 수 있으나 보통은 CSS로 조절한다.

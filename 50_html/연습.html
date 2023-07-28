@@ -1,4 +1,4 @@
-블록레벨 요소에는
+<!-- 블록레벨 요소에는
 h, p, hr, ul, li, ol, dr, dd, dt, div, form, fieldset, header, footer, section, article, aside, nav, main
 
 인라인 요소
@@ -45,6 +45,60 @@ butten: 버튼
 label: 속성 for의 값과 같은 값을 가지는 id 속성의 태그가 클린된다.
 checkbox: 다수를 선택 할 수 있는 박스를 만들어냄
 radio: 다수 또는 한가지만 선택되게 할때 사용하는 동그란 모양의 요소.
-section: 자식 요소(option)으로 목록을 만들고 선택한다.
+select: 자식 요소(option, optgroup)으로 목록을 만들고 선택한다.
 datalist: 자식 요소(option) 중 선택하거나, 없을 경우 내용을 작성할 수 있다
 textarea: 말칸으로 cols(행), rows(열)으로 나타나는 텍스트를 조절할 수 있으나 보통은 CSS로 조절한다.
+
+ -->
+내비게이션
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션</title>
+</head>
+<body>
+
+    <header>
+        <h1>로고</h1>
+        <nav>
+            <ul>
+                <li><a href="#">메인1</a></li>
+                <ul>
+                    <li><a href="#">1-1</a></li>
+                    <li><a href="#">1-2</a></li>
+                </ul>
+            </ul>
+            <ul>
+                <li><a href="#">메인2</a></li>
+                <ul>
+                    <li><a href="#">2-1</a></li>
+                    <li><a href="#">2-2</a></li>
+                    <li><a href="#">2-3</a></li>
+                    <li><a href="$">2-4</a></li>
+                </ul>
+            </ul>
+            <ul>
+                <li><a href="#">메인3</a></li>
+                <ul>
+                    <li><a href="#">3-1</a></li>
+                    <li><a href="#">3-2</a></li>
+                    <li><a href="#">3-2</a></li>
+                </ul>
+            </ul>
+            <ul>
+                <li><a href="#">메인4</a></li>
+                <ul>
+                    <li><a href="#">4-1</a></li>
+                    <li><a href="#">4-2</a></li>
+                    <li><a href="#">4-3</a></li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+    <div class="image">
+        <img src="#" alt="">
+    </div>
+</body>
+</html>

@@ -5,23 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
-    <!-- 2. 외부 CSS: <link> 태그로 *.css 파일을 연결 -->
-
+    <!-- 
+        CSS(Cascading Style Sheet): 계단식, 폭포, 아래로 흐르는...
+        우선순위(같은 속성이 사용되었을 경우)
+        1. 인라인 CSS
+        2. 내부 CSS, 외부CSS
+    -->
+    <!-- 1. 외부 CSS: <link> 태그로 *.css 파일을 연결 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- rel(relationship):관계성 -->
     <style>
-        /* 
+       /* CSS는 태그를 디자인한다. */
+       /* 어떤 태그를 디자인할지 선택 */
+       /* 
             형식: 
             선택자 {속성:값;} 
         */
 
-        /* 1. 내부 CSS: <style> 태그 사이에 기록 */
-        
-
-        /* <link>, <style> 태그는 <head> 사이에 쓴다. */
+        /* 2. 내부 CSS: <style> 태그 사이에 기록 */
+        /* 선택자: 태그 이름 */
+        p {color:blue;}
+        /* <link>[외부], <style>[내부] 태그는 <head>의 자식요소이며 주로 title 밑에 쓴다. */
     </style>
 </head>
 <body>
     <h1>CSS 선언 방식</h1>
-    <!-- 3. 인라인 CSS: HTML의 스타일 속성의 값으로 기록  -->
-    <p>인라인 CSS이란 HTML의 스타일 속성의 값으로 CSS의 속성과 값을 기록한다.</p>
+    <!-- 
+        3. 인라인 CSS: HTML의 스타일 속성의 값으로 기록
+        HTML 태그에 직접 기록하기 때문에 선택자가 필요 없다.
+        선택자란 HTML 태그를 선택하는 것인데,HTML 태그에 직접 기록하면 선택자는 필요없다.
+        W3C에서는 HTML문서 안에 CSS 같이 쓰는 것을 추천하지 않는다.        
+    -->
+    <p style="background-color:red;">인라인 CSS이란 HTML의 스타일 속성의 값으로 CSS의 속성과 값을 기록한다.</p>
+    <ul>
+        <li>Inline style</li>
+        <li>Internal style</li>
+        <li>External style</li>
+    </ul>
 </body>
 </html>

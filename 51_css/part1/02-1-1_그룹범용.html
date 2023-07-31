@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+
+        body{margin:0;}
+        h1{margin:0;}
+        h2{margin:0;}
+        p{margin:0;}
+        
+        /* 스스템 자원 낭비 현상이 생긴다. */
+        /* 시스템 시소르를 많이 차지한다. */
+        html {margin:0; padding:0;}
+        body{margin:0; padding:0;}
+        div{margin:0; padding:0;}
+        h1{margin:0; padding:0;}
+        h2{margin:0; padding:0;}
+        p{margin:0; padding:0;}
+        
+        html, body, h1, h2, p {margin:0; padding:0;}
+
+        *{margin:0; padding:0;}
+
+        위의 네가지 표현은 브라우저에 나오는건 똑같다.
+        /* 
+        HTML은 마진,패딩이 없다.
+        h1~6은 패딩이 없다.
+        p는 패딩이 없다.
+        ul은 위아래 마진이 있고,왼쪽 패딩이 있다.
+        li는 마진,패딩이 없다.
+        패딩과 마진의 여부를 확인하고 싶으면 보
+
+         */
+    </style>
+</head>
+<body>
+    <h1>선택자</h1>
+    <h2>범용(전체) 선택자: *</h2>
+    <p>가급적 사용하지 않는다.</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+</body>
+</html>

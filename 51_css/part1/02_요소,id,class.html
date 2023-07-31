@@ -8,33 +8,94 @@
     <style>
         /* 
             우선순위:
-            id > class > 요소
+            !important > inline CSS > id > class, 의사 class > 요소, 의사 요소,
+            id > class > 요소(tag)
 
-            id와 class의 이름 지정 방법
+            -
+            !important는 어떠한 방법을 써 봐도 작동이 안될때 쓰는 최후의 수단
+            사용 방법: 선택자 {속성:값  !important}
+            -
+
+            id와 class의 tjsxorwk 이름 지정 방법
             1. 첫 글자는 영문자, _, - (숫자x)
             2. 두 번째 문자 부터는 영문자, _, -, 숫자
             3. 대소문자 구별된다.
         */
 
         /* 아이디(id) 선택자: #이름 */
-
-
+        #p {color:red}
+        #p2 {color:lightgreen}
         /* 클래스(class) 선택자: .이름 */
-
+        .p {background-color:blue}
+        .p {border-color: black; border-style: solid;}
+        /* 
+            테두리는 종류 없이 지정되지 않는다.
+            실선: solid
+            점선: dotted
+            대쉬선: dashed
+        */
 
         /* 요소(element, type, 태그) 선택자: 태그 이름으로 지정 */
+        p {color:orange}
+
+
+
+        /* 
+            CSS
+            1. 어디에 기록? 
+            2. 선택자에는 어떤 것이 있는가?
+            3. 속성에는 어떤 것이 있는가?
+        */
+        /*
+            CSS의 형식
+            선택자 {속성:값;}
+            ex.
+            선택자 {background-color:값;}
+            선택자 {border:값;}
+            선택자 {border-style:값;}
+
+            속성
+            color: 글자 색
+            background-color: 배경 색
+            border-color: 테두리 색
+            border-style:solid;
+            
+            CSS 선택자(selector)
+            1.기본: 요소, id, class, 전체, 그룹
+            2.복합: 부모+자식+형제
+            2.의사[pseudo](슈도, 가상, 유사) 클래스: :link, :hover, :avtive
+                                    클론(:)이 한개만 붙는다.
+            3.의사 요소: ::before, ::afther
+                        클론이 두개 붙는다.
+            4.속성:
+
+            <div id="wrap">
+            <div class="container">
+            
+         */
 
     </style>
 </head>
 <body>
     <h1>요소/아이디/클래스 선택자</h1>
     <p>나는 id와 class가 없습니다.</p>
-    <p id="p1">나는 id=p1 입니다.</p>
-    <p class="p1" id="p2">나는 class=p1, id=p2 입니다.</p>
-    <!-- 하나의 문서에서 아이디의 값은 같은 이름을 중복 사용할 수 없다. -->
-    <!-- 하나의 문서에서 클래스의 값은 같은 이름을 중복 사용할 수 있다. -->
-    <!-- 클래스 속성의 값으로 하나 이상을 지정할 수 있다. -->
-    <p class="p1 p2">나는 class=p1, p2 입니다.</p>
+    <p id="p">나는 id=p 입니다.</p>
+    <p class="p" id="p2">나는 class=p, id=p2 입니다.</p>
+    
+    <!-- 
+        하나의 문서에서 
+        class 값: 중복 사용 가능.O
+        id 값: 중복 사용 불가.X
+    -->
+    
+    <p class="p p2">나는 class=p, p2 입니다.</p>
+    <!-- 
+        class 속성의 값으로 하나 이상을 지정할 수 있다.
+        각 속성의 값은 띄어쓰기로 구분한다.
+    -->
+    
     <p id="p3">나는 id=p3 입니다.</p>
+    <!-- id 속성의 값으로 하나 이상을 지정할 수 없다. -->
+    
 </body>
 </html>

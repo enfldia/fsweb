@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리</title>
+    <style>
+        ul {
+            width:400px;
+            margin: 0;
+            padding-left: 0;
+        }
+        li {
+            border-bottom: solid;
+            padding: 0 0 8px 0;
+            margin: 8px 0;
+            /* 숫자 0은 단위 생략 가능 */
+        }
+        span {
+            /* 
+                블록레벨 요소
+                1. 줄바꿈(위에서 아래로 세로 배치)
+                2. width: 100% heigth: 콘텐츠;
+                3. width, heigth를 CSS로 지정할 수 있다.
+                4. div, h1~h6, p, .....
+                
+                인라인 요소
+                1. 줄바꿈x (왼쪽에서 오른쪽 가로 배치)
+                2. width: 콘텐츠; height: 콘텐츠;
+                3 width, heigth를 CSS로 지정할 수 없다.
+                (display: inline-block으로 적용시키면 가능)
+                4. span, a, img, ...
+
+                CSS의 display 속성
+                display: block;
+                display: inline;
+                display: inline-block;
+            */
+            /* 인라인 요소는 width와 height는 지정할 수 없다. */
+            /* 블록레벨 요소는 width와 height는 지정할 수 있다. */
+            /* display: block; 은 인라인 요소인데 블록 레벨 요소로 바꾼다. */
+            display: inline-block;
+            width: 310px
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href=""><span>맞춤 플랜을 제안하는 크리에이티브...</span>2023-08-02</a></li>
+        <li><a href=""><span>JUST 쇼핑몰과 함께 하실 가슴 따뜻한..</span>2023-08-02</a></li>
+        <li><a href=""><span>코리아웨딩페어 결혼박람회가 열립니다.</span>2023-08-02</a></li>
+        <li><a href=""><span>마진없이 아낌없이 드리는 마지막 찬스!</span>2023-08-02</a></li>
+    </ul>
+</body>
+</html>

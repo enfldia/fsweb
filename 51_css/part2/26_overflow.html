@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        .container::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
         .container {
             background: red;
             overflow:hidden;
+          
         }
         .container div {
             float:left;
@@ -16,19 +22,33 @@
             height:100px;
             margin:20px;
             background:yellow;
+            overflow: visible;
         }
 
-        /* (1) .ovf1에 overflow 속성을 visible로 지정하시오. */
+        /* 
+            overflow-x: scroll; -> 가로 스크롤
+            overflow-y: scroll; -> 세로 스크롤
 
+            overflow:visible; (기본 값) -> 넘쳐도 보임
+            overflow:hidden; -> 넘치면 숨김
+            overflow:auto; -> 스크롤바 생성(상황에 따라 생성 됨)
+            overflow:scroll; -> 스크롤바 생성(무조건)
+        */
+
+        /* (1) .ovf1에 overflow 속성을 visible로 지정하시오. */
+        .container .ovf1 {overflow: visivle;}
 
         /* (2) .ovf2에 overflow-y 속성을 scroll로 지정하시오. */
-
+        .container .ovf2 {overflow-y: scroll;}
 
         /* (3) .ovf3에 overflow 속성을 hidden으로 지정하시오. */
-
+        .container .ovf3 {overflow: hidden;}
 
         /* (4) .ovf4에 overflow 속성을 auto로 지정하시오. */
-
+        .container .ovf4 {overflow: auto;}
+        
+        /* (5) .ovf5에 overflow 속성을 auto로 지정하시오. */
+        .container .ovf5 {overflow: auto;}
 
     </style>
 </head>
@@ -40,6 +60,7 @@
         <div class="ovf2">scroll: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro voluptate, rem itaque. Perferendis, ullam?</div>
         <div class="ovf3">hidden: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro voluptate, rem itaque. Perferendis, ullam?</div>
         <div class="ovf4">auto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro voluptate, rem itaque. Perferendis, ullam?</div>
+        <div class="ovf5">auto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga od</div>
     </div>
 </body>
 </html>

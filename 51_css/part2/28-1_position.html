@@ -7,22 +7,38 @@
     <title>HTML+CSS</title>
     <style>
         .parent {
+            /* 
+                1. 자식이 position:absolute; 이면 부모의 높이에 자식 크기를 갖지 못한다.
+                
+                2. 요소를 position: absolute;로 설정하면
+                width:콘텐츠; height:콘텐츠; 로 된다.
+                
+                3. position:absolute;의  left, top의 기준은 static이 아닌 조상이다.
+                relative를 주로 사용하지만 무조건은 아니다.
+                
+                4. 요소를 position: absolute;는 ploat처럼 위로 떠오르는 것과 같은 효과를 가진다.
+                
+             */
             position: relative;
+            /* reative는 static하고 비슷하다.static의 성질을 갖고 있지만 방향 값을 쓸 수 있다. */
             height:500px;
             background: yellow;
         }
 
         /* .parent의 자식 div를 부모를 기준으로 정중앙 배치하시오. */
         .parent div {
+            position: absolute;
+            
+            left: 50%;
+            top: 50%;
             width:200px;
-            /* height:50px; */
+            height:50px;
             background: red;
-            /* width의 절반의 음수 값으로 지정한다. */
-            /* height의 절반의 음수 값으로 지정한다. */
-
-            /* 텍스트 중앙 배치 */
-            text-align: center;
-            line-height: 50px;
+            /* 왼쪽 margin을 width의 절반의 음수 값으로 지정한다. */
+            margin-left: -100px;
+            /* 위쪽 margin을 height의 절반의 음수 값으로 지정한다. */
+            margin-top: -25px;
+          
         }
     </style>
 </head>

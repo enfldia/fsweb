@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭</title>
+    <style>
+        /* 초기화 */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0px;
+            list-style: none;
+        }
+
+
+        /* 탭 */
+        #tabs input {
+            display: none;
+        }
+
+        #tabs input:checked+div {
+            display: block;
+        }
+
+        #tabs div {
+            display: none;
+            position: absolute;
+            top: 40px;
+            width: 400px;
+            height: 160px;
+        }
+
+
+        /* 공지사항 */
+        #tab1 {
+            background: lightblue;
+
+        }
+
+        #tab1 li {
+            border-bottom: 1px solid red;
+            padding-bottom: 8px;
+            margin: 8px 0;
+        }
+
+        #tab1 span {
+
+            display: inline-block;
+            width: 310px
+        }
+
+        /* 갤러리 */
+        #tabs #tab2 {
+            /*  box-sizing: border-box; */
+            background: lightcoral;
+            padding: 28px 16px;
+        }
+
+        #tab2 a {
+            margin: 0 4px
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 탭 메뉴 -->
+    <div id="tabs">
+        <!-- tab1은 공지사항 -->
+        <label for="btn1">공지사항</label>
+        <input type="radio" name="tabs" id="btn1" checked>
+        <div id="tab1">
+            <ul>
+                <li><a href="#"><span>맞춤 플랜으로 나에게 맞는 차량..</span>2023.07.20</a></li>
+                <li><a href="#"><span>VOLVO과 함께 하실 가슴 따뜻한..</span>2023.06.20</a></li>
+                <li><a href="#"><span>2023 자동차박람회가 열립니다.</span>2023.05.20</a></li>
+                <li><a href="#"><span>마진없이 아낌없이 드리는 마지막 찬스</span>2023.04.20</a></li>
+            </ul>
+        </div>
+        <!-- tab2는 갤러리 -->
+        <label for="btn2">갤러리</label>
+        <input type="radio" name="tabs" id="btn2">
+        <div id="tab2">
+            <a href="#"><img src="../../70_project/project1/asset/image/1/gallerys90.png" alt="s90"></a>
+            <a href="#"><img src="../../70_project/project1/asset/image/1/galleryxc60.png" alt="xc60"></a>
+            <a href="#"><img src="../../70_project/project1/asset/image/1/galleryxc90.png" alt="xc90"></a>
+        </div>
+    </div><!-- //#tabs -->
+
+</body>
+
+</html>

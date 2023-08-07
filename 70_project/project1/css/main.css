@@ -1,37 +1,170 @@
 @charset "utf-8";
 
 /* 작업중 */
-body * {outline: 1px solid lime;}
+body * {
+    outline: 1px solid lime;
+}
 
 /* resset */
 * {
+    /* 요소의 패팅과 테두리를 요소의 안쪽으로 지정 */
     box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+ul {
     margin: 0;
+}
+
+ul {
     padding: 0;
 }
+
 /* common */
 #wrap {
     width: 1200px;
+    /* 가로 가운데(width 값이 있어야 사용 가능) */
     margin: 0 auto;
 }
+
+/* header */
 /* logo */
+header {
+    height: 100px;
+    padding: 30px 0;
+}
+
 .logo {
     float: left;
 }
+
 /* gnb */
 #gnb {
     float: right;
+    margin-top: 10px;
 }
+
 /* 1depth */
 #gnb .main li {
     display: inline-block;
+    width: 150px;
 }
+
 /* 2depth */
 #gnb .sub {
     display: none;
 }
 
 /* slide */
-#slide li{
+#slide {
+    height: 300px;
+}
+
+#slide li {
     position: absolute;
+}
+
+/* modal */
+#modal {
+    display: none;
+}
+
+/* contents */
+#contents {
+    height: 200px;
+    padding: 5px 0;
+}
+
+#contents > div {
+    float: left;
+    width: 380px;
+}
+
+/* tabs */
+#contents #tabs {
+    width: 424px;
+}
+#tabs input {
+    display: none;
+}
+
+#tabs input:checked+div {
+    display: block;
+}
+
+#tabs div {
+    display: none;
+    position: absolute;
+    width: 424px;
+    height: 160px;
+}
+
+/* notice & gallery */
+label {
+    display: inline-block;
+    pad: 8px 16px;
+    background-color: #7a8e9f;
+}
+
+#tab1 li {
+    border-bottom: 1px solid ccc;
+    padding-bottom: 8px;
+}
+
+#tab1 span {
+    display: inline-block;
+    width: 334px
+}
+
+/* 갤러리 */
+#tabs #tab2 {
+    /*  box-sizing: border-box; */
+    background: lightcoral;
+    padding: 28px 16px;
+}
+
+#tab2 a {
+    margin: 0 4px
+}
+/* banner */
+.banner {
+    margin-left:  8px;
+}
+/* shortcut */
+#contents .shortcut {
+    float: right;
+}
+
+/* footer */
+footer {
+    height: 100px;
+    background-color: #eaeaea;
+    padding: 30px;
+}
+footer a {
+    /* a 태그는 글자색을 상속 받지 못해가 때문에 별도 지정한다. */
+    color: #fff;
+}
+footer >div {
+    float: left;
+}
+/* 하단 로고 */
+.blogo {
+    width: 200px;
+}
+/* 주소 및 저작권 */
+.copy {
+    width: 640px;
+}
+/* SNS */
+.sns {
+    width: 300px;
+}
+
+.sns li { 
+    float: left;
+    margin: 0 16px;
 }

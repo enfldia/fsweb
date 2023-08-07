@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>박스 정중앙배치</title>
     <style>
-        body > div {
+        body {
+            margin: 0;
+        }
+        #sec1 {
             position: relative;
 
         }
@@ -35,10 +38,7 @@
             font-size: 36px;
             letter-spacing: 4px;
         }
-        .tit1 + span {
-        
-            
-        }
+
         /* 
             가로 중앙 배치 
             1. 블록레벨 요소 -> margin: 0 auto;
@@ -49,7 +49,7 @@
     </style>
 </head>
 <body>
-    <div>
+    <div id="sec1" class="sec">
         <div class="main_img"><img src="../assets/images/Architecture.jpg" alt="이미지"></div>
         <div class="txt">
             <span class="tit1"><b>ST</b></span><span>Stanley</span>

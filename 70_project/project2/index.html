@@ -3,144 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formula1</title>
-    <style>
-      
-        #sec2 {
-            width: 1500px;
-            height: 700px;
-            margin: 0;
-            padding: 0;
-            background-color: #999;
-
-        }
-        
-        .projects_content div{
-            margin: 10px;
-            padding: 0;
-            object-fit: contain;
-            width: 300px;
-            height: 300px;
-            float:left
-        }
-    </style>
+    <title>Formula One</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <!-- 헤더 -->
-    <header>
-        <h1>로고</h1>
-        <nav class="GNB">
+    <header class="clearfix">
+        <!-- 로고 -->
+        <h1 class="logo">
+            <a href="#"><img src="" alt="F1"></a>
+        </h1>
+        <!-- 내비게이션 -->
+        <nav id="gnb">
             <ul>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Abot</a></li>
-                <li><a href="#">Contact</a></li>
-            
+                <li><a href="sec2"></a>Teams</li>
+                <li><a href="sec3"></a>Drivers</li>
+                <li><a href="sec4"></a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 섹션1 -->
-    <section id="sec1" class="sec">
-        <p>
-            <span><b>BR</b></span>
-            <span>Architects</span>
-        </p>
-        <div><img src="asset/images/Architecture.jpg" alt="architects"></div>
-    </section>
-
-    <!-- 섹션2 -->
-    <section id="sec2" class="sec">
-        <h3>Projects</h3>
-        <div class="projects_content">
-            <div>
-                <p>Summer House</p>
-                <img src="asset/images/House.jpg" alt="">
+    <div class="container">
+        <!-- 섹션1 -->
+        <div id="sec1" class="sec">
+            <div class="main_img"><img src="asset/images/f1f/Charles doing a pitstop [3973x2235] _ formula1.png" alt="main_img"></div>
+            <div class="txt">
+                <span></span> class="tit1"><b>F1</b></span><span>Formula One</span>
             </div>
-            <div>
-                <p>Brick House</p>
-                <img src="asset/images/House(1).jpg" alt="">
-            </div>
-            <div>
-                <p>Renovated</p>
-                <img src="asset/images/House(3).jpg" alt="">
-            </div>
-            <div>
-                <p>Barn House</p>
-                <img src="asset/images/House(2).jpg" alt="">
-            </div>
-            <div>
-                <p>Summer House</p>
-                <img src="asset/images/House(1).jpg" alt="">
-            </div>
-            <div>
-                <p>Summer House</p>
-                <img src="asset/images/House.jpg" alt="">
-            </div>
-            <div>
-                <p>Summer House</p>
-                <img src="asset/images/House(2).jpg" alt="">
-            </div>
-            <div>
-                <p>Summer House</p>
-                <img src="asset/images/House(3).jpg" alt="">
-            </div>
-        </div>  
-    </section>
-    
-    <!-- 섹션3 -->
-    <section id="sec3" class="sec">
-        <h2>ABout</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-        <div class="JohnDoe">
-            <img src="asset/images/John.jpg" alt="john">
-            <h3>John Doe</h3>
-            <p>CEO & Founde</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <button>contact</button>
-        </div>
-        <div class="JaneDoe">
-            <img src="asset/images/Jane.jpg" alt="jane">
-            <h3>John Doe</h3>
-            <p>Architect</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <button>contact</button>
-        </div>
-        <div class="MikeRoss">
-            <img src="asset/images/Mike.jpg" alt="mike">
-            <h3>Mike Ross</h3>
-            <p>Architect</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <button>contact</button>
-        </div>
-        <div class="DanStar">
-            <img src="asset/images/Dan.jpg" alt="dan">
-            <h3>Dan Star</h3>
-            <p>Architect</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <button>contact</button>
-        </div>
-    </section>
-
-    <!-- tprtus4 -->
-    <section id="sec4" class="sec">
-        <h3>Contact</h3>
-        <p>Lets get in touch and talk about your next project.</p>
+        </div><!-- //#sec1 -->
         
-        <form action="my.jpg">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Subjet">
-            <input type="text" placeholder="Comment">
-            <button>SEND MESSAGE</button>
-        </form>
-        <div class="map"><img src="asset/images/map.jpg" alt="map"></div>
-
-    </section>
+        <!-- 섹션2 -->
+        <section id="sec2" class="sec sec23">
+            <h2>Teams</h2>
+            <ul class="clearfix">
+                <li><img src="asset/images/f1f/red_20bull.jpg" alt="Red Bull"><span>Red Bull</span></li>
+                <li><img src="asset/images/f1f/mercedes.jpg" alt="Mercedes"><span>Mercedes</span></li>
+                <li><img src="asset/images/f1f/aston_20martin.jpg" alt="Aston Martin"><span>Aston Martin</span></li>
+                <li><img src="asset/images/f1f/mclaren.jpg" alt="McLaren"><span>McLaren</span></li>
+                <li><img src="asset/images/f1f/alpine.jpg" alt="Alpine"><span>Alpine</span></li>
+                <li><img src="asset/images/f1f/williams_20blue.jpg" alt="Williams"><span>Williams</span></li>
+                <li><img src="asset/images/f1f/haas.jpg" alt="Haas"><span>Haas</span></li>
+                <li><img src="asset/images/f1f/alphatauri.jpg" alt="AlphaTauri"><span>AlphaTauri</span></li>
+            </ul>
+        </section><!-- //#sec2 -->
+        
+        <!-- 섹션3 -->
+        <section id="sec3" class="sec sec23">
+            <h2>Drivrs</h2>
+            <p>F1 Drivers 2023
+                Check out this season's official F1 line-up. Full breakdown of drivers, points and current positions. Follow your favourite F1 drivers on and off the track.</p>
+            <ul class="clearfix">
+                <li><img src="asset/images/f1f/1677069646195.jpg" alt="Max Verstappen">
+                <H3>Max Verstappen</H3>
+                <P> Team	Red Bull Racing</P>
+                <P> Country	Netherlands
+                    Podiums	89
+                    Points	2325.5
+                    Grands Prix entered	175
+                    World Championships	2
+                    Highest race finish	1 (x45)
+                    Highest grid position	1
+                    Date of birth	30/09/1997
+                    Place of birth	Hasselt, Belgium</P>
+                </li>
+                <li><img src="asset/images/f1f/1677069594164.jpg" alt="Lewis Hamilton">
+                <H3>Lewis Hamilton</H3>
+                <P>Team	Mercedes</P>
+                <P> Country	United Kingdom
+                    Podiums	195
+                    Points	4553.5
+                    Grands Prix entered	322
+                    World Championships	7
+                    Highest race finish	1 (x103)
+                    Highest grid position	1
+                    Date of birth	07/01/1985
+                    Place of birth	Stevenage, England</P>
+                </li>
+                <li><img src="asset/images/f1f/1677244577162.jpg" alt="Fernando Alonso">
+                <H3>Fernando Alonso</H3>
+                <P>Team	Aston Martin</P>
+                <P> Country	Spain
+                    Podiums	104
+                    Points	2210
+                    Grands Prix entered	370
+                    World Championships	2
+                    Highest race finish	1 (x32)
+                    Highest grid position	1
+                    Date of birth	29/07/1981
+                    Place of birth	Oviedo, Spain</P>
+                </li>
+                <li><img src="asset/images/f1f/1677069223130.jpg" alt="Charles Leclerc">
+                <H3>Charles Leclerc</H3>
+                <P>Team	Ferrari</P>
+                <P> Country	Monaco
+                    Podiums	27
+                    Points	967
+                    Grands Prix entered	115
+                    World Championships	N/A
+                    Highest race finish	1 (x5)
+                    Highest grid position	1
+                    Date of birth	16/10/1997
+                    Place of birth	Monte Carlo, Monaco</P>
+                </li>
+            </ul>
+        </section><!-- //#sec3 -->
+        
+        <!-- 섹션4 -->
+        <section id="sec4" class="sec">
+        
+        </section><!-- //#sec4 -->
+    </div>
 
     <!-- 푸터 -->
-    <footer>
-        <p class="copy">Copyright 2023 CSH. All rights reserved.</p>
-    </footer>
+    <footer>© 2003-2023 Formula One World Championship Limited</footer>
 </body>
 </html>

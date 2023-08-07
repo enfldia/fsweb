@@ -92,26 +92,22 @@ header {
 
 /* 섹션1 */
 #sec1 {
-    position: relative;
     top: 55px;
 }
 
-txt {
+.txt {
     position: absolute;
     left: 50%;
     top: 50%;
     margin-top: -10px;
     margin-left: -80px;
     color: #fff;
-
-
 }
 
 .tit1 {
     padding: 8px 16px;
     background-color: #000;
     opacity: .75;
-    ;
 }
 
 /* 섹션2,3 공통 */

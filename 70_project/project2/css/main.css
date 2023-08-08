@@ -31,25 +31,25 @@ header {
     background-color: lightblue;
 }
 
-.sec {
+/* .sec {
     height: 800px;
-}
+} */
 
-#sec1 {
+/* #sec1 {
     background-color: lightcoral;
-}
+} */
 
-#sec2 {
+/* #sec2 {
     background-color: lightgreen;
 }
-
-#sec3 {
+ */
+/* #sec3 {
     background-color: lightsalmon;
-}
+} */
 
-#sec4 {
+/* #sec4 {
     background-color: lightseagreen;
-}
+} */
 
 header {
     background-color: lightblue;
@@ -65,14 +65,19 @@ header {
     /* position, absolute */
     height: 55px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 /* 로고 */
 .logo {
     float: left;
 }
+.logo img {
+    width: 100%;
+    height:45px;
+    padding: 10px 0 0 0;
 
+}
 /* 내비게이션 */
 #gnb {
     float: right;
@@ -96,12 +101,13 @@ header {
 }
 
 .txt {
+    font-size: 36px;
     position: absolute;
     left: 50%;
     top: 50%;
     margin-top: -10px;
     margin-left: -80px;
-    color: #fff;
+    color: #ffffff;
 }
 
 .tit1 {
@@ -111,14 +117,15 @@ header {
 }
 
 /* 섹션2,3 공통 */
-.sec23 li {
+.sec234 li {
     float: left;
     width: 360px;
     height: 240px;
     margin-right: 20px;
+    margin-bottom: 16px;
 }
 
-.sec23 li:nth-of-type(4n) {
+.sec234 li:nth-of-type(4n) {
     margin-right: 0;
 }
 
@@ -138,6 +145,7 @@ header {
 }
 
 /* 섹션3 */
+
 
 /* 섹션4 */
 

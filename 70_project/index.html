@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>조상현</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <!-- 헤더 -->
     <header>
-        <nav class="GNB">내비게이션</nav>
+        <nav id="gnb">
+            <ul class="clearfix">
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">PORTFOLI0</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- 섹션1 -->
@@ -18,27 +26,35 @@
 
     <!-- 섹션2 -->
     <section id="sec2" class="sec">
-        <h2>About ME</h2>
-        <p><em>I like web Programming</em></p>
-        <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <div class="my_pic">
-            <p><b>조상현</b></p>
-            <img src="images/PhotoofMe.jpg" alt="내 사진">
-        </div>
-        <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="container">
+            <h2>About ME</h2>
+            <p><em>I like web Programming</em></p>
+            <div class="basic clearfix">
+                <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div class="my_pic">
+                    <p><b>조상현</b></p>
+                    <img src="images/my.png" alt="내 사진">
+                </div>
+                <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                
+            </div><!-- //.basic -->
 
-        <!-- 스킬(skill) -->
-        <h3>Im really good at:</h3>
-        <p>Web Planning</p>
-        <div><span>90%</span></div>
-        <p>Frontend Programming</p>
-        <div><span>85%</span></div>
-        <p>Backend Programming</p>
-        <div><span>80%</span></div>
+            <!-- 스킬(skill) -->
+            <div class="skill">
+                <h3>Im really good at:</h3>
+                <p>Web Planning</p>
+                <div><span>90%</span></div>
+                <p>Frontend Programming</p>
+                <div><span>85%</span></div>
+                <p>Backend Programming</p>
+                <div><span>80%</span></div>
+            </div><!-- //.slill -->
+        </div><!-- //.container -->
+        
         <!-- 카운터 -->
         <div class="counter">
-            <ul>
+            <ul class="clearfix">
                 <li><span>20+</span>Total Pages</li>
                 <li><span>4+</span>Web projects</li>
                 <li><span>2+</span>App projects</li>
@@ -51,50 +67,62 @@
     <section id="sec3" class="sec">
         <div><span>PORTFOLIO</span></div>
         <h2>나의 작업</h2>
-        <p><em>아래 작품은 나의 최근 작품입니다. <br>이미지를 클릭하면 큰 이미지로 볼 수 있습니다.</em></p>
-        <div class="pf">
-            <ul>
-                <li><img src="images/Bearcloseup.jpg" alt="작품1"></li>
-                <li><img src="images/Coffeebeans.jpg" alt="작품2"></li>
-                <li><img src="images/Emptyghosttrain.jpg" alt="작품3"></li>
-                <li><img src="images/Themist.jpg" alt="작품4"></li>
-                <li><img src="images/Mybelovedtypewriter.jpg" alt="작품5"></li>
-                <li><img src="images/Themist.jpg" alt="작품6"></li>
-                <li><img src="images/Sailing.jpg" alt="작품7"></li>
-                <li><img src="images/Themistoverthemountains.jpg" alt="작품8"></li>
-            </ul>
+            <p><em>아래 작품은 나의 최근 작품입니다. <br>이미지를 클릭하면 큰 이미지로 볼 수 있습니다.</em></p>
+            <div class="pf"><div class="container">
+            
+                <ul class="clearfix">
+                    <li><img src="images/pf1.png" alt="볼보"></li>
+                    <li><img src="images/pf2.png" alt="Fomula One"></li>
+                    <li><img src="images/pf1.png" alt="CANNONDEAL"></li>
+                    <li><img src="images/pf2.png" alt="미니 게임"></li>
+                    <li><img src="images/pf1.png" alt="팀 프로젝트"></li>
+                    <li><img src="images/pf2.png" alt="작품6"></li>
+                    <li><img src="images/pf1.png" alt="작품7"></li>
+                    <li><img src="images/pf2.png" alt="작품8"></li>
+                </ul>
+                <a href="#">더보기</a>
+            </div><!-- //.container -->
         </div>
-
-        <a href="#">더보기</a>
     </section>
 
     <!-- 섹션4 -->
     <section id="sec4" class="sec">
         <div><span>CONTACT</span></div>
         <h2>나의 위치</h2>
-        <p><em>당신의 연락을 기다립니다.</em></p>
-
-        <div class="map"><img src="images/map.jpg" alt="나의 위치"></div>
-        <div class="addr">
-            <ul>
-                <li>경기도 안양시</li>
-                <li>Phone: +82 10-1234-1234</li>
-                <li>Email:hong@gmail.com</li>
-            </ul>
-            <p>Swing by for a cup of , or leave me a note:</p>
-        </div>
-        <form action="my.jpg">
-            <input type="text" placeholder="이름">
-            <input type="email" placeholder="메일">
-            <input type="text" placeholder="메시지">
-            <button>메시지 전송하기</button>
-        </form>        
+            <p><em>당신의 연락을 기다립니다.</em></p><div class="container">
+            
+            <div class="map"><img src="images/map.png" alt="나의 위치">
+            </div>
+            <div class="right">
+                <div class="addr">
+                    <ul>
+                        <li>경기도 안양시</li>
+                        <li>Phone: +82 10-1234-1234</li>
+                        <li>Email:hong@gmail.com</li>
+                    </ul>
+                    <p>Swing by for a cup of , or leave me a note:</p>
+                </div>
+                <form action="my.jpg">
+                    <input type="text" placeholder="이름">
+                    <input type="email" placeholder="메일">
+                    <input type="text" placeholder="메시지">
+                    <button>메시지 전송하기</button>
+                </form>
+            </div><!-- //.right -->
+        </div><!-- //.container -->      
     </section>
 
     <!-- 푸터 -->
     <footer>
         <div class="tbtn">to the top</div>
-        <div class="sns">SNS</div>
+        <div class="sns">
+            <a href="#">페이스북</a>
+            <a href="#">인스타그램</a>
+            <a href="#">스냅챗</a>
+            <a href="#">핀터레스트</a>
+            <a href="#">트위터</a>
+            <a href="#">링크드인</a>
+        </div>
         <p class="copy">Copyright 2023 CSH. All rights reserved.</p>
     </footer>
 </body>

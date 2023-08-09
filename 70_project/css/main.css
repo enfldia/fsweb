@@ -87,5 +87,18 @@ header {
     margin-right: 0;
 }
 /* 섹션4: 연락처 */
-.map {width: 284px;}
+
+.map {
+    float: left;
+    width: 284px;
+}
+.right {
+    float: right;
+    width: 640px;
+}
+input {padding: 8px; border: 1px solid #ccc;}
+input:nth-of-type(1) {float:left;width:49%}
+input:nth-of-type(2) {float:right;width:49%}
+input:nth-of-type(3) {float:left;display:block; width:100%; margin-top: 8px;}
+
 /* 푸터 */

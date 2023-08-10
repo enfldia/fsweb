@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>말줄임표</title>
+    <style>
+        li {
+            width: 400px;
+            /* 말줄임표 핵심 */
+            text-overflow: ellipsis;
+            overflow:hidden;
+            /* 줄 바꿈 하지 않음. */
+            white-space:nowrap;
+            /* 박스 영역을 벗어난 텍스트 숨김 */
+            border: 1px solid red;
+        }
+            
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, perferendis.</li>
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quasi obcaecati vero nobis odio beatae libero totam architecto numquam ad consectetur incidunt placeat asperiores quia, eos quidem sint pariatur laboriosam?</li>
+    </ul>
+</body>
+</html>

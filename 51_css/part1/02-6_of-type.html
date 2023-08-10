@@ -7,19 +7,26 @@
     <title>HTML+CSS</title>
     <style>
         /* 
-            
-            선택자:nth-of-type(n)
-            n은 number(숫자): 1,2,3,...(자연수)
-            n은 odd(홀수), even(짝수) 키워드 사용 
-            n은 수열을 사용할 수 있다.2n-1(홀수), 2n(짝수), 4n(4의 배수)
+
             의사(Pseudo, 가상, 유사) 클래스
+            형제관계
+
             타입을 구분한다.
 
-            선택자:first-of-type
-            선택자:last-of-type
-            선택자:nth-of-type(n)
-            선택자:nth-last-of-type(n)
+            선택자:first-of-type -> 첫 번쨰 요소 선택
+            선택자:last-of-type -> 마지막 번째 요소 선택
+            선택자:nth-of-type(n) -> 위에서 아래로 n번째 요소 선택
+            선택자:nth-last-of-type(n) -> 아래에서 위로 n번째 요소 선택
             
+            타입을 구분하지 않는다.
+
+            선택자:first-of-child -> 첫 번쨰 요소 선택
+            선택자:last-of-child -> 마지막 번째 요소 선택
+            선택자:nth-of-child(n) -> 위에서 아래로 n번째 요소 선택
+            선택자:nth-last-of-child(n) -> 아래에서 위로 n번째 요소 선택
+            
+            n이란? 숫자, 키워드, 수열
+
             n: 1,2,3,..., odd, even, 2n-1, 2n, 3n ...
             
             2n -> 2*1, 2*2, 2*3, ... -> 2, 4, 6, ...
@@ -28,7 +35,17 @@
             짝수: 2n 또는 even
             홀수: 2n-1 또는 odd
         */
-
+        
+        /* p중에서 첫 번째 요소 */
+        p:first-of-type {color: red;}
+        p:last-of-type {color: red;}
+        p:nth-of-type(1) {background: blue;}
+        p:nth-of-type(2) {color: red;}
+        p:nth-of-type(12) {background: orange;}
+        p:nth-last-of-type(1) {border: 1px solid red;}
+        p:nth-of-type(even) {font-size: 12px;}
+        p:nth-of-type(4n) {font-style:italic;}
+        
     </style>
 </head>
 <body>
@@ -46,5 +63,6 @@
     <p>10 번째 요소입니다.</p>
     <p>11 번째 요소입니다.</p>
     <p>12 번째 요소입니다.</p>
+    <p>13 번째 요소입니다.</p>
 </body>
 </html>

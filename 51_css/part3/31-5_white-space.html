@@ -6,9 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+
+        /* 
+            whote-space: 공백 처리;
+                물리적(키보드):space bar, tap, Enter
+                값: normal, nowrap, pre, pre-wrap, pre-line
+
+            문장의 줄임(...으로 표시 되게)
+            white-space:nowrap;
+
+            <br>: 줄 바꿈
+            <pre>: 
+        */
+        /*
+            Enter키를 사용하여 줄을 바꿔도 적용되지 않는다.
+            space bar나 tap으로 빈칸을 늘려도 한 칸 이상의 공백을 한 칸으로 인식한다.
+        */
         /* 자동 줄 바꿈(o), Enter(x), sp/tab(x) */
         .whn {white-space: normal;}
         /* 자동 줄 바꿈(x), Enter(x), sp/tab(x) */
+        /* wrap 줄 바꿈, nowrap 줄 바꿈 x */
         .whnw {white-space: nowrap;}
         /* 자동 줄 바꿈(x), Enter(o), sp/tab(o) */
         .whp {white-space: pre;}
@@ -21,26 +38,11 @@
 <body>
     <h1>CSS 텍스트 속성</h1>
     <h2>white-space</h2>
-    <p class="whn">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit.</p>
-    <p class="whnw">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit.</p>
-    <p class="whp">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit.</p>
-    <p class="whpw">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit.</p>
-    <p class="whpl">Lorem           ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem            ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
-        Lorem ipsum dolor sit.</p>
+    <p class="whn">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis alias minus nesciunt inventore enim repellendus impedit veniam eligendi dolorem modi.</p>
+    <p class="whnw">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis alias minus nesciunt inventore enim repellendus impedit veniam eligendi dolorem modi.</p>
+    <p class="whp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis alias minus nesciunt inventore enim repellendus impedit veniam eligendi dolorem modi.</p>
+    <p class="whpw">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis alias minus nesciunt inventore enim repellendus impedit veniam eligendi dolorem modi.</p>
+    <p class="whpl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis alias minus nesciunt inventore enim repellendus impedit veniam eligendi dolorem modi.</p>
 
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밑줄</title>
+    <style>
+        p:nth-of-type(1) {
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-color: red;
+        }
+        
+        p:nth-of-type(2) {
+            display: inline-block;
+            border-bottom: 1px solid red;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>text-decoration</p>
+    <p>border-bottom</p>
+    <p><del>콘텐츠 삭제</del><ins>콘텐츠 삽입</ins></p>
+    
+</body>
+</html>

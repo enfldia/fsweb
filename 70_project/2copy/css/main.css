@@ -151,9 +151,9 @@ header {
     left: 0;
     top: 0;
     color: #fff;
-    background-color: #111;
+    background-color: #111b;
     padding: 8px 16px;
-
+    font-size: 1.2rem;
 }
 
 /* 섹션3 */
@@ -165,5 +165,14 @@ header {
 }
 
 /* 섹션4 */
+#sec4 img {
+    height: 800px;
+    width: 100%;
 
+}
 /* 푸터 */
+.copy {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 5rem;
+}

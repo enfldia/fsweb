@@ -10,11 +10,13 @@ body, h1, h2 ,h3 ,p ,ul {
 }
 
 ul {
+    list-style: none;
     padding: 0;
 }
 
 img {
     width: 100%;
+    vertical-align: top;
 }
 
 input {

@@ -10,22 +10,16 @@
 * {
     /* 요소의 패팅과 테두리를 요소의 안쪽으로 지정 */
     box-sizing: border-box;
-}
-
-body,
-h1,
-h2,
-p,
-ul {
     margin: 0;
+    padding: 0;
 }
 
 ul {
-    padding: 0;
+    list-style: none;
 }
 img {
     vertical-align: top;
-    width: 100%;
+    /* width: 100%; */
 }
 /* typo */
 html {font-size: 10px;}

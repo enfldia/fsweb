@@ -7,33 +7,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+        목록의 마커
+        list-style-type: 마커의 유형
+            ul,ol에 가장 많이 쓰는 값은: none
+
+            <ul>값: disc, circle, square
+            
+            <ol>값: decimal, decimal-leading-zero, 
+                upper-alpha, lower-alpha,
+                upper-roman, lower-roman, ...
+                
+                list-style-image: url('경로/이미지파일')
+                lisy-style-position: 위치
+                    값: outside(기본값), inside
+                
+                (속기형)
+                list-style: type[|image] [position]
+                타입하고 이미지를 중복해서 쓰지 않는다. |기호의 뜻: ~ 또는  
+        */
         /* <ul>에 사용 */
         /* disc */
-
+            .lst1 {
+                border: 1px solid red;
+                list-style-image:  url(../assets/images/star2.png);
+                list-style-position: outside;
+            }
+            
         /* circle */
+        /* 목록 속성은 <ul>, <ol>, <li> 지정한다. */
+            .lst2 li{
+                border: 1px solid red;
+                list-style-type: circle;
+                list-style-position: inside;
 
+                list-style: url(../assets/images/star2.png) inside;;
+            }
         /* square */
-
+            .lst3 {list-style-type: square;}
         /* <ul>,<ol>에 모두 사용 - 항목 마커 제거 */
-
+            .lst10{
+                /* list-style-type: none; 이 아닌 속기형으로 쓰자*/
+                list-style: none;
+            }
         /* <ol>에 사용 */
         /* decimal */
-        
+            .lst4 {list-style-type: decimal;}
         /* decimal-leading-zero */
-
+            .lst5 {list-style-type: decimal-leading-zero;}
         /* upper-alpha */
-
+            .lst6 {list-style-type: upper-alpha;}
         /* lower-alpha */
-
+            .lst7 {list-style-type: lower-alpha;}
         /* upper-roman */
-
+            .lst8 {list-style-type: upper-roman;}
         /* lower-roman */
-
+            .lst9 {list-style-type: hiragana;}
+        /* 기타 */
+            .lst11 {list-style-type: lower-greek}
+            .lst12 {list-style-type: katakana}
+        /* start="n" 으로 속성값을 주면 n번째 부터 시작한다.
+                    CSS에는 없는 기능이라HTML에서 작성해야한다. 
+                    
+                    비트맵:png,jpg, gif -> 확대할 때 깨짐
+                    백터: svg 확대할 때 깨짐x->로고,아이콘(마커), 버튼
+        */
     </style>
+
+
+
 </head>
 
 <body>
     <h1>CSS 목록 관련 속성</h1>
+    <!-- type="disc,circle,square" -->
     <h2>순서 없는 목록</h2>
     <ul class="lst1">
         <li>아메리카노</li>
@@ -41,11 +88,13 @@
         <li>카페라떼</li>
     </ul>
     <ul class="lst2">
+        <!-- <ul class="lst2" type="circle"> -->
         <li>아메리카노</li>
         <li>카페모카</li>
         <li>카페라떼</li>
     </ul>
     <ul class="lst3">
+        <!-- <ul class="lst3" type="square"> -->
         <li>아메리카노</li>
         <li>카페모카</li>
         <li>카페라떼</li>
@@ -57,6 +106,7 @@
     </ul>
 
     <h2>순서 있는 목록</h2>
+    <!-- type="1|A|a|I|i" -->
     <ol class="lst4">
         <li>아메리카노</li>
         <li>카페모카</li>
@@ -82,12 +132,22 @@
         <li>카페모카</li>
         <li>카페라떼</li>
     </ol>
-    <ol class="lst9">
+    <ol class="lst9" start="4">
+        <li>딸기우유</li>
+        <li>초코우유</li>
+        <li>커피우유</li>
+    </ol>
+    <ol class="lst11">
         <li>아메리카노</li>
         <li>카페모카</li>
         <li>카페라떼</li>
     </ol>
     <ol class="lst11">
+        <li>아메리카노</li>
+        <li>카페모카</li>
+        <li>카페라떼</li>
+    </ol>
+    <ol class="lst12">
         <li>아메리카노</li>
         <li>카페모카</li>
         <li>카페라떼</li>

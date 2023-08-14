@@ -14,20 +14,24 @@
     padding: 0;
 }
 
-ul {
-    list-style: none;
-}
+
 img {
     vertical-align: top;
-    /* width: 100%; */
+    width: 100%;
 }
-/* typo */
+/* 
+typo - 글꼴 , 크기 , 색, 줄간격, 자간,굴기, 기울임, 밑줄 */ 
 html {font-size: 10px;}
 body {
     font: 1.5rem/1.6 'Noto Sans KR', sans-serif;
 }
-
-a {color:#333}
+ul {
+    list-style: none;
+}
+a {
+    color:#333;
+    text-decoration: none;
+}
 .main a {
     font-size: 1.8rem;
     color:#333
@@ -36,13 +40,10 @@ a {color:#333}
     font-size: 1.4rem;
     color:#777
 }
-.blogo {
-    text-align: right;
-    opacity: .3;
-}
 .copy {
     color: 777;
     text-align: center;
+    line-height: 50px;
 }
 .copy p:last-of-type {
     font-size: 1.2rem;
@@ -62,6 +63,7 @@ header {
 }
 
 .logo {
+    width: 300px;
     float: left;
 }
 
@@ -168,8 +170,8 @@ label {
 /* footer */
 footer {
     height: 100px;
-    background-color: #eaeaea;
-    padding: 30px;
+    background-image: linear-gradient(#eaeaea 50%, #e0e0e0 50%);
+    padding: 0 30px;
 }
 footer a {
     /* a 태그는 글자색을 상속 받지 못해가 때문에 별도 지정한다. */
@@ -179,16 +181,19 @@ footer >div {
     float: left;
 }
 /* 하단 로고 */
-.blogo {
-    width: 200px;
-}
+
 /* 주소 및 저작권 */
 .copy {
-    width: 640px;
+    float: left;
+    background: url(../asset/image/1/blogo1.png) no-repeat 200px 50%/70px;
+    padding-left: 350px;
+    
 }
 /* SNS */
 .sns {
+    float: right;
     width: 300px;
+    line-height: 100px;
 }
 
 .sns li { 

@@ -8,25 +8,61 @@
     <style>
 
         /* 
-            transition-property: 전환 속성;
-            transition-duration: 전환 시간(단위: s(초));
-            transition-timing-function: 전환 시간 함수;
-            transition-delay: 전환 지연 시간(단위: s(초));
+            전환(transition)?
+                일정 시간에 걸쳐 속성의 변화를 준다.
+        
+            transition-property: 값1, 값2, ... -> 속성
+                값: all(모든 CSS 속성), CSS의 속성명)
+                
+            transition-duration: 값,1 값2, ... -> 전환 시간(단위: s(초));
+                값: 숫자s (단위:s(초)) 
+            
+            transition-timing-function: 값1, 값2, ... -> 전환 시간 함수;
+                값: 
+                    가속: ease, ease-in, ease-out, ease-in-out
+                    등속: linear
+                    사용자 정의: cubic-bezier(n,n,n,n)-> n은 0 ~ 1의 숫자
+            
+            transition-delay: 지연 시간(단위: s(초));
+                값: 숫자s (단위s(초))
 
             transition: [property] duration [timing-function] [delay];
+            transition: [all] 0s [ease] [0s]; 기본값
+        
         */
 
-
-        /* div에 전환 속성을 all, 전환 시간은 0.3초, 가속도는 ease, 지연 시간은 0초로 지정하시오. */
-        
         div {
             width:100px;
-            height:100px;
+            height:50px;
             background: red;
+            /* 
+                transition-property: width, height;
+                transition-duration: 1s, 2s;
+                transition-timing-function: ease,  ease-in;
+                transition-delay: 0s, 0s;
+                와
+                
+                transform: all .3s ease 0s;
+                는
+                
+                아래와 같은 표현이다.
+             */
+            transition:width 1s, height 2s ;
+            /* property(속성) */
         }
         
+        /* 
+            div에 마우스를 올리면
+            jvs에서는 이벤트(event): hover = mouseover + mouseout
+        */
+        
+        /* 
+            일반적으로 호버에 transition을 쓰지 않는다.
+            mouseout에는 적용되지 않기 때문에.
+        */
         div:hover {
             width: 200px;
+            height: 100px;
             background: blue;
         }
     </style>

@@ -9,11 +9,10 @@ body,
 h1,
 ul {
     margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-ul {
-    padding: 0;
-}
 
 img {
     width: 100%;
@@ -24,6 +23,7 @@ img {
     display: block;
     clear: both;
 }
+
 
 
 /* 와이어프레임 */
@@ -51,7 +51,7 @@ header {
     background-color: lightseagreen;
 } */
 
-header {
+footer {
     background-color: lightblue;
 }
 
@@ -148,5 +148,27 @@ header {
 
 
 /* 섹션4 */
+.contect {
+    display: block;
+    width: 100%;
+    margin: 16px 0;
+    padding:10px;
+}
+.btn {
+    display: block;
+    background: #111;
+    color: #fff;
+    margin: 16px 0;
+    padding:10px;
+}
+#sec4 a::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 
 /* 푸터 */
+.copy {
+    text-align: center;
+}

@@ -51,7 +51,7 @@ header {
 #sec1 {
     position: relative;
     height: 100vh;
-    background-image: url(../images/bg1.png);
+    background-image: url(../images/bg1_2.png);
     background-position: 0 -120px;
 }
 #sec1 h1 {
@@ -102,7 +102,7 @@ header {
 }
 /* 섹션4: 연락처 */
 #sec4 .parallax {
-    background-image: url(../images/bg3_1.png);
+    background-image: url(../images/bg3_3.png);
     background-position: 0 -25px;
 }
 .map {

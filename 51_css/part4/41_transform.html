@@ -7,6 +7,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            함수 (function - 기능을 수행하는 의미함)
+            background-image: url();
+            
+            
+            transform(변환)
+                1. 이동
+                2. 크기 조절
+                3. 회전
+                4. 기울임
+            transform(변환)
+                값:  
+                    
+                    단위 :px, %
+                    translateX(x):좌우
+                    translateY(y):상하
+                    translatez(z):깊이(앞뒤)
+                    translatey3d(x,y,z):
+                    perspective(값):원근감 -> 변형 요소에 직접 지정(자기자신)
+                    translate(x[,y]): y값을 생략하면 x만 지정된다.
+                    
+                    단위 없음. 기본값(1)
+                    scale(x): 가로
+                    scale(y): 세로
+                    scale(z): 깊이
+                    scale(x,y,z): 
+                    scale(x[,y]): y를 생략하면 x에 비례로 값이 적용된다.
+                    
+                    
+                    단위: deg(각도)
+                    rotateX(deg): 3D
+                    rotateY(deg): 3D
+                    rotateZ(deg): 2D
+                    rotate3d(x,y,z,deg): 3D 
+                    rotate(deg): 2D 
+                    
+                    단위: deg(각도)
+                    skewX(deg):
+                    skewY(deg):
+                    skew(deg, deg):
+                    
+            2D 변환: x축, y축
+            
+            3D 변환: x축, y축, z축
+            perspective: 1000px; ->(속성) 부모 요소에 지정
+                값: px (%는 사용할 수 없다.)
+            perspective-origin: x축 y축; -> 변형의 기준
+            transform-origin: x축 y축; -> 변형의 기중
+                값: px, %, 키워드
+                x축: left, right, center
+                y축 top, bottom, center
+                
+                transform-style
+                backface-visibility
+                    
+                    
+                
+        */
         .outer {
             border: 1px solid black;
             /* perspective는 관점 속성으로 부모 요소에 지정한다. */
@@ -32,9 +90,15 @@
         */
 
         /* .outer에 마우스를 올렸을 때 .trftr의 위치를 가로로 100px 이동되게 하시오. */
-
-
+        .outer:hover .trftr {
+            transform: translateX(100px);
+            transform: translate(100px, 0);
+        }
+        
         /* .outer에 마우스를 올렸을 때 .trfsc의 크기를 너비/높이 모두 1.2로 지정하시오. */
+        .outer:hover .trfsc {
+            transform: scale(1.2);
+        }
 
 
         .trfro {
@@ -42,16 +106,25 @@
             transform-origin: 0 0;
         }
         /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
-
+        .outer:hover .trfro {
+            transform: rotate(60deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfrox를 x축 기준으로 60도 회전되도록 지정하시오. */
-
+        .outer:hover .trfrox {
+            transform: rotateX(60deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfroy를 y축 기준으로 90도 회전되도록 지정하시오. */
-
+        .outer:hover .trfroy {
+            transform: rotateY(90deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfsk를 y축 기준으로 10도 기울이시오. */
-
+        .outer:hover .trfsk {
+            transform: rotateY(10deg);
+            /* transform: rotate(0, 10deg); */
+        }
 
     </style>
 </head>

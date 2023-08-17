@@ -5,18 +5,21 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.7rem;
+}
 body,
 h1,
+h2,
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-
-img {
-    width: 100%;
-}
 
 .clearfix::after {
     content: '';
@@ -32,27 +35,27 @@ header {
 }
 
 .sec {
-    height: 800px;
+    /*     height: 800px; */
 }
 
-/* #sec1 {
+#sec1 {
     background-color: lightcoral;
-} */
+}
 
-/* #sec2 {
+#sec2 {
     background-color: lightgreen;
 }
- */
-/* #sec3 {
-    background-color: lightsalmon;
-} */
 
-/* #sec4 {
+#sec3 {
+    background-color: lightsalmon;
+}
+
+#sec4 {
     background-color: lightseagreen;
-} */
+}
 
 footer {
-    background-color: lightblue;
+    background-color: #333;
 }
 
 
@@ -72,12 +75,14 @@ header {
 .logo {
     float: left;
 }
+
 .logo img {
     width: 100%;
-    height:45px;
+    height: 45px;
     padding: 10px 0 0 0;
 
 }
+
 /* 내비게이션 */
 #gnb {
     float: right;
@@ -139,8 +144,9 @@ header {
     left: 0;
     top: 0;
     color: #fff;
-    background-color: #111;
+    background-color: #111c;
     padding: 8px 16px;
+
 
 }
 
@@ -152,23 +158,27 @@ header {
     display: block;
     width: 100%;
     margin: 16px 0;
-    padding:10px;
+    padding: 10px;
 }
+
 .btn {
     display: block;
     background: #111;
     color: #fff;
     margin: 16px 0;
-    padding:10px;
+    padding: 10px;
 }
-#sec4 a::after {
-    content: "";
-    display: block;
-    clear: both;
-}
+
 
 
 /* 푸터 */
 .copy {
     text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    color: #fff;
+    padding: 1rem 0;
+}
+.sns {
+    float: right;
 }

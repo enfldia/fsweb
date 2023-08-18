@@ -8,26 +8,30 @@
     <style>
         div {
             position: relative;
-            width:100px;
-            height:100px;
-            background: yellow;
+          /*   left: -150px;
+            top: -150px; */
+            width:338px;
+            height:335px;
+            /* background: yellow; */
             margin:20px;
-            left:0px; top:0px;
+            text-indent: -999em;
         }
 
-        .wrap {
+        /* .wrap {
+            
             width:300px;
             border:1px solid red;
             background: transparent;
             margin-bottom: 100px;
-        }
+        } */
 
         /* 애니메이션 실행 여부 */
         .wrap:hover .anim {
-            animation-play-state: running;
+            animation-play-state: paused;
         }
         .anim {
-            animation: rotate 1s infinite linear paused;
+            background: url(../assets/images/txt.png);
+            animation: rotate 20s infinite linear running;
         }
         @keyframes rotate {
             0% {transform: rotate(0);}

@@ -19,9 +19,43 @@
             animation-name: 애니메이션 이름;
             animation-duration: 애니메이션 시간(단위: s(초));
             animation-iteration-count: 애니메이션 반복 여부;
+                값: 숫자, infinite
             animation-direction: 애니메이션 방향;
+                값: normail,alternate, reverse, alternate-reverse
             animation-timing-function: 애니메이션 시간 함수;
+                값: ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier(0,0,1,1,)
             animation-delay: 애니메이션 지연 시간(단위: s(초));
+            
+            animatton-fill-mode: 값
+                값: none
+                    forwards: 100% 상태 유지, 반복 횟수는 1로 지정
+                    -> 구름, 텍스트
+                    backwaeds:0% 위치에서 시작
+                    both
+                    
+            animation-play-state: 실행 상태;
+                값: running, paused
+            
+            (속기형)
+            animation: name duration [delay] [timing-function]
+                        [iteration-count] [direction]
+            
+            animation: 이름 시간 [지연 시간] [가속도] [반복 횟수] [방향]
+                        
+            키프레임, 프레임 -> 애니메이션의 작업 단위
+            @keyframes name {CSS 속성}
+            
+            @keyframes 이름 {
+                from {시작 CSS}
+                to {끝 CSS}
+            }
+            
+            @keyframes 이름 {
+                0% {시작 CSS}
+                50% {중간 CSS}
+                50.55555{중간 CSS-소숫점 다섯 번째 자리 까지 가능}
+                100%{끝 CSS}
+            }
         */
 
 
@@ -43,10 +77,43 @@
                 100% {속성: 값;}
             }
         */
-
+        /* 
+            애니메이션의 이름 규칙
+            1. 영문의 대소문자 구별한다.
+            2.첫 글자는 영문자, -, _로 쓴다.
+            3.두 번째 글자부터 영문자, -, _, 숫자 사용
+        */
+        .anim{
+            /* animation-name: move;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+            
+            animation: move 4s linear 2s infinite ;
+        }
+        
         @keyframes move {
-            0% {left:0;}
-            100% {left:200px;}
+            0% {
+                left:0;
+                top: 0;
+            }
+            25% {
+                left:200px;
+                top:0;
+            }
+            50% {
+                left:200px;
+                top: 200px;
+            }
+            75% {
+                left:0;
+                top:200px;}
+            100% {
+                left:0px;
+                top: 0;
+            }
         }
 
     </style>

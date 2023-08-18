@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            position: relative;
+            width:178px;
+            height:100px;
+            background: url(../assets/www_ht_co_kr/bg-main0-0.png);
+            margin:20px;
+            left:0px; top:0px;
+            opacity: 0;
+        }
+
+        /* forwards를 사용할 때는 반복 횟수(infinite)를 쓰지 않는다. */
+        .anim {
+                animation: move 2s ;
+        }
+        @keyframes move {
+            0% {left:0px; opacity: 0;}
+            100% {left:200px; opacity: 1;}
+        }
+
+        /* 애니메이션이 재생되지 않을 때(시작 전, 종료 후 또는 둘 다) 요소의 스타일 지정 */
+        /* 시작(지연) -> 0% -> 100% -> 시작 */
+        .anim1 {animation-fill-mode: none;}
+        /* 시작(지연) -> 0% -> 100% */
+        .anim2 {animation-fill-mode: forwards;}
+        /* 0%(지연) -> 100% -> 시작 */
+        .anim3 {animation-fill-mode: backwards;}
+        /* 0%(지연) -> 100% */
+        .anim4 {animation-fill-mode: both;}
+
+    </style>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <h2>animation-fill-mode</h2>
+    <div class="anim anim1">none</div>
+    <div class="anim anim2">forwards</div>
+    <div class="anim anim3">backwards</div>
+    <div class="anim anim4">both</div>
+</body>
+</html>

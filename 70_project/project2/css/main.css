@@ -151,6 +151,9 @@ header {
 }
 
 /* 섹션3 */
+#sec3 li {
+    height: 550px;
+}
 
 
 /* 섹션4 */
@@ -179,6 +182,7 @@ header {
     color: #fff;
     padding: 1rem 0;
 }
-.sns {
+.sns li{
     float: right;
+    padding: 10px;
 }

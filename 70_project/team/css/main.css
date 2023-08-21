@@ -42,6 +42,18 @@ li {
 
 
 /* 작업중 */
+header {
+    background: lightblue;
+}
+.sec1 {
+    background: lightcoral;
+}
+.sec2 {
+    background: lightgreen;
+}
+.sec3 {
+    background: lightsalmon;
+}
 
 footer {
     background: #333;
@@ -54,8 +66,6 @@ h2 {
 .sec {
     height: 100vh;
     height: 931px;
-    border: 1px solid black;
-    background: red;
 }
 
 /* 헤더 */
@@ -81,7 +91,6 @@ h2 {
 }
 .logo {
     width: 320px;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +98,6 @@ h2 {
 
 #gbn {
     width: 680px;
-    border: 1px solid black;
 }
 
 #gbn>ul {
@@ -101,7 +109,6 @@ h2 {
     width: 170px;
     height: 100px;
     display: inline-block;
-    border: 1px solid black;
     text-align: center;
     line-height: 100px;
 }
@@ -115,7 +122,6 @@ h2 {
     display: none;
     height: 150px;
     background: #fff;
-    border: 1px solid black;
     line-height: 36px
 }
 .subn a {
@@ -124,12 +130,9 @@ h2 {
 .ms {
     width: 320px;
     display: flex;
-    border: 1px solid black;
 }
 
-.mbs {
-    border: 1px solid black;
-}
+
 
 .mbs ul {
     display: flex;
@@ -166,9 +169,7 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-.video {
-    border: 1px solid black;
-}
+
 
 /* 섹션3 */
 .sec3 img {
@@ -180,37 +181,44 @@ footer {
     width: 100%;
     height: 300px;
 }
-
+.bn a {
+    color: #000;
+}
 .bcon {
-    height: 150px;
+    height: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 1rem;
 
 }
 
 .bcon>li {
     width: 320px;
     text-align: center;
+    line-height: 20px;
+}
+
+
+.bmn {
+    display: inline-block;
+    height: 40px;
+    line-height: 50px;
+    font-size: 2rem;
+}
+
+.bsn li {
+    margin: 3px;
 }
 
 .copy {
     width: 100%;
-    height: 150px;
+    height: 100px;
     text-align: center;
 }
 
 .copy span {
     display: block;
-    margin: 36px
+    padding: 10px;
 }
 
-.bmn {
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    font-size: 2rem;
-}
-
-.bsn li {
-    margin: 2px;
-}

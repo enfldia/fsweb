@@ -110,8 +110,7 @@ header {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-top: -10px;
-    margin-left: -80px;
+    transform: translate(-50%, -50%);
     color: #ffffff;
 }
 
@@ -125,7 +124,6 @@ header {
 .sec234 li {
     float: left;
     width: 360px;
-    height: 240px;
     margin-right: 20px;
     margin-bottom: 16px;
 }
@@ -185,4 +183,7 @@ header {
 .sns li{
     float: right;
     padding: 10px;
+}
+.sns img {
+    width: 40px;
 }

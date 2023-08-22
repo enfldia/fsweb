@@ -1,0 +1,6 @@
+@charset "utf-8";        
+        
+        
+        
+        /* phone: 최대 600px -> 해상도가 600px 이하인 장치 */
+       body { background: yellow;}

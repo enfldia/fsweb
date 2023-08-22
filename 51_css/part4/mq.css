@@ -1,0 +1,21 @@
+@charset "utf-8";  
+@import url(phone.css);      
+@import url(tablet.css) (min-width:768px);
+@import url(desktop.css) (min-width:992px);
+        
+        /* phone: 최대 600px -> 해상도가 600px 이하인 장치 */
+        /* body { background: yellow;} */
+
+        /* tablet: 최소 768px -> 해상도가 768 이상인 장치*/
+        /* @media (min-width:768px) {
+            body {
+                background: green;
+            }
+        } */
+
+        /* desktop: 최소 992px -> 해상도가 992px 이상인 장치 */
+        /* @media (min-width:992px) {
+            body {
+                background: lightblue;
+            }
+        } */

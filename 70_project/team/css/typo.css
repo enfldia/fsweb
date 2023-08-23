@@ -1,1 +1,50 @@
 @charset "uft-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font: 1.6rem/1.8 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+
+h2{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+.wrap a {
+    color: #000;
+}
+.wrap a:hover {
+    color: #009223
+}
+.mainn {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.subn {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.bn a {
+    color: #fff;
+}
+.bn a:hover {
+    color: #009223;
+}
+.copy {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    color: #999;
+}

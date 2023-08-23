@@ -12,33 +12,58 @@
         }
 
         /* 
+            레이아웃 구현
+            1. flloat
+            2. flex
+            3. grid
+
+
             플렉스 박스(유연한 박스)
             주축과 교차축
                 flex-direction:row; 이면 주축 row, 교차축 column
-                flew-direction:column; 이면 주축 column, 교차축 row
+                flex-direction:column; 이면 주축 column, 교차축 row
 
             부모: 플렉스 컨테이너
-                1. display:flex;
-                2. flex-direction: 방향;
-                3. flex-wrap: 줄바꿈;
-                4. flex-flow: direction wrap
-                5. justify-content: 주축 정렬
-                6. align-items: 교차축 정렬
-                7. align-content: 교차축 블록 방향 정렬 (2개의 라인)
+            display:flex;
+                1. flex-direction: 방향;
+                값: row
+                    column
+                    row-reverse
+                    column-reverse
+
+                2. flex-wrap: 줄바꿈;
+                값: nowrap: 줄바꿈 하지 않음
+                    wrap: 줄바꿈
+                    wrap-reverse: 역방향 줄바꿈
+
+                3. 1,2번의 속기형 flex-flow: direction wrap
+                
+                4. justify-content: 주축 정렬
+                    값: flex-start. start: 시작
+                        flex-end, end: 끝
+                        center: 가운데
+                        space-between: 아이템을 시작과 끝을 배치 후 남은 공간을 균등 분배
+                        space-around: 아이템을 주변 공간을 균동하게 분배
+                        space-evenly: 아이템을 제외한 남은 공간을 균등하게 분배
+                
+                5. align-items: 교차축 정렬
+                
+                6. align-content: 교차축 블록 방향 정렬 (2개의 라인)
 
             자식: 플렉스 아이템
-                8. align-self: 교차축 정렬, align-items 보다 우선 적용된다.
-                9. flex-grow: 커진다.
-                10. flex-shrink: 작아진다.
-                11. flex-basis: 처음 크기
-                12. flex: grow shrink basis
-                13. order: 순서, 숫자가 작을수록 앞에 배치
+                7. align-self: 교차축 정렬, align-items 보다 우선 적용된다.
+                8. flex-grow: 커진다.
+                9. flex-shrink: 작아진다.
+                10. flex-basis: 처음 크기
+                11. 8,9,10의 속기형 -> flex: grow shrink basis
+                12. order: 순서, 숫자가 작을수록 앞에 배치
         */
 
 
         /* 부모 요소인 .container의 display를 flex로 적용해 보세요. */
         .container {
-            outline: 1px solid red;
+            outline: 10px solid red;
+            display: flex;
         }
 
         .container div {

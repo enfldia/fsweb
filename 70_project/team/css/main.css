@@ -1,9 +1,10 @@
 @charset "uft-8";
 @import url(typo.css);
+@import url(hp.css);
 
 /* 초기화 */
 
-* {
+/* * {
     box-sizing: border-box;
 }
 
@@ -39,7 +40,7 @@ li {
     display: block;
     clear: both;
 }
-
+ */
 
 /* 작업중 */
 header {
@@ -56,8 +57,22 @@ header {
 }
 
 footer {
-    background: #333;
+    background: #292929
+    ;
 }
+
+/* scroll_bar */
+body::-webkit-scrollbar {
+    width: 12px; /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #008060; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background-color: #f0f0f0;  }
 
 /* 공통 */
 h2 {
@@ -70,7 +85,7 @@ h2 {
 
 /* 헤더 */
 
-.wrap {
+/* .wrap {
     position: fixed;
     width: 100%;
     height: 100px;
@@ -160,7 +175,7 @@ h2 {
 
 .sns img {
     width: 25px;
-}
+} */
 
 /* 섹션1 */
 
@@ -177,7 +192,7 @@ h2 {
 }
 
 /* 푸터 */
-footer {
+/* footer {
     width: 100%;
     height: 300px;
 }
@@ -214,11 +229,11 @@ footer {
 .copy {
     width: 100%;
     height: 100px;
-    text-align: center;
+
 }
 
 .copy span {
     display: block;
     padding: 10px;
 }
-
+ */

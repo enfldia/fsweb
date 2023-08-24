@@ -36,6 +36,16 @@ h3 {
     font-size: 1.5rem;
     font-weight: 400;
 }
+.btn {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.tabc {
+    font-size: 1.8rem;
+}
+.btn label:hover {
+    color: #009223;
+}
 .bn a {
     color: #fff;
 }

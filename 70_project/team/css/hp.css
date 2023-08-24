@@ -28,16 +28,13 @@ li {
 }
 a {
     text-decoration-line: none;
+    color: #000;
 }
 li {
     list-style: none;
 }
 
-.clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
-}
+
 /* 헤더 */
 
 

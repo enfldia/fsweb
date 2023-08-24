@@ -226,6 +226,64 @@ h2 {
     justify-content: center;
 }
 
+/* 섹션4 */
+
+.sec4 {
+    display: flex;
+    justify-content: center;
+    outline: 1px solid red;
+
+}
+.tabs {
+    margin-top: 10%;
+    width:1440px;
+    outline: 1px solid red;
+
+}
+.tabmenu {
+    display: flex;
+    justify-content: center;
+    height: 48px;
+}
+.btn {
+    display: flex;
+    justify-content: space-around;
+    outline: 1px solid red;
+    width: 900px;
+}
+.btn label {
+    line-height: 48px;
+}
+.tabc img {
+    width: 500px;
+}
+.tabc {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+}
+.tabc li{
+    margin: 8px 0;
+    outline: 1px solid red;
+}
+.tabinner {
+    margin-top: 4%;
+    outline: 1px solid green;
+}
+.tabinner input {
+    display: none;
+}
+
+.tabinner input:checked + div {
+    display: block;
+}
+
+.tabinner div {
+    display: none;
+}
+
+
 /* 푸터 */
 /* footer {
     width: 100%;

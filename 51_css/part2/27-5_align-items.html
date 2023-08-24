@@ -43,12 +43,16 @@
         .wrap1 .container div {
             width:100px;
         }
+        /* 플렉스 아이탬의 height 지정 되면 - flex-start */
+        /* 플렉스 아이탬의 height 지정 않으면 - stretch*/
         /* 플렉스 컨테이너 크기 만큼 늘어남. */
         /* .ais에 플렉스 아이템의 height를 지정하면 늘어나지 않고, flex-start로 지정된다. */
         .ais {
+            align-items: normal;
+        }
+        .ais {
             align-items: stretch;
         }
-        
         
         /* (1) .aifs에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
         .aifs {
@@ -69,6 +73,9 @@
         /* (4) .aib에 플렉스 아이템을 텍스트 아래 기준선에 맞춰 정렬하기 위해 속성을 지정하시오. */
         .aib {
             align-items: baseline;
+        }
+        .wrap2 .aib div{
+            writing-mode: vertical-lr;
         }
 
 

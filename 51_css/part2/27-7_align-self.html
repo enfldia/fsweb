@@ -7,22 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            플렉스 컨테이너
+                display: flex;
+            플렉스 아이템
+                align-self: 교차축 정렬
+                    값: auto
+                        stretch
+                        flex-start
+                        flex-end
+                        center
+                        baseline
+                align-self 값은 지정하지 않으면,align-items 값을 상속 받는다.
+                flex-grow
+                flex-shrink
+                flex-basis
+                forder
+        */
         .container {
             display: flex;
             flex-wrap: wrap;
+            align-items: flex-end;
             border:1px solid orange;
+            height: 200px;
         }
 
         .container div {
             background-color: gray;
-        }
-
-        /* 교차축 세로 */
-        .wrap1 .container {
-            height:200px;
-        }
-        .wrap1 .container div {
-            width:100px;
+            width: 100px;
         }
 
         /* align-items보다 align-self가 우선적용된다. */
@@ -30,16 +42,24 @@
         .ass {align-self: stretch;}
 
         /* (1) .asfs에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
-
+        .asfs {
+            align-self: flex-start;
+        }
 
         /* (2) .asfe에 플렉스 아이템을 교차축의 끝에 정렬하기 위해 속성을 지정하시오. */
-
+        .asfe   {
+            align-self: flex-end;
+        }
 
         /* (3) .asc에 플렉스 아이템을 교차축의 가운데 정렬하기 위해 속성을 지정하시오. */
-
+        .asc {
+            align-self: center;
+        }
 
         /* (4) .asb에 플렉스 아이템을 텍스트 아래 기준선에 맞춰 정렬하기 위해 속성을 지정하시오. */
-
+        .asb {
+            align-self: baseline;
+        }
 
         .asb1 {font-size: 3rem;}
         .asb2 {font-size: 1rem;}

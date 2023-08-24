@@ -7,8 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            display:flex;
+                flex-dorection
+                flex-wrap
+                flex-flow
+                justify-content
+                    값: flex-start, flex-end, center, space-between,space-around, space-evenly
+                align-content
+                    값: stretch. flex-start, flex-end, center, space-between, space-around, space-evenly
+                align-items
+                    값: stertch, normal, flex-start, flex-end, center, 
+                    baseline
+                align-slef
+                flex-grow
+                flex-shrink
+                flex-basis
+                flex-order
+
+        */
         .container {
             display: flex;
+            /* align-itemssms flex-wrap의 상태와는 상관없이 사용한다. */
+            /* align-cotent는 반드시 flex-wrap:wrap; 인 상태에서 사용한다. */
+            /* nowrap 상태로 사용하면 stretch로 작동 된다.*/
+            /* nwopr시 shrink의 기본 값에 의에 수축된다. */
             flex-wrap: wrap;
             border:1px solid orange;
         }
@@ -27,24 +50,28 @@
         /* 플렉스 컨테이너 크기 만큼 늘어남. */
         /* 플렉스 아이템의 height를 지정하면 늘어나지 않고, flex-start로 지정된다. */
         /* align-content와 align-items를 동시 적용하면 align-content로 적용된다. */
-
+        /* .acs {align-content: stretch;} */
+        .acs {align-items: stretch;}
         /* (1) .acfs에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
-
+        /* .acfs {align-content: flex-start;} */
+        .acfs {align-items: flex-start;}
 
         /* (2) .acfe에 플렉스 아이템을 교차축의 끝에 정렬하기 위해 속성을 지정하시오. */
-
+        /* .acfe {align-content: flex-end;} */
+        .acfe {align-items: flex-end;}
 
         /* (3) .acc에 플렉스 아이템을 교차축의 가운데에 정렬하기 위해 속성을 지정하시오. */
-
+        /* .acc {align-content: center;} */
+        .acc {align-items: center;}
 
         /* (4) .acsb에 플렉스 아이템을 교차축의 시작과 끝에 붙이고 사이 간격을 동일하게 하기 위해 속성을 지정하시오. */
-
+        .acsb {align-content: space-between;}
 
         /* (5) .acsa에 플렉스 아이템 좌우 또는 상하 여백 크기를 동일하게 하기 위해 속성을 지정하시오. */
-
+        .acsa {align-content: space-around;}
 
         /* (6) .acse에 플렉스 아이템의 크기를 제외한 여백의 크기를 동일하게 하기 위해 속성을 지정하시오. */
-
+        .acse {align-content: space-evenly;}
 
 
         /* 교차축 가로 정렬 */
@@ -67,6 +94,17 @@
     <h2>교차축 세로 정렬</h2>
     <div class="wrap1">
         <div class="container acs">
+            <!-- align-items, align-contnet, align-self 의 공통점은 교차축 정렬이다. -->
+            <!-- 아이템이 두 줄 이상으로 표시되게 한다. -->
+            <!-- 한줄의 경우 align-items와 구별하기 힘들다. -->
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -85,8 +123,24 @@
             <div>6</div>
             <div>7</div>
             <div>8</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
         </div>
         <div class="container acfe">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -105,8 +159,25 @@
             <div>6</div>
             <div>7</div>
             <div>8</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            
         </div>
         <div class="container acsb">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -125,8 +196,24 @@
             <div>6</div>
             <div>7</div>
             <div>8</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
         </div>
         <div class="container acse">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -150,8 +237,24 @@
             <div>6</div>
             <div>7</div>
             <div>8</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
         </div>
         <div class="container acfs">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -170,8 +273,24 @@
             <div>6</div>
             <div>7</div>
             <div>8</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
         </div>
         <div class="container acc">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
             <div>1</div>
             <div>2</div>
             <div>3</div>
@@ -190,6 +309,14 @@
             <div>6</div>
             <div>7</div>
             <div>8</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
         </div>
         <div class="container acsa">
             <div>1</div>
@@ -200,8 +327,24 @@
             <div>6</div>
             <div>7</div>
             <div>8</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
         </div>
         <div class="container acse">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
             <div>1</div>
             <div>2</div>
             <div>3</div>

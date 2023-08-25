@@ -9,20 +9,138 @@
 </head>
 <body>
     <h1>표</h1>
-    <!-- 교재 19페이지에 있는 기본 표를 만들어 보세요. -->
+    <!-- 
+        필수
+        <table>:  표
+        <tr>: 행
+        <th rowspan="숫자" colspan="숫자">: 셀의 제목
+        <td rowspan="숫자" colspan="숫자">: 셀의 내용
+            rowspn="행병합"
+            colspan="열병합"
+        선택
+        <caption>: 표의 제목
+        <colgroup>: 열 그룹
+        <col>: colimn(열)
+        <thead>: 셀 제목 그룹
+        <tbody>: 셀 내용 그룹
+        <tfoot>: 그룹
+        
+        
+            <table>
+                <caption>
+                <colgroup>    
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>제목</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>내용</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>내용</td>
+                    </tr>
+                </tfoot>
+        
+    -->
 
     <h2>기본</h2>
     <table>
+        <!-- cpation태그는 반드시 table 바로 밑에 쓴다. -->
+        <caption>표의 제목</caption>
+        <colgroup>
+            <col>
+            <!-- col 3개 병합 -->
+            <col span="3">
+            <!-- 
+                <col>
+                <col> 
+                <col> 
+            -->
+            
+        </colgroup>
+        <tbody>
+            <tr>
+                <!-- scope=col 은 열 범위 -->
+                <th scope="col">번호</th>
+                <th scope="col">과목</th>
+                <th scope="col">이름</th>
+                <th scope="col">점수</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>HTML</td>
+                <td>홍길동</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>CSS</td>
+                <td>홍길도</td>
+                <td>92</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">평균</td>
+                <td>91</td>
+            </tr>
+        </tfoot>
     </table>
 
-    <h2>열 병합</h2>
-    <!-- 열을 병합할 때는 colspan 속성을 사용한다. -->
+    <hr>
+
     <table>
+        <!-- cpation태그는 반드시 table 바로 밑에 쓴다. -->
+        <caption>표의 제목</caption>
+        <tr>
+            <!-- scope=row  행 범위 -->
+            <th scope="row">번호</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <th scope="row">과목</th>
+            <td>HTML</td>
+            <td>CSS</td>
+            <td>JS</td>
+        </tr>
+        
     </table>
+
+    <hr>
 
     <h2>행 병합</h2>
-    <!-- 행을 병합할 때는 rowspan 속성을 사용한다. -->
     <table>
+        <tr>
+            <!-- 1행과 2행 2개를 병합 -->
+            <td rowspan="2">1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>열 병합</h2>
+    <table>
+        <tr>
+            <!-- 1열과 2열 2개를 병합 -->
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td colspan="2">3</td>
+        </tr>
     </table>
 </body>
 </html>

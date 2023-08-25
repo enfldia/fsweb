@@ -287,7 +287,9 @@ h2 {
 .tabinner div {
     display: none;
 }
-
+#tab3 img {
+    filter: saturate(0%);
+}
 
 /* 푸터 */
 /* footer {

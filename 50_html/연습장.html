@@ -3,47 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모달 팝업,탭,슬라이드</title>
+    <title>Document</title>
     <style>
-        .popup {
-            width: 600px;
-            height: 300;
-            background-color: #ff0;
-            padding: 10px 20px;
-            border-style: solid;
+        * {
+    box-sizing: border-box;
+}
 
-        }
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+body,
+nav,
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+
+}
+a {
+    text-decoration-line: none;
+    color: #000;
+}
+li {
+    list-style: none;
+}
+
+
+/* 헤더 */
+
+
+.wrap {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+.logo {
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gbn {
+    width: 680px;
+}
+
+#gbn>ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainn {
+    width: 170px;
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+}
+
+.mainn a {
+    font-size: 2.5rem;
+    ;
+}
+
+.subn {
+    display: none;
+    height: 150px;
+    background: #fff;
+    line-height: 36px
+}
+.subn a {
+    font-size: 1.7rem;
+}
+.ms {
+    margin-right: 50px;
+    width: 320px;
+    display: flex;
+}
+
+
+
+.mbs ul {
+    display: flex;
+}
+
+.mbs li {
+    width: 80px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.sns ul {
+    width: 160px;
+    display: flex;
+}
+
+.sns li {
+    width: 40px;
+    height: 100px;
+    text-align: center;
+    line-height: 112px;
+}
+
+
+.sns img {
+    width: 25px;
+}
+#header > .gbn.on::before {
+    display: block;
+}
     </style>
+    <script>
+        let gnb = document.querySelectorAll(".gbn li")
+        let gnbElement = document.querySelector(".gbn")
+
+        for (let i = 0; i < gnb.length; i++) {
+            gnb[i].addEventListener("mouseover",() => {
+                gnbElement.classList.add("on")
+            })
+        }
+
+        let headerElement = document.querySelector("#header")
+
+        header.addEventListener("mouseout",(e) =>{
+            if (e.target.id == "gnb" ){
+                gnbElement.classList.remove("on")
+            }
+        })
+    </script>
+    </script>
 </head>
 <body>
-    <!-- 팝업 -->
-    <div><a href="#">모달 팝업</a></div>
-    <div class="modal">
-        <div class="popup">
-            <h2>제목</h2>
-            <p>내용</p>
-            <but class="button">닫기</but>
-        </div>
-    </div>
-
-    <!-- 탭 -->
-    <div class="tabs">
-        <ul class="button">
-            <li class="tab1"><a href="#">탭1</a></li>
-            <li class="tab2"><a href="#">탭2</a></li>
-        </ul>
-        <div id="tab1">내용</div>
-        <div id="tab2">내용</div>
-    </div>
-
-    <!-- 슬라이드 -->
-    <div class="slide">
-        <ul>
-            <li><a href="#"><img src="1" alt=""></a></li>
-            <li><a href="#"><img src="2" alt=""></a></li>
-            <li><a href="#"><img src="3" alt=""></a></li>
-            <li><a href="#"><img src="1" alt=""></a></li>
-        </ul>
-    </div>
+    <div class="wrap">
+        <h1 class="logo"><a href="#"><img src="images/main/logo_sub_header.png" alt="sub header img"></a>
+        </h1>
+        <div class="container ">
+            <nav id="gbn">
+                <ul>
+                    <li class="mainn">
+                        <a href="#">회사 소개</a>
+                        <ul class="subn subn1">
+                            <li><a href="#">소개1</a></li>
+                            <li><a href="#">소개2</a></li>
+                            <li><a href="#">소개3</a></li>
+                            <li><a href="#">소개4</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainn">
+                        <a href="#">제품 소개</a>
+                        <ul class="subn subn2">
+                            <li><a href="#">소개1</a></li>
+                            <li><a href="#">소개2</a></li>
+                            <li><a href="#">소개3</a></li>
+                            <li><a href="#">소개4</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainn">
+                        <a href="#">가맹점 모집</a>
+                        <ul class="subn subn3">
+                            <li><a href="#">모집1</a></li>
+                            <li><a href="#">모집2</a></li>
+                            <li><a href="#">모집3</a></li>
+                            <li><a href="#">모집4</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainn">
+                        <a href="#">공지사항</a>
+                        <ul class="subn subn4">
+                            <li><a href="#">공지사항1</a></li>
+                            <li><a href="#">공지사항2</a></li>
+                            <li><a href="#">공지사항3</a></li>
+                            <li><a href="#">공지사항4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav><!-- //.gbn -->
+        </div><!-- //.container -->
 </body>
 </html>

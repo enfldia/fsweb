@@ -264,11 +264,13 @@ h2 {
     flex-wrap: wrap;
 }
 .tabc li{
-    
     margin: 8px 0;
     background: #fff;
 }
-
+.tabc li:hover {
+    outline: 4px solid #008060;
+    transition-duration: 0.3s;
+}
 .tabc span {
     display: block;
     text-align: center;

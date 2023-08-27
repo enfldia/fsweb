@@ -45,22 +45,20 @@ li {
     z-index: 999;
     display: flex;
     justify-content: space-around;
-    
+    overflow: hidden;
 }
 
 .wrap:hover {
     transition-duration: 0.3s;
     background: #fff;
+    height: 250px;
 }
-.wrap:hover .subn {
-    transition-duration: 0.3s;
-    display: block;
-}
+
 .logo {
     width: 320px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    line-height: 100px;
 }
 
 #gbn {
@@ -86,10 +84,8 @@ li {
 }
 
 .subn {
-    display: none;
     height: 150px;
-    background: #fff;
-    line-height: 36px
+    line-height: 32px
 }
 .subn a {
     font-size: 1.7rem;

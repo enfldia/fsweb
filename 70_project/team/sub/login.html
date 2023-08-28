@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <!-- 브라우저 탭 아이콘 -->
+    <!-- https://stay-present.tistory.com/14 -->
+    <!-- 서브웨이 홈페이지 -> 페이지 소스 보기 -> 30번째 줄 -->
+    <!-- <link rel="icon" href="images/subway_favicon.ico"> -->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="./../index.html"><img src="../images/main/logo_sub_header.png" alt="sub header img"></a>
+            </h1>
+            <div class="container ">
+                <nav id="gbn">
+                    <ul>
+                        <li class="mainn">
+                            <a href="./../sub/sub1.html">회사 소개</a>
+                            <ul class="subn subn1">
+                                <li><a href="#">서브웨이 약속</a></li>
+                                <li><a href="#">NOW 핵심 요소</a></li>
+                                <li><a href="#">샌드위치 아티스트</a></li>
+                                <li><a href="#">채용</a></li>
+                            </ul>
+                        </li>
+                        <li class="mainn">
+                            <a href="./../sub/sub2.html">제품 소개</a>
+                            <ul class="subn subn2">
+                                <li><a href="#">샌드위치</a></li>
+                                <li><a href="#">랩/기타</a></li>
+                                <li><a href="#">샐러드</a></li>
+                                <li><a href="#">아침메뉴</a></li>
+                                <li><a href="#">스마일 썹</a></li>
+                                <li><a href="#">단체메뉴</a></li>
+                            </ul>
+                        </li>
+                        <li class="mainn">
+                            <a href="./../sub/sub3.html">가맹점 모집</a>
+                            <ul class="subn subn3">
+                                <li><a href="#">미국 1위 프랜차이즈</a></li>
+                                <li><a href="#">브랜드 경쟁력</a></li>
+                                <li><a href="#">가맹점 개설 절차</a></li>
+                                <li><a href="#">예상 투자비용</a></li>
+                            </ul>
+                        </li>
+                        <li class="mainn">
+                            <a href="./../sub/sub4.html">공지사항</a>
+                            <ul class="subn subn4">
+                                <li><a href="#">전체보기</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">뉴스</a></li>
+                                <li><a href="#">채널</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav><!-- //.gbn -->
+            </div><!-- //.container -->
+            <div class="ms">
+                <div class="mbs">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+                <div class="sns">
+                    <ul>
+                        <li><a href="#"><img src="../images/main/sns_icon_in.png" alt="instar"></a></li>
+                        <li><a href="#"><img src="../images/main/sns_icon_yt.png" alt="youtube"></a></li>
+                        <li><a href="#"><img src="../images/main/sns_icon_fb.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="../images/main/sns_icon_tw.png" alt="tweeter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- //.wrap -->
+    </header>
+    <!-- // 헤더-->
+
+    <!-- 로그인 섹션 -->
+
+    <section id="login_sec">
+        <!-- 로그인 창 -->
+        <div class="wrap_login">
+            <!-- 로그인 박스 -->
+            <div class="panel_box">
+                <div class="boxbox"></div>
+                <!-- 로그인 폼 항목 -->
+                <form action="login_jsp" method="post" autocomplete="on" class="login_form">
+                    <h3 class="login_h3"><br>LOGIN</h3>
+                    <label for="user_id" name="id"></label>
+                    <span class="boxid"></span><input type="text" name="id" id="user_id" placeholder="이메일 아이디를 입력하세요.">
+                    <br>
+                    <label for="user_password" name="password"></label>
+                    <span class="boxps"></span><input type="password" name="password" id="user_password"
+                        placeholder="비밀번호를 입력하세요."> <br>
+                    <input type="checkbox" class="checkbox_bold"> <span class="checkbox_bold2">이메일 아이디 저장</span> <br>
+                    <span><a href="#">아이디 찾기</a></span>ㅣ
+                    <span><a href="#">비밀번호 찾기</a></span>ㅣ
+                    <span><a href="#">회원가입</a></span> <br>
+                    <input type="submit" class="login_button" value="로그인">
+                </form>
+
+                <div class="login_image_slide">
+                    <ul class="login_image_slide_ul">
+                        <li><a href=""><img src="../images/sub5/slide1.png" alt="슬라이드1"></a></li>
+                        <li><a href=""><img src="../images/sub5/slide2.png" alt="슬라이드2"></a></li>
+                        <li><a href=""><img src="../images/sub5/slide3.png" alt="슬라이드3"></a></li>
+                        <li><a href=""><img src="../images/sub5/slide1.png" alt="슬라이드1=4"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- //..로그인 섹션 -->
+
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="bn">
+            <ul class="bcon">
+                <li>
+                    <a href="./../sub/sub1.html" class="bmn">회사 소개</a>
+                    <ul class="bsn bsn1">
+                        <li><a href="#">서브웨이 약속</a></li>
+                        <li><a href="#">NOW 핵심 요소</a></li>
+                        <li><a href="#">샌드위치 아티스트</a></li>
+                        <li><a href="#">채용</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./../sub/sub2.html" class="bmn">제품 소개</a>
+                    <ul class="bsn bsn2">
+                        <li><a href="#">샌드위치</a></li>
+                        <li><a href="#">랩/기타</a></li>
+                        <li><a href="#">샐러드</a></li>
+                        <li><a href="#">아침메뉴</a></li>
+                        <li><a href="#">스마일 썹</a></li>
+                        <li><a href="#">단체메뉴</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./../sub/sub3.html" class="bmn">가맹점 모집</a>
+                    <ul class="bsn bsn3">
+                        <li><a href="#">미국 1위 프랜차이즈</a></li>
+                        <li><a href="#">브랜드 경쟁력</a></li>
+                        <li><a href="#">가맹점 개설 절차</a></li>
+                        <li><a href="#">예상 투자비용</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./../sub/sub4.html" class="bmn">공지 사항</a>
+                    <ul class="bsn bsn4">
+                        <li><a href="#">전체보기</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">뉴스</a></li>
+                        <li><a href="#">채널</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- //.bn -->
+        <div class="copy">
+            <p>
+                <span>서울시 서초구 강남대로 535 프린스빌딩 15층 대표 : INSOO CHO(인수조) 전화 : 02-797-5036 사업자등록번호 : 101-84-04143</span>
+                <span>SUBWAY® is a Registered Trademark of Subway IP LLC. © 2021 Subway IP LLC. All Rights
+                    Reserved</span>
+            </p>
+        </div>
+    </footer>
+    <!-- //..푸터 -->
+</body>
+
+</html>

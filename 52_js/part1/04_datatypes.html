@@ -35,8 +35,50 @@
         // null
 
         // 출력
+        // 데이터
+        var a = '십';
+        var b = 'ten';
+        var c = '10';
+        var d = 10;
+        var e = true;
+        var f = false;
+        var g = undefined;
+        var h = null;
 
-    </script>
+        // .write() 내부에서 HTML을 인식한다.
+        document.write(a, '<br>');
+        document.write(b, '<br>');
+        document.write(c, '<br>');
+        document.write(d, '<br>');
+        document.write(e, '<br>');
+        document.write(f, '<br>');
+        document.write(g, '<br>');
+        document.write(h, '<br>');
+
+        document.write(a,'<br>',b,'<br>',c,'<br>',d,'<br>',e,'<br>',f,'<br>',g,'<br>',h,'<hr>')
+        // + 는 문자열 연결 연산자
+        document.write(a+'<br>'+b+'<br>'+c+'<br>'+d+'<br>'+e+'<br>'+f+'<br>'+g+'<br>'+h,'<hr>')
+
+        // 보간법: 변수는 ${변수}
+        // 백틱(`) -> 백틱안에 변수(표선식)와 문자열을 쓸 수 있다.
+        document.write(
+            `<hr> ${a}<br>${b}<br>${c}<br>${d}<br>${f}<br>${e}<br>${g}<br>${h}<br>`
+        )
+
+        // 자바스크립트는 대소문자 구별한다.
+        // 예약어(키워드): true, false
+
+        // undefined: 선언 후 할당하지 않은 값;
+        var undef;
+        document.write(`<hr> undef = ${undef}`)
+        
+        // 키워드(예약어)는 변수 이름으로 사용할 수 없다.
+        var nu = 10;
+        // null은 빈 값
+        nu = null;
+        nu = '';
+        document.write(`<hr> nu = ${nu}`)
+</script>
 </body>
 
 </html>

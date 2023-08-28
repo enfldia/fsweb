@@ -62,6 +62,11 @@
             형식:
             요소.style.속성 = 값;
         */
+        var red = document.querySelector('.red')
+        
+        /* 으로 변수를 지정해서 사용하면 수정 보안의 편의성이 오르고, 작업속도 증가 등
+        장점을 갖는다. */
+
 
         // 요소 선택
         // 객체.메서드()
@@ -69,17 +74,32 @@
         // 자바 스크립트의 문자열은 따옴표('' 또는 "")로 묶는다.
         document.write(document.getElementById('blue'));
         // console.log(document.getElementById('blue'));
+
         // console.log는 개발자 모드 console 탭에서 확인할 수 있다.
+
         document.getElementById('blue').style.color = 'blue';
         // CSS의 표현으로는 #blue {속성:값} 이다.
         // CSS의 표현으로는 #blue {color:blue} 이다.
+        
         document.getElementsByClassName('red')[0].style.color= 'red';
         // document.getElementsByClassName('red').item(0).style.color='red';
         document.getElementsByTagName('p')[3].style.color = 'orange';
 
-        document.querySelector('#blue').style.border = '1px solid red';
-        document.querySelectorAll('p')[0].style.border = '1px solid blue';
         // querySelectorAll()을 사용시 [], item() 으로 몇 번째인지 지정해줘야한다.
+        document.querySelectorAll('p')[0].style.border = '1px solid red';
+        document.querySelector('.red').style.border = '1px solid red';
+        document.querySelector('.red').style.fontSize = '20px';
+        document.querySelector('.red').style.background = 'yellow';
+        
+        /*   
+            HTML 태그의 내용을 변경
+            요소.innerText: ~안에 텍스트 (태그 인식x)
+            요소.innerHTML: ~안에 HTML태그(태그 인식o)
+        */
+        document.querySelector('.red').innerText = '<h3>yellow</h3>';
+        // <h3></h3>도 문자로 인식한다.
+        document.querySelector('.red').innerHTML = '<h3>yellow</h3>';
+        // <h3></h3>를 태그로 인식한다.
         
     </script>
 </body>

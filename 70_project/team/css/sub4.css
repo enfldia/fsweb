@@ -1,0 +1,375 @@
+@charset "UTF-8";
+@import url(typo.css);
+@import url(hp.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    background-color: #fff;
+    z-index: 2;
+}
+
+a {
+    text-decoration: 0;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+.notice_section {
+    /* border: 5px solid red; */
+    padding-top: 150px;
+    /* width: 1920px; */
+    /* width: 100%; */
+    height: 2060px;
+    background-color: #eee;
+}
+
+.text_box {
+    /* border: 2px solid pink; */
+    /* width: 1920px; */
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.text_box h3 {
+    font-size: 36px;
+}
+
+.text_box p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+/* 검색어입력 */
+
+.search {
+    position: relative;
+    height: 35px;
+    /* margin-top: 10px; */
+
+    /* border: 1px solid pink; */
+    /* text-align: right; */
+    /* display: inline-block; */
+}
+
+.search_form {
+    position: absolute;
+    left: 83%;
+    top: 70%;
+    /* width: 10; */
+    height: 25px;
+}
+
+.search>img {
+    position: absolute;
+    left: 81.5%;
+    top: 70.5%;
+    width: 18px;
+    height: 18px;
+}
+
+.button {
+    text-align: center;
+    /* margin-top: 16px 0; */
+}
+
+.button>li {
+    /* border: 1px solid #777; */
+    display: inline-block;
+    /* margin-top: 16px 0; */
+    padding: 15px 20px;
+    font-size: 18px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+#tab_content {
+    /* width: 50%; */
+    height: 2000px;
+    background-color: black;
+    /* border: 255px solid black; */
+}
+
+.tab_box li {
+    margin: 0 2px;
+}
+
+.tab_box li:nth-last-of-type(4) {
+    /* font-weight: bold; */
+    background-color: #FFCE32;
+    /* background-color: #009223; */
+}
+
+.news_all_box {
+    /* width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* background-color: #fff; */
+}
+
+.news_all_box li {
+    margin-top: 25px;
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    /* border: 1px solid black; */
+    box-shadow: 5px 10px 8px 5px #ccc;
+    background-color: #fff;
+}
+
+
+
+.page_slot {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50px;
+    letter-spacing: 8px;
+}
+
+.page_slot a:nth-of-type(1) {
+    letter-spacing: 50px;
+}
+
+.page_slot a:nth-of-type(11) {
+    margin-right: 50px;
+}
+
+
+
+
+#tab_notice {
+    display: none;
+}
+
+#tab_news {
+    display: none;
+}
+
+#tab_channel {
+    display: none;
+}
+
+/* .news_all_box li:nth-last-of-type(1) {
+    
+} */
+
+h3>img:hover {
+    animation-name: imgimg;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-delay: .0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.news_all_box .tab_sig:hover {
+    animation-name: imgimg;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-delay: .0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.news_all_box li:hover {
+    animation-name: liboxbox;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-delay: .0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+/* 호버하면 다른 요소 애니메이션 효과 어케 하는지 봐야됨 */
+.news_all_box li:hover>.tab_sig {
+    animation-name: imgimg;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-delay: .0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.tab_image {
+    width: 100%;
+    height: 60%;
+    border-radius: 0 0 15px 15px;
+    margin-top: 74.5px;
+    /* vertical-align: bottom; */
+    /* text-align: bottom; */
+    /* margin: 0 auto; */
+}
+
+.tab_image_ready {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes imgimg {
+    0% {
+        scale: 1.0
+    }
+
+    100% {
+        scale: 1.05
+    }
+}
+
+@keyframes liboxbox {
+    0% {
+        scale: 1.0;
+    }
+
+    100% {
+        scale: 1.01;
+        translate: 0 -10px;
+        box-shadow: 5px 10px 8px 12px #bbb;
+
+    }
+}
+
+.news_all_box {
+    text-align: center;
+    margin: 0 100px;
+}
+
+
+h3>img {
+    position: absolute;
+    left: 40.5%;
+    top: 14.5%;
+}
+
+.tab_sig {
+    position: relative;
+    z-index: 0;
+    left: -150px;
+    padding: 0;
+    margin: 0;
+}
+
+/* 탭 창 */
+
+.news_all_box span {
+    position: relative;
+    left: 6%;
+    /* line-height: 50px; */
+}
+
+.tab_notice {
+    /* display: block; */
+    display: none;
+}
+
+.tab_news {
+    /* display: block; */
+    display: none;
+}
+
+.tab_channel {
+    /* display: block; */
+    display: none;
+}
+
+.page_slot span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #009923;
+    
+}
+
+/* 모달 창 */
+
+.modal_container {
+    background-color: #fff;
+    border: 3px solid #85c441;
+    /* box-shadow: 5px 5px 5px 1px #85c441; */
+    border-radius: 15px;
+    position: fixed;
+    width: 1400px;
+    height: 800px;
+    left: calc(50% - 700px);
+    top: calc(50% - 350px);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.modal_box {
+    /* position: absolute; */
+    /* z-index: 9999999; */
+    width: 1400px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: space-around;
+}
+
+.modal_box > li {
+    position: absolute;
+    /* z-index: 9999999; */
+    /* text-align: center; */
+    /* vertical-align: bottom; */
+}
+
+.modal_box img {
+    width: 1200px;
+    height: 600px;
+    border-radius: 15px;
+}
+
+.modal_container {
+    display: none;
+}
+
+.modal1 {
+    display: none;
+}
+
+.modal2 {
+    display: none;
+}
+
+.modal3 {
+    display: none;
+}
+
+.modal4 {
+    display: none;
+}
+
+.modal5 {
+    display: none;
+}
+
+.modal6 {
+    display: none;
+}
+
+.modal_close {
+    font-size: 24px;
+    margin-top: 30px;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #fff;
+    background-color: #aaa;
+    /* vertical-align: bottom; */
+    /* text-align: bottom; */
+}
+
+.modal_close:hover {
+    background-color: #009223;
+}

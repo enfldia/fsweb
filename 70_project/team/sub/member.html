@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <!-- <link rel="icon" href="images/subway_favicon.ico"> -->
+    <link rel="stylesheet" href="../css/member.css">
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="./../index.html"><img src="../images/main/logo_sub_header.png" alt="sub header img"></a>
+            </h1>
+            <div class="container ">
+                <nav id="gbn">
+                    <ul>
+                        <li class="mainn">
+                            <a href="./../sub/sub1.html">회사 소개</a>
+                            <ul class="subn subn1">
+                                <li><a href="#">서브웨이 약속</a></li>
+                                <li><a href="#">NOW 핵심 요소</a></li>
+                                <li><a href="#">샌드위치 아티스트</a></li>
+                                <li><a href="#">채용</a></li>
+                            </ul>
+                        </li>
+                        <li class="mainn">
+                            <a href="./../sub/sub2.html">제품 소개</a>
+                            <ul class="subn subn2">
+                                <li><a href="#">샌드위치</a></li>
+                                <li><a href="#">랩/기타</a></li>
+                                <li><a href="#">샐러드</a></li>
+                                <li><a href="#">아침메뉴</a></li>
+                                <li><a href="#">스마일 썹</a></li>
+                                <li><a href="#">단체메뉴</a></li>
+                            </ul>
+                        </li>
+                        <li class="mainn">
+                            <a href="./../sub/sub3.html">가맹점 모집</a>
+                            <ul class="subn subn3">
+                                <li><a href="#">미국 1위 프랜차이즈</a></li>
+                                <li><a href="#">브랜드 경쟁력</a></li>
+                                <li><a href="#">가맹점 개설 절차</a></li>
+                                <li><a href="#">예상 투자비용</a></li>
+                            </ul>
+                        </li>
+                        <li class="mainn">
+                            <a href="./../sub/sub4.html">공지사항</a>
+                            <ul class="subn subn4">
+                                <li><a href="#">전체보기</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">뉴스</a></li>
+                                <li><a href="#">채널</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav><!-- //.gbn -->
+            </div><!-- //.container -->
+            <div class="ms">
+                <div class="mbs">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+                <div class="sns">
+                    <ul>
+                        <li><a href="#"><img src="../images/main/sns_icon_in.png" alt="instar"></a></li>
+                        <li><a href="#"><img src="../images/main/sns_icon_yt.png" alt="youtube"></a></li>
+                        <li><a href="#"><img src="../images/main/sns_icon_fb.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="../images/main/sns_icon_tw.png" alt="tweeter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- //.wrap -->
+    </header>
+    <!-- // 헤더-->
+
+    <!-- 회원가입 섹션 -->
+
+
+
+    <section class="regist_section">
+        <div class="wrap_regist">
+            <div class="boxbox"></div>
+            <form action="registration_jsp">
+                <div class="form_box">
+                    <h3>회원가입</h3>
+                    <p>서브웨이 홈페이지 신규 가입</p>
+                    <label for="user_id" name="id"></label>
+                    <span class="boxid"></span><input type="text" name="id" id="user_id" class="box"
+                        placeholder="이메일 아이디"> <br>
+                    <span class="boxps"></span><input type="password" name="ps" class="box" id="user_password"
+                        placeholder="비밀번호"> <br>
+                    <span class="boxpscheck"></span><input type="password" name="ps_check" class="box"
+                        id="user_password_check" placeholder="비밀번호 확인"> <br>
+                    <span class="boxphone"></span><input type="phone" name="phone" class="box" id="user_phone"
+                        placeholder="휴대폰 번호"> <br>
+                    <span class="boxborn"></span><input type="text" name="born" class="box" class="box" id="user_born"
+                        placeholder="생년월일"> <br>
+
+                    <span class="boxfavmenu"></span><input type="button" name="favmenu" class="box" id="btn"
+                        value="가장 좋아하는 메뉴"> <br>
+                    <!-- 가장 좋아하는 메뉴 버튼 -->
+
+                    <div class="favorite_menu_box">
+                        <div class="favorite_menu_image">
+                            <img class="egg_display" src="../images/sub5/a_sandwich_egg.png" alt="빵1">
+                            <img class="cs_display" src="../images/sub5/a_sandwich_chickenslice.png" alt="빵2">
+                            <img class="tuna_display" src="../images/sub5/a_sandwich_tuna.png" alt="빵3">
+                            <img class="ppb_display" src="../images/sub5/a_sandwich_pulledporkbarbecue.png" alt="빵4">
+                            <img class="sc_display" src="../images/sub5/a_sanwich_subwayclub.png" alt="빵5">
+                            <img class="rc_display" src="../images/sub5/a_sanwich_roastedchicken.png" alt="빵6">
+                            <img class="cba_display" src="../images/sub5/a_sandwich_chickenbaconavocado.png" alt="빵7">
+                            <img class="rbc_display" src="../images/sub5/a_sandwich_rotisseriebarbecuechicken.png"
+                                alt="빵8">
+                            <img class="ns_display" src="../images/sub5/a_sandwich_newshrimp.png" alt="빵9">
+                        </div>
+                    </div>
+                    <span class="boxfavmenu">이메일수신</span> 예<input type="radio" name="email_receive" id="email_receive"
+                        value="er_y">
+                    아니오<input type="radio" name="email_receive" id="email_receive" value="er_n"> <br>
+                    <span class="boxfavmenu">&nbsp;&nbsp;SMS수신&nbsp;</span> 예<input type="radio"
+                        name="sms_receive_check" id="user_id" value="SNS수신">
+                    아니오<input type="radio" name="sms_receive_check" id="user_id" value="sms_receive"> <br>
+                    <input type="submit" class="complete_button" value="회원가입 완료">
+                </div>
+            </form>
+        </div>
+
+        <div id="modal_box">
+            <div class="popup">
+                <div class="modal_menu_box">
+                    <ul class="modal_ul">
+                        <li class="eggmayo">
+                            <img src="../images/sub5/b_sandwich_egg.png" alt="빵1">
+                            <h4>에그마요</h4>
+                            <p>Egg Mayo</p>
+                        </li>
+                        <li class="chickenslice">
+                            <img src="../images/sub5/b_sandwich_chickenslice.png" alt="빵2">
+                            <h4>치킨 슬라이스</h4>
+                            <p>Chicken Slice</p>
+                        </li>
+                        <li class="tuna">
+                            <img src="../images/sub5/b_sandwich_tuna.png" alt="빵3">
+                            <h4>참치</h4>
+                            <p>Tuna</p>
+                        </li>
+                        <li class="pulledporkbarbecue">
+                            <img src="../images/sub5/b_sandwich_pulledporkbarbecue.png" alt="빵4">
+                            <h4>풀드 포크 바비큐</h4>
+                            <p>Pulled Pork Barbecue</p>
+                        </li>
+                        <li class="subwayclub">
+                            <img src="../images/sub5/b_sanwich_subwayclub.png" alt="빵5">
+                            <h4>서브웨이 클럽</h4>
+                            <p>Subway Club™</p>
+                        </li>
+                        <li class="roastedchicken">
+                            <img src="../images/sub5/b_sanwich_roastedchicken.png" alt="빵6">
+                            <h4>로스트 치킨</h4>
+                            <p>Roasted Chicken</p>
+                        </li>
+                        <li class="chickenbaconavocado">
+                            <img src="../images/sub5/b_sandwich_chickenbaconavocado.png" alt="빵7">
+                            <h4>치킨 베이컨 아보카도</h4>
+                            <p>Chicken Bacon Avocado</p>
+                        </li>
+                        <li class="rotisseriebarbecuechicken">
+                            <img src="../images/sub5/b_sandwich_rotisseriebarbecuechicken.png" alt="빵8">
+                            <h4>로티세리 바비큐 치킨</h4>
+                            <p>Rotisserie Barbecue Chicken</p>
+                        </li>
+                        <li class="shrimp">
+                            <img src="../images/sub5/b_sandwich_newshrimp.png" alt="빵9">
+                            <h4>쉬림프</h4>
+                            <p>Shrimp</p>
+                        </li>
+                    </ul>
+                </div>
+                <label for="modal_close" class="modal_close"></label>
+                <input type="button" id="modal_close" class="modal_close" name="modal_close" value="닫기">
+                <!-- test -->
+                <!-- <button class="exit_btn">
+                x
+            </button> -->
+            </div>
+
+            <!-- 닫기 버튼 -->
+        </div>
+    </section>
+
+
+
+    <!-- //. 회원가입 섹션 -->
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="bn">
+            <ul class="bcon">
+                <li>
+                    <a href="./../sub/sub1.html" class="bmn">회사 소개</a>
+                    <ul class="bsn bsn1">
+                        <li><a href="#">서브웨이 약속</a></li>
+                        <li><a href="#">NOW 핵심 요소</a></li>
+                        <li><a href="#">샌드위치 아티스트</a></li>
+                        <li><a href="#">채용</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./../sub/sub2.html" class="bmn">제품 소개</a>
+                    <ul class="bsn bsn2">
+                        <li><a href="#">샌드위치</a></li>
+                        <li><a href="#">랩/기타</a></li>
+                        <li><a href="#">샐러드</a></li>
+                        <li><a href="#">아침메뉴</a></li>
+                        <li><a href="#">스마일 썹</a></li>
+                        <li><a href="#">단체메뉴</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./../sub/sub3.html" class="bmn">가맹점 모집</a>
+                    <ul class="bsn bsn3">
+                        <li><a href="#">미국 1위 프랜차이즈</a></li>
+                        <li><a href="#">브랜드 경쟁력</a></li>
+                        <li><a href="#">가맹점 개설 절차</a></li>
+                        <li><a href="#">예상 투자비용</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./../sub/sub4.html" class="bmn">공지 사항</a>
+                    <ul class="bsn bsn4">
+                        <li><a href="#">전체보기</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">뉴스</a></li>
+                        <li><a href="#">채널</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- //.bn -->
+        <div class="copy">
+            <p>
+                <span>서울시 서초구 강남대로 535 프린스빌딩 15층 대표 : INSOO CHO(인수조) 전화 : 02-797-5036 사업자등록번호 : 101-84-04143</span>
+                <span>SUBWAY® is a Registered Trademark of Subway IP LLC. © 2021 Subway IP LLC. All Rights
+                    Reserved</span>
+            </p>
+        </div>
+    </footer>
+    <!-- //..푸터 -->
+    <script src="../js/member.js"></script>
+</body>
+
+</html>

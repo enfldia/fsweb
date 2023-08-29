@@ -97,19 +97,16 @@ li {
     font-size: 1.7rem;
 }
 .ms {
-    margin-right: 50px;
-    width: 320px;
+    width: 300px;
     display: flex;
 }
-
-
 
 .mbs ul {
     display: flex;
 }
 
 .mbs li {
-    width: 80px;
+    width: 60px;
     text-align: center;
     line-height: 100px;
 }
@@ -142,7 +139,6 @@ footer {
     height: 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-size: 1rem;
     background:#ffce32
 }
@@ -157,7 +153,6 @@ footer {
 
 
 .bmn {
-    
     display: inline-block;
     height: 40px;
     line-height: 50px;
@@ -168,23 +163,24 @@ footer {
     margin: 3px;
 }
 
-.copy {
+.bmac {
     width: 100%;
     height: 200px;
 }
-.copy div{
+.bsmc {
     margin-top: 10px;
     display: flex;
     justify-content: center;
 }
-.bsm{
+.bsm {
     display: flex;
     justify-content: space-evenly;
+    width: 1500px;
 }
 .bsm li {
-    width: 200px;
+    width: 300px;
 }
-.copy span {
-    display: block;
-    padding: 10px;
+.adcp div{
+    margin-top: 32px;
+    text-align: center;
 }

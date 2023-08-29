@@ -11,7 +11,7 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
     height: 30%;
     /* 스크롤바의 길이 */
-    background: ##009223;
+    background: #009223;
     /* 스크롤바의 색상 */
     border-radius: 10px;
 }
@@ -91,7 +91,6 @@ h2 {
     position: relative;
 }
 .sec3container {
-    outline: 1px solid red;
     display: flex;
     justify-content: center;
 }
@@ -183,7 +182,7 @@ h2 {
     background: #fff;
 }
 .tabc li:hover {
-    outline: 4px solid ##009223;
+    outline: 4px solid #009223;
     transition-duration: 0.1s;
 }
 .tabc span {

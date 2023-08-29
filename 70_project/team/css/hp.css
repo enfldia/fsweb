@@ -51,7 +51,7 @@ li {
 .wrap:hover {
     transition-duration: 0.3s;
     background: #fff;
-    height: 310px;
+    height: 340px;
 }
 
 .logo {
@@ -72,20 +72,26 @@ li {
 
 .mainn {
     width: 170px;
-    height: 100px;
+    height: 340px;
     display: inline-block;
     text-align: center;
     line-height: 100px;
+    transition-duration: 0.3s;
 }
 
 .mainn a {
     font-size: 2.5rem;
     ;
 }
-
+.mainn:hover {
+    background: #ffce32;
+}
 .subn {
     height: 150px;
-    line-height: 32px
+    line-height: 36px;
+}
+.subn li {
+    height : 36px
 }
 .subn a {
     font-size: 1.7rem;
@@ -128,7 +134,7 @@ li {
 
 footer {
     width: 100%;
-    height: 300px;
+    height: 440px;
     background: #292929
 }
 
@@ -138,8 +144,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    
-
+    background:#ffce32
 }
 
 .bcon>li {
@@ -165,10 +170,20 @@ footer {
 
 .copy {
     width: 100%;
-    height: 100px;
-    text-align: center;
+    height: 200px;
 }
-
+.copy div{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.bsm{
+    display: flex;
+    justify-content: space-evenly;
+}
+.bsm li {
+    width: 200px;
+}
 .copy span {
     display: block;
     padding: 10px;

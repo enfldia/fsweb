@@ -47,7 +47,7 @@ h3 {
     color: #009223;
 }
 .bn a {
-    color: #fff;
+    color: #000;
 }
 .bn a:hover {
     color: #009223;
@@ -56,5 +56,10 @@ h3 {
     font-size: 1.3rem;
     font-weight: 400;
     text-align: center;
+    color: #999;
+}
+.copy a{
+    font-size: 1.3rem;
+    font-weight: 400;
     color: #999;
 }

@@ -80,6 +80,7 @@ h2 {
 
 /* 섹션2 */
 .sec2 {
+    background: #009223d0;
     display: flex;
     justify-content: center;
     align-items: center;

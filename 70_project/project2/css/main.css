@@ -129,16 +129,16 @@ header {
 .contect {
     display: block;
     width: 100%;
-    margin: 16px 0;
-    padding: 10px;
+    margin: 12px 0 ;
+    padding-bottom: 20px;
 }
 
-.btn {
+#sec4 button {
     display: block;
     background: #111;
     color: #fff;
-    margin: 16px 0 16px 0;
-    padding: 10px;
+    margin-bottom:  20px ;
+    padding: 8px 30px;
 }
 #sec4 img {
     display: block;

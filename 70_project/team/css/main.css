@@ -21,62 +21,44 @@ body::-webkit-scrollbar-track {
 }
 
 /* 공통 */
-h2 {
-    display: none;
-}
 
 .sec {
-    
+
     height: 931px;
 }
 
 
 /* 섹션1 */
-.crc {
-    display: flex;
-    justify-content: center;
 
+/* 캐로셀 */
+.slider a{
+    padding: 0;
+    
 }
 
-.crcinner {
-    width: 1908px;
-    height: 931px;
-    position: relative;
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #000;
+    width: 48px;
 }
 
-.crci {
+.bx-wrapper .bx-pager .bx-default-pager a {
+    background: #666;
+    text-indent: -9999px;
+    display: block;
+    width: 20px;
+    height: 8px;
+    margin: 0 2px;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
     position: absolute;
-    left: 50%;
-    top: 90%;
-}
-
-.btn_prev {
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transform: rotate(45deg);
-    border: 2px solid #000;
-    border-top: none;
-    border-right: none;
-    width: 40px;
-    height: 40px;
-    background: none;
-}
-
-.btn_next {
-    position: absolute;
-    left: 92%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transform: rotate(45deg);
-    border: 2px solid #000;
-    border-left: none;
-    border-bottom: none;
-    width: 40px;
-    height: 40px;
-    background: none;
-}
+    bottom: 16px;
+    width: 100%;
+    }
 
 /* 섹션2 */
 .sec2 {
@@ -84,6 +66,7 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .videob {
     width: 100%;
     height: 765px;
@@ -92,6 +75,7 @@ h2 {
     align-items: center;
     background: #ffce32;
 }
+
 .sec2 p {
     width: 1440px;
     height: 80px;
@@ -107,10 +91,12 @@ h2 {
 .sec3 {
     position: relative;
 }
+
 .sec3container {
     display: flex;
     justify-content: center;
 }
+
 .sec3container a {
     height: 930px;
     z-index: 99;
@@ -120,12 +106,14 @@ h2 {
     position: absolute;
     left: 34%;
     top: 4%;
-    animation: move1 2s infinite ;
+    animation: move1 2s infinite;
 }
+
 @keyframes move1 {
     0% {
         transform: translate(0);
     }
+
     100% {
         transform: translate(0, 50px);
     }
@@ -135,30 +123,36 @@ h2 {
     position: absolute;
     left: 32%;
     top: 9%;
-    animation: move2 2s infinite ;
+    animation: move2 2s infinite;
 }
+
 @keyframes move2 {
     0% {
         transform: translate(0);
     }
+
     100% {
         transform: translate(0, 50px);
     }
 }
-.catch img{
+
+.catch img {
     position: absolute;
     left: 30%;
     top: 47%;
     width: 300px;
-    animation: move3 2s infinite ;
+    animation: move3 2s infinite;
 }
+
 @keyframes move3 {
     0% {
         transform: translate(0);
     }
+
     50% {
-        transform: translate(0,16px);
+        transform: translate(0, 16px);
     }
+
     100% {
         transform: translate(0);
     }
@@ -171,63 +165,74 @@ h2 {
     justify-content: center;
     background: #f6f6f6;
 }
+
 .tabs {
     margin-top: 5%;
-    width:1440px;
+    width: 1440px;
 
 }
+
 .tabmenu {
     display: flex;
     justify-content: center;
     height: 48px;
 }
+
 .btn {
     display: flex;
     justify-content: space-around;
     width: 900px;
 }
+
 .btn label {
     width: 300px;
     text-align: center;
     line-height: 48px;
 }
+
 .tabc img {
     width: 500px;
     vertical-align: top;
 }
+
 .tabc {
     display: flex;
     justify-content: space-evenly;
     align-content: space-evenly;
     flex-wrap: wrap;
 }
-.tabc li{
+
+.tabc li {
     margin: 8px 0;
     background: #fff;
 }
+
 .tabc li:hover {
     outline: 4px solid #009223;
     transition-duration: 0.1s;
 }
+
 .tabc span {
     display: block;
     text-align: center;
 }
+
 .tabinner {
     margin-top: 4%;
 }
+
 .tabinner input {
     display: none;
 }
 
-.tabinner input:checked + div {
+.tabinner input:checked+div {
     display: block;
 }
 
 .tabinner div {
     display: none;
 }
+
 #tab3 img {
     filter: saturate(0%);
 }
-

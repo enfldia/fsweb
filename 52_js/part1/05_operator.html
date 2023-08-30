@@ -46,13 +46,37 @@
             a + b + c = ${a + b + c} <br>
             a + c + b = ${a + c + b} <br>
         `);
-        
+        /* 표현식: 값이 출력되는 문장 */
+
+        /* 
+            a = b
+            a += b -> a = a + b
+            a -= b -> a = a - b
+            a *= b -> a = a * b
+            a /= b -> a = a / b
+            a %= b -> a = a % b
+            a **= b -> a = a ** b
+
+            +=은 누적 집계를 낼때 사용할 수  있다.
+        */
+        document.write(`
+            <h2>typeof<h2>
+            변수c의 값은 문자열? ${typeof c}
+            <br>
+            변수b의 값은 숫자? ${typeof(b)}
+        `)
         c = b;
         // b의 값을 c에 할당한다.
         document.write(`
             <h2>대입(할당) 연산자</h2>
-            b의 값을  c에 할당<br>
-            c = b -&gt; ${c}
+            변수b의 값을  변수c에 할당<br>
+            c = b, c는 ${c}<br>
+            c += b, c는 ${c += b}<br>
+            c -= b, c는 ${c -= b}<br>
+            c *= b, c는 ${c *= b}<br>
+            c /= b, c는 ${c /= b}<br>
+            c %= b, c는 ${c %= b}<br>
+            c **= b, c는 ${c **= b}<br>
         `);
 
     </script>

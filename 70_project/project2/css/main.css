@@ -21,6 +21,7 @@ ul {
 }
 
 
+
 .clearfix::after {
     content: '';
     display: block;
@@ -97,7 +98,12 @@ header {
 }
 
 /* 섹션2,3 공통 */
-
+#sec2 {
+    height: 800px;
+}
+#sec3 {
+    height: 800px;
+}
 .sec234 li {
     float: left;
     width: 360px;
@@ -110,6 +116,9 @@ header {
 }
 
 /* 섹션2 */
+#sec2 {
+    position: relative;
+}
 #sec2 li {
     position: relative;
 }
@@ -121,10 +130,12 @@ header {
     color: #fff;
     background-color: #111c;
     padding: 8px 16px;
-
-
 }
-
+.sec2_cont {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
 /* 섹션3 */
 
 

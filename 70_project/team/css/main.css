@@ -118,26 +118,41 @@ h2 {
 
 .catch p:nth-of-type(1) {
     position: absolute;
-    left: 52%;
-    top: 15%;
-    transform: translate(-50%, -50%);
+    left: 34%;
+    top: 4%;
+    animation: move1 2s infinite ;
+}
+@keyframes move1 {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(0, 50px);
+    }
 }
 
 .catch p:nth-of-type(2) {
     position: absolute;
-    left: 52%;
-    top: 30%;
-    transform: translate(-50%, -50%);
+    left: 32%;
+    top: 9%;
+    animation: move2 2s infinite ;
+}
+@keyframes move2 {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(0, 50px);
+    }
 }
 .catch img{
     position: absolute;
     left: 30%;
     top: 47%;
     width: 300px;
-    transform: translate(-50%, -50%);
-    animation: move 2s infinite ;
+    animation: move3 2s infinite ;
 }
-@keyframes move {
+@keyframes move3 {
     0% {
         transform: translate(0);
     }

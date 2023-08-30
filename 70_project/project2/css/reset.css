@@ -1,0 +1,25 @@
+@charset "uft-8";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    /* 페이지내 링크로 이동시 바로 이동이 아니라 스크롤 이동 */
+}
+body {
+    font: 1.6rem/1.8 'Noto Sans KR', sans-serif;
+}
+
+body,
+h1,
+h2,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{text-decoration: none;}

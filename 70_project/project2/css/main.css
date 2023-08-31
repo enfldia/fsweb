@@ -82,11 +82,13 @@ section h2{
 }
 /* 섹션2,3 공통 */
 #sec2 {
-    height: 800px;
-}
-#sec3 {
+    height: 600px;
     /* height: 800px; */
+    
 }
+/* #sec3 {
+    height: 800px;
+} */
 .sec234 ul {
     display: flex;
     flex-wrap: wrap;

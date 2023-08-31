@@ -85,7 +85,7 @@ section h2{
     height: 800px;
 }
 #sec3 {
-    height: 800px;
+    /* height: 800px; */
 }
 .sec234 ul {
     display: flex;
@@ -154,21 +154,23 @@ section:first-of-type ~ section > p {
     transform: translate(0,-50%);
 }
 /* 섹션3 */
+#sec3 {
+    background: red;
+}
+#sec3 h3 {
+    margin: 16px 0;
+}
+
 #sec3 li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 680px;
 }
-#sec3 h3 {
-    margin: 16px 0;
-}
 #sec3 li p:first-of-type {
     margin-bottom: 16px;
 }
-/* #sec3 p {
-    margin-bottom: 4px;
-} */
+
 #sec3 a {
     display: block;
     text-align: center;

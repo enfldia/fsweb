@@ -31,12 +31,12 @@ body::-webkit-scrollbar-track {
 /* 섹션1 */
 
 /* 캐로셀 */
-.slider a{
+.slider a {
     padding: 0;
-    
+
 }
 
-.bx-wrapper .bx-pager.bx-default-pager a:hover,
+
 .bx-wrapper .bx-pager.bx-default-pager a.active,
 .bx-wrapper .bx-pager.bx-default-pager a:focus {
     background: #000;
@@ -54,11 +54,33 @@ body::-webkit-scrollbar-track {
     border-radius: 5px;
 }
 
-.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
     position: absolute;
     bottom: 16px;
     width: 100%;
-    }
+}
+
+.bx-wrapper .bx-pager {
+    bottom: 32px;
+}
+.bx-wrapper .bx-prev {
+    left: 120px;
+    transform: rotate(45deg);
+    border: 4px solid #111;
+    border-top: none;
+    border-right: none;
+    background-image: none;
+}
+
+.bx-wrapper .bx-next {
+    right: 120px;
+    transform: rotate(45deg);
+    border: 4px solid #111;
+    border-left: none;
+    border-bottom: none;
+    background-image: none;
+}
 
 /* 섹션2 */
 .sec2 {

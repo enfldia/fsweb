@@ -26,7 +26,7 @@ h3 {
 
 /* 헤더 */
 .wrap a {
-    color: #000;
+    color: #222;
 }
 .wrap a:hover {
     color: #009223
@@ -76,7 +76,7 @@ h3 {
 
 /* 푸터 */
 .bn a {
-    color: #000;
+    color: #222;
 }
 .bn a:hover {
     color: #009223;

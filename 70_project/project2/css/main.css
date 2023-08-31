@@ -2,6 +2,41 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
 
+/****************************************************************************
+typo.css: 크기, 색, 종류, 굵기, 줄간격, 자간
+****************************************************************************/
+/* .txt, #sec2 span, #sec4 button, .copy { */
+/* a, button, ::placeholder 의 글자색은 직접 설정해야 한다.*/
+.wtxt, button {    
+    color: #fff;
+}
+#gnb a {
+    color: #111;
+    font-weight: 700;
+}
+.txt {
+    font-size: 3.6rem;
+}
+#gnb, .txt{
+    letter-spacing: 4px;
+}
+#sec3 a {
+    color: #111;
+}
+
+.copy {
+    font-size: 2rem;
+    font-weight: 200;
+}
+::placeholder{
+    color: #111;
+}
+/*--------------------------------------------------------------------------*/
+
+/* 전체 */
+body {
+    background: #fff;
+}
 
 /* 헤더 */
 header {
@@ -26,42 +61,25 @@ header {
 
 }
 
-내비게이션
+/* 내비게이션 */
 
 #gnb li {
     display: inline-block;
     margin-right: 32px;
 }
-#gnb a {
-    color: #111;
-    font-weight: 700;
-}
+
+
 /* 섹션 공통 */
 .sec {
     position: relative;
     width: 1500px;
     margin: 0 auto;
 }
-
-
-/* 섹션1 */
-
-.txt {
-    font-size: 36px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-top: -10px;
-    margin-left: -80px;
-    color: #ffffff;
+/* 섹션2,3,4, 공통 */
+section h2{
+    padding: 64px 0 20px 0;
+    border-bottom: 1px solid #ccc;
 }
-
-.tit1 {
-    padding: 8px 16px;
-    background-color: #000;
-    opacity: .75;
-}
-
 /* 섹션2,3 공통 */
 #sec2 {
     height: 800px;
@@ -76,26 +94,57 @@ header {
 .sec234 li {
     width: 360px;
     margin-right: 20px;
-    margin-bottom: 20px;
 }
 
 .sec234 li:nth-of-type(4n) {
     margin-right: 0;
 }
 
+/* 섹션 3,4 공통 */
+section:first-of-type ~ section > p {
+    margin-bottom: 40px;
+}
+/* 섹션1 */
+#sec1 {
+    padding-top: 55px;
+}
+.txt {
+    font-size: 36px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tit1 {
+    padding: 8px 16px;
+    background-color: #000;
+    opacity: .75;
+}
+
+
 /* 섹션2 */
 #sec2 {
     position: relative;
 }
+#sec2 h2 {
+    margin-bottom: 40px;
+}
 #sec2 li {
     position: relative;
+    border: 2px solid #e1e1e1;
 }
-
+#sec2 li:nth-of-type(4)~li {
+    margin-top: 20px;
+}
+#sec2 img {
+    width: 100%;
+    height: 100%;
+}
 #sec2 span {
     position: absolute;
     left: 0;
     top: 0;
-    color: #fff;
     background-color: #111c;
     padding: 8px 16px;
 }
@@ -109,15 +158,20 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 700px;
+    height: 680px;
 }
-#sec3 p {
+#sec3 h3 {
+    margin: 16px 0;
+}
+#sec3 li p:first-of-type {
+    margin-bottom: 16px;
+}
+/* #sec3 p {
     margin-bottom: 4px;
-}
+} */
 #sec3 a {
     display: block;
     text-align: center;
-    color: #111;
     border: 1px solid #111;
     height: 40px;
     /* line-height: 40px; */
@@ -125,7 +179,9 @@ header {
     
 }
 /* 섹션4 */
-
+#sec4 {
+    padding-bottom: 8px;
+}
 .contect {
     display: block;
     width: 100%;
@@ -134,18 +190,21 @@ header {
 }
 
 #sec4 button {
+    margin: 16px 0 48px 0;
     display: block;
     background: #111;
-    color: #fff;
-    margin-bottom:  20px ;
     padding: 8px 30px;
 }
 #sec4 img {
     display: block;
+    border: 2px solid #e1e1e1;
 }
 
 /* 푸터 */
-
+/* 
+    ling-height 는 한 줄 텍스트일 떄  박스의 주식 중앙 정령이 
+    가능하며 높이 값으로 줄 수있다.
+*/
 footer {
     height: 200px;
     width: 100%;
@@ -155,9 +214,6 @@ footer {
 .copy {
     padding: 50px 0 20px 0;
     text-align: center;
-    font-size: 2rem;
-    font-weight: 200;
-    color: #fff;
 }
 
 .sns {

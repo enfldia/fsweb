@@ -154,9 +154,6 @@ section:first-of-type ~ section > p {
     transform: translate(0,-50%);
 }
 /* 섹션3 */
-#sec3 {
-    background: red;
-}
 #sec3 h3 {
     margin: 16px 0;
 }

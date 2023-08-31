@@ -9,16 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
     <style>
         body {
-            background: lightblue;
             margin: 0;
         }
 
-        #section {
-            height: 100vh;
-        }
-
         .slideWrap {
-            height: 100%;
+            /*  이미지 하나가 348px */
+            width: 1044px;
+            margin: 0 auto;
         }
 
         .bx-wrapper {
@@ -27,10 +24,11 @@
             border: none;
             height: 100%;
             overflow: hidden;
+            margin-bottom: 0;
         }
 
         .bx-wrapper .bx-pager {
-            bottom: 40px;
+            bottom: 0px;
         }
 
         .bx-wrapper .bx-pager.bx-default-pager a:hover,
@@ -86,9 +84,19 @@
     <div id="section">
         <div class="slideWrap">
             <div class="slider">
-                <div><img src="images/slide1.jpg" alt="이미지1"></div>
-                <div><img src="images/slide2.jpg" alt="이미지2"></div>
-                <div><img src="images/slide3.jpg" alt="이미지3"></div>
+                <div><img src="images/01.png" alt="이미지1">
+                    <p>투톤 셀러셀 트리플 댕글 참</p>
+                    <p>\130,000</p>
+                    <button>버튼</button>
+                </div>
+                <div><img src="images/02.png" alt="이미지2"></div>
+                <div><img src="images/03.png" alt="이미지3"></div>
+                <div><img src="images/04.png" alt="이미지3"></div>
+                <div><img src="images/05.png" alt="이미지3"></div>
+                <div><img src="images/06.png" alt="이미지3"></div>
+                <div><img src="images/07.png" alt="이미지3"></div>
+                <div><img src="images/08.png" alt="이미지3"></div>
+                <div><img src="images/09.png" alt="이미지3"></div>
             </div>
         </div>
     </div>
@@ -116,11 +124,11 @@
         // 요소.메서드(매개변수, ...)
         // $('선택자').메서드();
         $('.slider').bxSlider({
-            auto: true,
-            // autoControls: true,
-            stopAutoOnClick: true,
             pager: true,
-            // slideWidth: 1200
+            slideWidth: 348,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 3,
         });
     </script>
 </body>

@@ -46,6 +46,18 @@
             a + b + c = ${a + b + c} <br>
             a + c + b = ${a + c + b} <br>
         `);
+        //산술 연산이며 단항: ++, --
+        // var a = 5;
+        // var b = 3;
+        document.write(`
+            <h2>++, --</h2>
+            ++는 1씩 증가<br>
+            --는 1씩 감소<br>
+            a = b++;일때 a = ${a = b++}<br>
+            a= ++b;일때  a = ${a = ++b}
+        `)
+
+
         /* 표현식: 값이 출력되는 문장 */
 
         /* 
@@ -78,7 +90,25 @@
             c %= b, c는 ${c %= b}<br>
             c **= b, c는 ${c **= b}<br>
         `);
+        document.write(`
+            <h2>비교 연산자</h2>
+            비교연산의 결과는 true 아니면 false 이다.<br>
+            a = ${a} b = ${b = '5'}<br>
+            a > b 는 ${a > b}<br>
+            a < b 는 ${a < b}<br>
+            a >= b 는 ${a >= b}<br>
+            a <= b 는 ${a <= b}<br>
+            a = b 는 ${a = b}<br>
+            
+            a == b 는 ${a == b}<br>
+            a != b 는 ${a != b}<br>
 
+            ===과 !==은 테이터의 유형을 구분한다.<br>
+            a === b 는 ${a === b}<br>
+            a !== b 는 ${a !== b}<br>
+            
+        
+        `)
     </script>
 </body>
 </html>

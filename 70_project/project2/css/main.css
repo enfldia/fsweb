@@ -7,19 +7,25 @@ typo.css: 크기, 색, 종류, 굵기, 줄간격, 자간
 ****************************************************************************/
 /* .txt, #sec2 span, #sec4 button, .copy { */
 /* a, button, ::placeholder 의 글자색은 직접 설정해야 한다.*/
-.wtxt, button {    
+.wtxt,
+button {
     color: #fff;
 }
+
 #gnb a {
     color: #111;
     font-weight: 700;
 }
+
 .txt {
     font-size: 3.6rem;
 }
-#gnb, .txt{
+
+#gnb,
+.txt {
     letter-spacing: 4px;
 }
+
 #sec3 a {
     color: #111;
 }
@@ -28,11 +34,24 @@ typo.css: 크기, 색, 종류, 굵기, 줄간격, 자간
     font-size: 2rem;
     font-weight: 200;
 }
-::placeholder{
-    color: #111;
+
+::placeholder {
+    color: var(--c111);
 }
+
+
 /*--------------------------------------------------------------------------*/
 
+/*************변수 정의*******************************************************/
+:root {
+    --c111: #111;
+    --cfff: #fff;
+    --c333: #333;
+    --cdad: #dadada;
+    --cccc: #ccc;
+}
+
+/*****************************************************************************/
 /* 전체 */
 body {
     background: #fff;
@@ -41,6 +60,7 @@ body {
 /* 헤더 */
 header {
     z-index: 99999;
+    /* fixed, absolute 이면 width가 인차인처럼 된다. */
     position: fixed;
     width: 100%;
     height: 55px;
@@ -49,69 +69,38 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0, 32px;
+    padding: 0 32px;
 }
 
 /* 로고 */
-
-
-.logo img {
-    height: 45px;
-    padding-left: 32px;
-
+.logo {
+    width: 40%;
 }
 
 /* 내비게이션 */
-
-#gnb li {
-    display: inline-block;
-    margin-right: 32px;
+#gnb {
+    display: none;
 }
 
-
-/* 섹션 공통 */
-.sec {
-    position: relative;
-    width: 1500px;
-    margin: 0 auto;
+/* 섹션 2,3,4 공통*/
+section {
+    padding: 0 30px;
 }
-/* 섹션2,3,4, 공통 */
-section h2{
-    padding: 64px 0 20px 0;
+section h2 {
+    padding: 96px 0 20px 0;
     border-bottom: 1px solid #ccc;
-}
-/* 섹션2,3 공통 */
-#sec2 {
-    height: 600px;
-    /* height: 800px; */
-    
-}
-/* #sec3 {
-    height: 800px;
-} */
-.sec234 ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-.sec234 li {
-    width: 360px;
-    margin-right: 20px;
-}
-
-.sec234 li:nth-of-type(4n) {
-    margin-right: 0;
-}
-
-/* 섹션 3,4 공통 */
-section:first-of-type ~ section > p {
-    margin-bottom: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 /* 섹션1 */
 #sec1 {
     padding-top: 55px;
 }
+.main_img {
+    position: relative;
+}
+
 .txt {
-    font-size: 36px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -120,15 +109,19 @@ section:first-of-type ~ section > p {
 
 .tit1 {
     padding: 8px 16px;
-    background-color: #000;
+    background-color: var(--c111);
     opacity: .75;
 }
 
-
-/* 섹션2 */
-#sec2 {
-    position: relative;
+.tit2 {
+    display: none;
 }
+/* 섹션2,3 공통 */
+.sec234 li {
+    width: auto;
+    height: auto;
+}
+/* 섹션2 */
 #sec2 h2 {
     margin-bottom: 40px;
 }
@@ -136,26 +129,19 @@ section:first-of-type ~ section > p {
     position: relative;
     border: 2px solid #e1e1e1;
 }
-#sec2 li:nth-of-type(4)~li {
-    margin-top: 20px;
+#sec2 li + li {
+    /* #sec2 li:first-of-type ~ li와 같다. */
+    /* 첫 번째 요소를 제외한 아래 모든 형제 요소 */
+    margin-top: 16px;
 }
-#sec2 img {
-    width: 100%;
-    height: 100%;
-}
-#sec2 span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: #111c;
-    padding: 8px 16px;
-}
-.sec2_cont {
-    position: absolute;
-    top: 50%;
-    transform: translate(0,-50%);
+/* 섹션 3,4 공통 */
+section:first-of-type ~ section > p {
+    margin-bottom: 40px;
 }
 /* 섹션3 */
+#sec3 li + li {
+    margin-top: 32px;
+}
 #sec3 h3 {
     margin: 16px 0;
 }
@@ -166,27 +152,35 @@ section:first-of-type ~ section > p {
     justify-content: space-between;
     height: 680px;
 }
+
 #sec3 li p:first-of-type {
     margin-bottom: 16px;
 }
 
+/* 버튼 */
 #sec3 a {
     display: block;
     text-align: center;
-    border: 1px solid #111;
+    background-color:  var(--cdada);
     height: 40px;
     /* line-height: 40px; */
-    padding: 4px;
-    
+    padding: 8px 0;
+    margin-top: 20px;
+
+}
+#sec3 a:hover {
+    background-color: var(--cdad)
 }
 /* 섹션4 */
 #sec4 {
+    /* 지도 아래 여백 */
     padding-bottom: 8px;
 }
+
 .contect {
     display: block;
     width: 100%;
-    margin: 12px 0 ;
+    margin: 12px 0;
     padding-bottom: 20px;
 }
 
@@ -196,35 +190,92 @@ section:first-of-type ~ section > p {
     background: #111;
     padding: 8px 30px;
 }
+
 #sec4 img {
     display: block;
     border: 2px solid #e1e1e1;
 }
-
 /* 푸터 */
-/* 
+footer {
+    padding: 32px 0;
+    background: var(--c333);
+    text-align: center;
+}
+
+/* 992 이상 */
+@media (min-width:992px) {
+
+    /* 헤더 */
+    /* 로고 */
+    .logo img {
+        height: 45px;
+        padding-left: 32px;
+    }
+    /* 내비게이션 */
+    #gnb li {
+        display: inline-block;
+        margin-right: 32px;
+    }
+    /* 섹션 공통 */
+    .sec {
+        position: relative;
+        width: 1500px;
+        margin: 0 auto;
+    }
+    /* 섹션2,3,4, 공통 */
+    section {
+        padding: 0;
+    }
+    /* 섹션2,3 공통 */
+    #sec2 {
+        height: 600px;
+        /* height: 800px; */
+    }
+    .sec234 ul {
+        /* 이미지 가로배치 */
+        display: flex;
+        /* 줄 바꿈(한 줄에 이미지 4개씩 배치하려고) */
+        flex-wrap: wrap;
+    }
+    .sec234 li {
+        width: 360px;
+        height: 240px;
+        margin-right: 20px;
+    }
+    .sec234 li:nth-of-type(4n) {
+        margin-right: 0;
+    }
+    /* 섹션1 */
+    /* 섹션2 */
+    #sec2 {
+        position: relative;
+    }
+    /* 8개 이미지 중 5번째 이미지 부터 4개만 윈쪽 여백 지정 */
+    #sec2 li:nth-of-type(4)~li {
+        margin-top: 20px;
+    }
+    #sec2 img {
+        width: 100%;
+        height: 100%;
+    }
+    #sec2 span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #111c;
+        padding: 8px 16px;
+    }
+    .sec2_cont {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    /* 섹션3 */
+    /* 섹션4 */
+    /* 푸터 */
+    /* 
     ling-height 는 한 줄 텍스트일 떄  박스의 주식 중앙 정령이 
     가능하며 높이 값으로 줄 수있다.
 */
-footer {
-    height: 200px;
-    width: 100%;
-    background-color: #333;
 }
-
-.copy {
-    padding: 50px 0 20px 0;
-    text-align: center;
-}
-
-.sns {
-    text-align: center;
-}
-.sns li{
-    display:inline-block;
-    padding: 8px;
-}
-
-.sns img {
-    width: 24px;
-}
+/* @media 992px 이상 */

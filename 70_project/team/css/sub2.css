@@ -16,33 +16,36 @@ a{text-decoration: none; cursor: pointer;}
 
 
 /* 공통 */
-body{background-color: #F2F2F2;;}
+body{background-color: #F2F2F2;}
 
 
 /* 해더 */
-.wrap{background-color:#FFC20D;}
+.wrap{background-color:#fff;}
 
  
 
 /* 제품비주얼 (케로셀) */
-section.sec0{
+section.sec1{
     height: 600px;
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #84C440;}
-
-    
+    background-color:#F2F2F2;
+   }
+   
 .visual{
     position: relative;
-    width: 1170px;
-    height: 320px;
+    top: 80px;
+    width: 100vw;
+    height: 300px;
+    background-color: #84C440;
    }
         
 /* 인디케이터 버튼*/
 .control { 
     position: absolute;
+    top: 250px;
     width: 100%;
     text-align: center;       
     }
@@ -52,70 +55,86 @@ section.sec0{
     width: 20px;
     height: 20px;
     background: #f6f5f5;                       
-    line-height: 26px;
     font-size: 14px;
     border-radius: 14px;
     margin: 0 4px
     }
 
+
+/* 케로셀 버튼 */
 button{ 
     border: 0;
     background-color: transparent;
     color:#FFF;
-    font-size: 25px;
+    font-size: 35px;
     cursor: pointer; }
 
-
-.prev{position: absolute; top:150px; left: 40px;}    
-.next{position: absolute; top:150px; right: 40px;}    
+.prev{position: absolute; top:130px; left: 300px;}    
+.next{position: absolute; top:130px; right: 300px;}    
 
 .prev:hover,
 .next:hover{
     color:#FFC20D;
     transition: 0.2s ease; }
 
-/* 케로셀 안의 텍스트  */
-.visual h1{
-    position:absolute; 
-    top: 150px;
-    left: 100px; 
-    color:#FFF;}
 
-.visual p{
-    position:absolute;
-    top: 138px;
-    right: 95px;
-    color: #FFF;
-    font-weight: 700;
-    font-size: 20px;
-    text-align:center;}
+
+/* 케로셀 안의 텍스트  */
+.visual h1:nth-of-type(1){
+    position:absolute; 
+    top: 250px;
+    left: 160px; 
+    color:#FFF}
+
+.visual h1:nth-of-type(2){
+    position:absolute; 
+    top: 250px;
+    left:930px; 
+    color:#FFF;
+    width: 450px;
+    }
+
+.visual h1:nth-of-type(3){
+    position:absolute; 
+    width: 430px;
+    top: 250px;
+    left:1695px; 
+    color:#fff;
+    }
 
 
 /* 케로셀이미지 */
 .carousel-wrapper{
     position:relative; 
-    left: 330px;
-    width: 500px;
+    top: -115px;
+    margin: 0 auto;
+    width: 760px;
     height: 300px;
     overflow: hidden;
-   
 }
 
-.Carousel{display: flex;}
+.Carousel{display: flex;  transition:all 1.8s;}
+
 
 .Carousel img {
     flex: 0 0 auto;
-    width:500px; 
-    height:300px;
+    width: 760px; height: 300px;
+    padding: 0 140px;
+    transition:all 2.8s;
     }
+.Carousel img:hover{transform: scale(1.2);}
 
+/* 케로셀 배경이미지 색상  */
+/* .Carousel img:nth-of-type(1){background-color: #853232;}
+.Carousel img:nth-of-type(2){background-color: #FBF6A4;}
+.Carousel img:nth-of-type(3){background-color: #A0D6B6;} */
 
 
 /* 상단 탭메뉴 */
 .tab-menu{
-    width: 1170px; height: 140px; 
+    width: 1170px; height: 100px; 
     margin: -40px auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     background-color: #F2F2F2;}
 
 

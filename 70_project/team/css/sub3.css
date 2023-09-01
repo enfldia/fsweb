@@ -2,36 +2,83 @@
 @import url(hp.css);
 @import url(reset.css);
 @import url(typo.css);
-/* 와이어프레임 */
-/* * {border: 1px solid red;} */
 
+html {
+    scroll-behavior: smooth;
+    color: #000;
+    background: #fff;
+}
 
+/* 타이포 */
+/* 섹션1 */
+#sec1 .img li {
+    font-weight: 700;
+    opacity: 0.75;
+}
+
+#sec1 span {
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+#sec1 strong {
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+/* 섹션2 */
+#sec2 .parallax1>div {
+    font-size: 2.8rem;
+    word-break: keep-all;
+}
+
+#sec2 .parallax1>div:last-of-type {
+    color: #ffc232;
+    font-weight: 700;
+}
+
+#sec2 {
+    font-weight: 300;
+    color: #fff;
+}
+
+/* 섹션3 */
+#sec3 .parallax2>div {
+    font-size: 2.8rem;
+    word-break: keep-all;
+}
+
+#sec3 .parallax2>div:first-of-type {
+    color: #009223;
+    font-weight: 700;
+}
 
 
 /* 헤더 */
+.wrap {
+    background: #fff;
+}
 
 /* 섹션공통 */
 .sec {
     position: relative;
     width: 1440px;
-    /* height:1200px; */
     margin: 0 auto;
 }
 
 /* 섹션1 */
 #sec1 {
-    top: 100px;
-    margin-bottom: 64px;
-    height: 1600px;
+    padding-top: 100px;
+    margin-bottom: 128px;
 }
 
 #sec1 h2 {
-    padding-top: 150px;
-    margin-bottom: 32px;
+    /* padding-top: 150px; */
+    margin: 128px 0 32px 0;
 }
 
 #sec1 .hover {
-    padding-top: 62px;
+    padding-top: 32px;
 }
 
 #sec1 .nation {
@@ -41,6 +88,7 @@
 
 .outer1 {
     background: url(../images/sub3/bg_nation.jpg) no-repeat;
+    color: #fff;
     position: relative;
     /* float: left; */
     width: 720px;
@@ -56,10 +104,12 @@
 
 .outer1:hover {
     background: #fff;
+    color: #000;
 }
 
 .outer2:hover {
     background: url(../images/sub3/bg_store.jpg) no-repeat;
+    color: #fff;
 }
 
 .inner1 {
@@ -67,6 +117,7 @@
     width: 195px;
     top: 50px;
     left: 400px;
+    letter-spacing: -3px;
 }
 
 .inner2 {
@@ -74,11 +125,13 @@
     width: 195px;
     top: 50px;
     left: 100px;
+    letter-spacing: -3px;
 }
 
 #sec1 .brand h3 {
-    margin: 64px 0 64px 0;
+    margin: 32px 0;
 }
+
 #sec1 .brandpower>ul {
     display: flex;
     flex-wrap: wrap;
@@ -119,6 +172,10 @@
     word-wrap: normal;
 }
 
+.img li {
+    margin-left: 16px;
+}
+
 .img ul {
     opacity: 0;
 }
@@ -132,7 +189,6 @@
     background: url(../images/sub3/Parallax.png) no-repeat center/cover fixed;
     width: 1440px;
     height: 200px;
-    margin: 64px 0 64px 0;
 }
 
 #sec2 .parallax1 div {
@@ -141,9 +197,10 @@
 }
 
 #sec2 h3 {
-    margin-bottom: 32px;
+    margin: 32px 0;
 }
-#sec2 > p:nth-of-type(2) {
+
+#sec2>p:nth-of-type(2) {
     margin-bottom: 64px;
 }
 
@@ -199,8 +256,8 @@
     margin: 0 auto 16px;
 }
 
-.step_wrap li{
-    animation: move 3s infinite 3s;
+.step_wrap li {
+    animation: move 6s infinite linear;
 }
 
 @keyframes move {
@@ -208,9 +265,11 @@
         opacity: 0;
         transform: translatey(50px);
     }
-    25% {opacity: 0.25;}
-    50% {opacity: 0.5;}
-    75% {opacity: 0.75;}
+
+    50% {
+        opacity: 0.5;
+    }
+
     100% {
         opacity: 1;
         transform: none;
@@ -230,12 +289,11 @@
 #sec2 p:nth-of-type(2) {
     opacity: 0.75;
 }
+
 #sec2 p:last-of-type {
     text-align: left;
-    padding: 36px;
+    padding: 36px 0 36px 36px;
 }
-
-
 
 /* 섹션3 */
 #sec3 .parallax2 {
@@ -247,19 +305,23 @@
     color: #fff;
     width: 1440px;
     height: 310px;
+    margin-top: 128px;
 }
 
 #sec3 .parallax2 div {
     width: 750px;
     text-align: center;
 }
+
 #sec3 h3 {
-    margin: 64px 0 32px 0;
+    margin: 32px 0 32px 0;
 }
+
 /* 테이블 */
 #sec3 caption {
     display: none;
 }
+
 #sec3 table {
     border-collapse: collapse;
     width: 100%;
@@ -267,10 +329,13 @@
     margin-bottom: 8px;
 
 }
+
 #sec3 table thead th {
     border-bottom: 1px solid #009223;
 }
-#sec3 table th, td {
+
+#sec3 table th,
+td {
     height: 69px;
     font-size: 1.6rem;
     text-align: left;
@@ -281,15 +346,18 @@
     border-bottom: 1px solid #dddddd;
     word-break: keep-all;
 }
+
 #sec3 table thead tr th:last-of-type {
     text-align: center;
 }
+
 #sec3 .table_wrap div p {
     text-align: right;
     font-size: 1.3rem;
     color: #999999;
     margin-bottom: 16px;
 }
+
 #sec3 span::after {
     content: '';
     display: inline-block;
@@ -299,30 +367,39 @@
     background: url(../images/sub3/button.png)0 0 no-repeat;
     margin-left: 7px;
 }
+
 #sec3 table tfoot td {
     font-weight: bold;
 }
+
 #sec3 table tfoot th {
     font-weight: bold;
 }
+
 #sec3 li {
     color: #999;
     font-size: 1.3rem;
 }
+
 /* 버튼 */
 #sec3 .button {
-    margin: 48px 0 48px 0;
+    margin: 32px 0 128px 0;
     width: 100%;
     text-align: center;
 }
+
 #sec3 a {
     display: inline-block;
     background-color: #009223;
     width: 160px;
     color: #fff;
     border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
+
 #sec3 span {
-height: 50px;
-line-height: 50px;
+    height: 50px;
+    line-height: 50px;
 }

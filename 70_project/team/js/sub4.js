@@ -13,9 +13,13 @@ const channel_tabtab = document.querySelector('.tab_channel');
 // 클릭 - 블록/가리기
 all_tab.addEventListener("click", ()=>{
     all_tab.style.background = "#FFCE32";
+    all_tab.style.fontWeight = "bold";
     notice_tab.style.background = "#ddd";
+    notice_tab.style.fontWeight = "normal";
     news_tab.style.background = "#ddd";
+    news_tab.style.fontWeight = "normal";
     channel_tab.style.background = "#ddd";
+    channel_tab.style.fontWeight = "normal";
     all_tabtab.style.display = "flex";
     notice_tabtab.style.display = "none";
     news_tabtab.style.display = "none";
@@ -24,9 +28,13 @@ all_tab.addEventListener("click", ()=>{
 
 notice_tab.addEventListener("click", ()=>{
     all_tab.style.background = "#ddd";
+    all_tab.style.fontWeight = "normal";
     notice_tab.style.background = "#FFCE32";
+    notice_tab.style.fontWeight = "bold";
     news_tab.style.background = "#ddd";
+    news_tab.style.fontWeight = "normal";
     channel_tab.style.background = "#ddd";
+    channel_tab.style.fontWeight = "normal";
     all_tabtab.style.display = "none";
     notice_tabtab.style.display = "flex";
     news_tabtab.style.display = "none";
@@ -35,9 +43,13 @@ notice_tab.addEventListener("click", ()=>{
 
 news_tab.addEventListener("click", ()=>{
     all_tab.style.background = "#ddd";
+    all_tab.style.fontWeight = "normal";
     notice_tab.style.background = "#ddd";
+    notice_tab.style.fontWeight = "normal";
     news_tab.style.background = "#FFCE32";
+    news_tab.style.fontWeight = "bold";
     channel_tab.style.background = "#ddd";
+    channel_tab.style.fontWeight = "normal";
     all_tabtab.style.display = "none";
     notice_tabtab.style.display = "none";
     news_tabtab.style.display = "flex";
@@ -46,9 +58,13 @@ news_tab.addEventListener("click", ()=>{
 
 channel_tab.addEventListener("click", ()=>{
     all_tab.style.background = "#ddd";
+    all_tab.style.fontWeight = "normal";
     notice_tab.style.background = "#ddd";
+    notice_tab.style.fontWeight = "normal";
     news_tab.style.background = "#ddd";
+    news_tab.style.fontWeight = "normal";
     channel_tab.style.background = "#FFCE32";
+    channel_tab.style.fontWeight = "bold";
     all_tabtab.style.display = "none";
     notice_tabtab.style.display = "none";
     news_tabtab.style.display = "none";
@@ -62,6 +78,14 @@ const mo3 = document.querySelector('.mo3');
 const mo4 = document.querySelector('.mo4');
 const mo5 = document.querySelector('.mo5');
 const mo6 = document.querySelector('.mo6');
+/* const mo7 = document.querySelector('.mo7');
+const mo8 = document.querySelector('.mo8');
+const mo9 = document.querySelector('.mo9');
+const mo10 = document.querySelector('.mo10');
+const mo11 = document.querySelector('.mo11');
+const mo12 = document.querySelector('.mo12'); */
+// const mo12 = document.getElementsByClassName('mo12');
+
 
 
 const modal0 = document.querySelector('.modal_container');
@@ -131,6 +155,66 @@ mo6.addEventListener("click", ()=>{
     modal5.style.display = "none";
     modal6.style.display = "block";
 })
+
+/* mo7.addEventListener("click", ()=>{
+    modal0.style.display = "block";
+    modal1.style.display = "block";
+    modal2.style.display = "none";
+    modal3.style.display = "none";
+    modal4.style.display = "none";
+    modal5.style.display = "none";
+    modal6.style.display = "none";
+})
+
+mo8.addEventListener("click", ()=>{
+    modal0.style.display = "block";
+    modal1.style.display = "none";
+    modal2.style.display = "block";
+    modal3.style.display = "none";
+    modal4.style.display = "none";
+    modal5.style.display = "none";
+    modal6.style.display = "none";
+})
+
+mo9.addEventListener("click", ()=>{
+    modal0.style.display = "block";
+    modal1.style.display = "none";
+    modal2.style.display = "none";
+    modal3.style.display = "block";
+    modal4.style.display = "none";
+    modal5.style.display = "none";
+    modal6.style.display = "none";
+})
+
+mo10.addEventListener("click", ()=>{
+    modal0.style.display = "block";
+    modal1.style.display = "none";
+    modal2.style.display = "none";
+    modal3.style.display = "none";
+    modal4.style.display = "block";
+    modal5.style.display = "none";
+    modal6.style.display = "none";
+})
+
+mo11.addEventListener("click", ()=>{
+    modal0.style.display = "block";
+    modal1.style.display = "none";
+    modal2.style.display = "none";
+    modal3.style.display = "none";
+    modal4.style.display = "none";
+    modal5.style.display = "block";
+    modal6.style.display = "none";
+})
+
+mo12.addEventListener("click", ()=>{
+    modal0.style.display = "block";
+    modal1.style.display = "none";
+    modal2.style.display = "none";
+    modal3.style.display = "none";
+    modal4.style.display = "none";
+    modal5.style.display = "none";
+    modal6.style.display = "block";
+}) */
 
 
 // 모달 닫기

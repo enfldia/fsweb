@@ -20,7 +20,7 @@ body{background-color: #F2F2F2;;}
 
 
 /* 해더 */
-.wrap{background-color:#fff;}
+.wrap{background-color:#FFC20D;}
 
  
 
@@ -66,15 +66,15 @@ button{
     cursor: pointer; }
 
 
-.but1{position: absolute; top:150px; left: 40px;}    
-.but2{position: absolute; top:150px; right: 40px;}    
+.prev{position: absolute; top:150px; left: 40px;}    
+.next{position: absolute; top:150px; right: 40px;}    
 
-.but1:hover,
-.but2:hover{
+.prev:hover,
+.next:hover{
     color:#FFC20D;
     transition: 0.2s ease; }
 
-
+/* 케로셀 안의 텍스트  */
 .visual h1{
     position:absolute; 
     top: 150px;
@@ -92,20 +92,22 @@ button{
 
 
 /* 케로셀이미지 */
-.slider{
+.carousel-wrapper{
     position:relative; 
-    left:330px ;
+    left: 330px;
     width: 500px;
     height: 300px;
-    overflow: hidden;}
+    overflow: hidden;
+   
+}
 
-.slide{
-    display: flex; 
-    flex-direction: row;
-    justify-content:center; 
-    outline: 1px solid blue;}
+.Carousel{display: flex;}
 
-.slide img{width:500px ; height: 300px;}
+.Carousel img {
+    flex: 0 0 auto;
+    width:500px; 
+    height:300px;
+    }
 
 
 
@@ -114,9 +116,8 @@ button{
     width: 1170px; height: 140px; 
     margin: -40px auto;
     margin-bottom: 30px;
-    background-color: #F2F2F2;  
-}
-/* .tab-menu{background: url(../images/sub2/bg_tabbox.png);} */
+    background-color: #F2F2F2;}
+
 
 .tab-menu ul{ 
     display: flex;
@@ -195,5 +196,6 @@ button{
     height: 189px;
     transition:all 2.8s;} 
 .pd-img:hover img{transform: scale(1.4);}
+
 
 

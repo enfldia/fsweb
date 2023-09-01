@@ -254,7 +254,7 @@ h3>img {
 .tab_sig {
     position: relative;
     z-index: 0;
-    left: -150px;
+    left: -230px;
     padding: 0;
     margin: 0;
 }
@@ -372,4 +372,51 @@ h3>img {
 
 .modal_close:hover {
     background-color: #009223;
+}
+
+.momo span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #009223;
+}
+
+.momo p:nth-last-of-type(1) {
+    translate: 0 70px;
+    /* font-weight: bold; */
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.momo p:nth-last-of-type(2) {
+    width: 480px;
+    /* height: 200px; */
+    translate: 0 35px;
+    /* font-size: 16px; */
+    font-weight: bold;
+    color: #333;
+
+}
+
+.momomo p:nth-of-type(1) {
+    color: #099223;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* 반응형 작업 */
+
+/* 미디어쿼리 */
+
+/* tablet: 최대 992px -> 992px 이하인 장치 */
+@media (max-width:992px) {
+    body {
+        box-sizing: border-box;
+    }
+}
+
+/* phone:  최대 768px -> 768px 이하인 장치*/
+@media (max-width:768px) {
+    body {
+        box-sizing: border-box;
+    }
 }

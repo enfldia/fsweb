@@ -16,6 +16,9 @@ body {
     background: #fff;
 }
 
+img {
+    width: 100%;
+}
 body,
 nav,
 h1,
@@ -34,12 +37,87 @@ a {
 li {
     list-style: none;
 }
+/* 헤더 */
+.wrap {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.wrap:hover {
+    transition-duration: 0.3s;
+    background: #fff;
+}
 
 
+.sns img {
+    width: 25px;
+}
+/* 푸터 */
+
+footer {
+    width: 100%;
+    height: 440px;
+    background: #292929
+}
+
+.bcon {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    background:#ffce32
+}
+
+.bcon>li {
+    height: 200px;
+    width: 320px;
+    text-align: center;
+    line-height: 20px;
+    
+}
+
+
+.bmn {
+    display: inline-block;
+    height: 40px;
+    line-height: 50px;
+    font-size: 2rem;
+}
+
+.bsn li {
+    margin: 3px;
+}
+
+.bmac {
+    width: 100%;
+    height: 200px;
+}
+.bsmc {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.bsm {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.adcp div{
+    margin-top: 32px;
+    text-align: center;
+}
+/****min992px****/
+@media (min-width:992px) {
 /* 헤더 */
 
 
-.wrap {
+/* .wrap {
     position: fixed;
     width: 100%;
     height: 100px;
@@ -47,7 +125,7 @@ li {
     display: flex;
     justify-content: space-around;
     overflow: hidden;
-}
+} */
 
 .wrap:hover {
     transition-duration: 0.3s;
@@ -130,7 +208,7 @@ li {
 }
 /* 푸터 */
 
-footer {
+/* footer {
     width: 100%;
     height: 440px;
     background: #292929
@@ -176,7 +254,7 @@ footer {
 .bsm {
     display: flex;
     justify-content: space-evenly;
-    width: 1500px;
+    width: 100;
 }
 .bsm li {
     width: 300px;
@@ -184,4 +262,5 @@ footer {
 .adcp div{
     margin-top: 32px;
     text-align: center;
-}
+} */
+}/* //@media min992px */

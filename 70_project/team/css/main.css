@@ -129,35 +129,50 @@ body::-webkit-scrollbar-track {
     z-index: 99;
 }
 
-.catch p:nth-of-type(1) {
+.catch p {
+    display: none;
+}
+
+.sec3:hover .catch p:nth-of-type(1) {
+    display: block;
     position: absolute;
     left: 34%;
     top: 4%;
-    animation: move1 2s infinite;
+    animation: move1 2s ;
+    animation-fill-mode: forwards;
 }
+
 
 @keyframes move1 {
     0% {
+        opacity: 0%;
         transform: translate(0);
     }
-
+    50% {
+        opacity: 100%;
+    }
     100% {
         transform: translate(0, 50px);
     }
 }
 
-.catch p:nth-of-type(2) {
+.sec3:hover .catch p:nth-of-type(2) {
+    display: block; 
     position: absolute;
     left: 32%;
     top: 9%;
-    animation: move2 2s infinite;
+    animation: move2 2s ;
+    animation-fill-mode: forwards;
 }
 
 @keyframes move2 {
     0% {
+        opacity: 0%;
         transform: translate(0);
     }
-
+    50% {
+        opacity: 100%;
+    }
     100% {
         transform: translate(0, 50px);
     }

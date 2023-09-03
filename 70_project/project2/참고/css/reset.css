@@ -2,11 +2,13 @@
 * {
     box-sizing: border-box;
 }
+
 html {
-    font-size: 10px;
     scroll-behavior: smooth;
-    /* 페이지내 링크로 이동시 바로 이동이 아니라 스크롤 이동 */
+    /* IEx */
+    font-size: 10px;
 }
+
 body,
 h1,
 h2,
@@ -17,13 +19,16 @@ ol,
 p {
     margin: 0;
 }
+
 ul {
     padding: 0;
     list-style: none;
 }
+
 img {
     width: 100%;
 }
+
 a {
     text-decoration: none;
 }
@@ -31,6 +36,7 @@ a {
 button {
     border: none;
 }
+
 iframe {
     border: none;
     width: 100%;

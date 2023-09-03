@@ -1,67 +1,75 @@
 @charset "utf-8";
 @import url('reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
-/*************변수 정의*******************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* 변수 정의 */
 :root {
     --c111: #111;
-    --cfff: #fff;
     --c333: #333;
-    --cdad: #dadada;
+    --c777: #777;
     --cccc: #ccc;
-    --ce1:#e1e1e1;
+    --cf1f: #f1f1f1; 
+    --cfff: #fff;
 }
-/*****************************************************************************/
-/* typo.css: 크기, 색, 종류, 굵기, 줄간격, 자간 */
-/* .txt, #sec2 span, #sec4 button, .copy { */
-/* a, button, ::placeholder 의 글자색은 직접 설정해야 한다.*/
-.wtxt,
-button {
+
+/************************************************** 
+    typo.css: 크기, 색, 종류, 굵기, 줄간격, 자간  
+**************************************************/
+body {
     font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
-    color: var(--cfff);
+    color: var(--c111);
 }
-#gnb a {
-    color: #111;
-    font-weight: 700;
+
+a {
+    color: var(--c111);
 }
+
 .txt {
     font-size: 3.6rem;
 }
+
 #gnb,
 .txt {
     letter-spacing: 4px;
 }
-#sec3 a {
-    color:  var(--c111);
+
+.wtxt,
+button {
+    color: var(--cfff);
 }
-.copy {
-    font-size: 2rem;
-    font-weight: 200;
-}
+
+footer,
 ::placeholder {
-    color: var(--c111);
+    color: var(--c777);
 }
+
+/*------------------------------------------------*/
+
 /* 전체 */
 body {
     background: var(--cfff);
 }
+
 /* 헤더 */
 header {
-    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 999;
-    /* fixed, absolute 이면 width가 인차인처럼 된다. */
+    z-index: 9999;
+    position: fixed;
+    /* fixed, absolute이면 width가 인라인처럼된다. */
     width: 100%;
     height: 55px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     background-color: var(--cfff);
     padding: 0 32px;
 }
+
 /* 로고 */
 .logo {
     width: 40%;
 }
+
 /* 내비게이션 */
 #gnb {
     display: none;
@@ -71,6 +79,7 @@ header {
 #sec1 {
     padding-top: 55px;
 }
+
 .main_img {
     position: relative;
 }
@@ -91,16 +100,19 @@ header {
 .tit2 {
     display: none;
 }
-/* 섹션 2,3,4 공통*/
+
+/* 섹션2,3,4 공통 */
 section {
     padding: 0 30px;
 }
+
 section h2 {
     padding: 96px 0 20px 0;
     border-bottom: 1px solid var(--cccc);
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+
 /* 섹션2,3 공통 */
 .sec23 li {
     width: auto;
@@ -114,16 +126,19 @@ section h2 {
 
 #sec2 li {
     position: relative;
-    border: 1px solid #e1e1e1;
+    border: 1px solid var(--cccc);
 }
 
-/* #sec2 li:first-of-type ~ li와 같다. */
-/* 첫 번째 요소를 제외한 아래 모든 형제 요소 */
+/* 
+    #sec2 li:first-of-type ~ li
+    #sec2 li + li 
+    첫 번째 요소를 제외한 아래 모든 형제 요소
+*/
 #sec2 li+li {
     margin-top: 16px;
 }
 
-/* 섹션 3,4 공통 */
+/* 섹션3,4 공통 */
 section:first-of-type~section>p {
     margin-bottom: 40px;
 }
@@ -142,14 +157,14 @@ section:first-of-type~section>p {
 /* 버튼 */
 #sec3 a {
     display: block;
-    background-color: var(--cdad);
+    background-color: var(--cf1f);
     text-align: center;
     /* line-height: 40px; */
     padding: 8px 0;
     margin-top: 20px;
 }
 #sec3 a:hover {
-    background-color: var(--cdad)
+    background-color: var(--cccc);
 }
 
 /* 섹션4 */
@@ -160,15 +175,15 @@ section:first-of-type~section>p {
 
 #sec4 input {
     width: 100%;
-    margin: 12px  16px;
-    padding-bottom: 16px;
-    border: 1px solid var(--cccc)
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border: 1px solid var(--cccc);
 }
 
 #sec4 button {
     margin: 16px 0 48px 0;
-    padding: 8px 30px;
-    background: #111;
+    padding: 12px 32px;
+    background: var(--c111);
 }
 .map {
     height: 184px;
@@ -176,6 +191,8 @@ section:first-of-type~section>p {
 
 /* 푸터 */
 footer {
+    /* 한 줄 텍스트일 때 박스의 수직 중앙 정렬 */
+    /* line-height: 84px; */
     padding: 32px 0;
     background: var(--c333);
     text-align: center;
@@ -185,13 +202,6 @@ footer {
 @media (min-width:992px) {
 
     /* 헤더 */
-    /* 로고 */
-    .logo img {
-        width: 310px;
-        height: 45px;
-        padding-left: 32px;
-    }
-
     /* 내비게이션 */
     #gnb li {
         display: inline-block;
@@ -204,6 +214,7 @@ footer {
         width: 1500px;
         margin: 0 auto;
     }
+
     /* 섹션1 */
 
     /* 섹션2,3,4 공통 */
@@ -213,9 +224,9 @@ footer {
 
     /* 섹션2,3 공통 */
     .sec23 ul {
-        /* 이미지 가로배치 */
+        /* 이미지 가로 배치 */
         display: flex;
-        /* 줄 바꿈(한 줄에 이미지 4개씩 배치하려고) */
+        /* 줄바꿈 -> 이미지 한 줄에 4개씩 */
         flex-wrap: wrap;
     }
 
@@ -231,7 +242,7 @@ footer {
 
     /* 섹션2 */
 
-    /* 8개 이미지 중 5번째 이미지 부터 4개만 윈쪽 여백 지정 */
+    /* 8개 이미지 중 5번째 이미지 부터 4개만 위쪽 여백 지정 */
     #sec2 li:nth-of-type(4)~li {
         margin-top: 20px;
     }
@@ -240,28 +251,25 @@ footer {
         position: absolute;
         left: 0;
         top: 0;
-        background-color: #111c;
+        background-color: var(--c111);
         padding: 8px 16px;
     }
 
     /* 섹션3 */
-        /* 섹션3 */
-        #sec3 li {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 530px;
-            max-height: 530px;
-        }
+    #sec3 li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 530px;
+        max-height: 530px;
+    }
+
     /* 섹션4 */
     .map {
         height: 845px;
     }
+
     /* 푸터 */
-    /* 
-    ling-height 는 한 줄 텍스트일 떄  박스의 주식 중앙 정령이 
-    가능하며 높이 값으로 줄 수있다.
-*/
 }
 
 /* @media 992px 이상 */

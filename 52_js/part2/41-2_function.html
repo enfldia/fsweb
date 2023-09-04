@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <script>
+        // 스크립트를 <head>에 기록할 경우
+        //=================자바 스크립트===================//
+        /* window.addEvneListerner('DOMContentLoaded' ,function(){
+            코드
+        }); */
+        //================= 제이쿼리===============//
+        /* $(document).ready(function(){
+            코드;
+        }); */
+
+        /* $(function(){
+            코드;
+        }); */
+    </script>
+</head>
+
+<body>
+    <h1>텍스트</h1>
+    <p>함수1 출력</p>
+    <p>함수2 출력</p>
+    <p>함수3 출력</p>
+    <p>함수4 출력</p>
+    <p>함수5 출력</p>
+    <p>함수6 출력</p>
+    <p>함수6 리턴값</p>
+
+    <script>
+
+        /* 
+
+        1. 매개변수(매개값)
+        2. 리턴(return): 값 표현식의 결과를 호출문에 되돌려 주거나, 함수 종류
+        3. 스코프(scope, 영역): 변수,함수
+
+        문 (statement)
+            1. 결과 값이 있는 문장: 표현식(expression)
+            2. 결과 값이 없는 문장: 함수문,제어문 (if, for) 
+        함수 정의
+        
+            선언적 함수
+            function 함수명([매개변수], [parameter], [...] {
+                코드;
+                retrun [표현식];
+            }
+
+            익명 함수
+            var 참조변수 = function([매개변수]) {
+                코드;
+            }
+            
+            화살표 함수
+            var 참조변수 = ([매개변수]) => {
+                코드;
+            }
+            
+
+
+            함수 호출
+            함수명([매개값],[argument],[인자]); 또는 참조변수([매개값]);
+        */
+
+        // 요소 선택
+        /* 
+            document: 내장 객체
+            alert(): 내장 함수
+            document.getElementById('아이디')    
+            document.getElementsByClassName('클래스')
+            document.getElementsBytagName('태그')
+            
+            document.querySelsctor()
+            document.querySelsctorAll()
+
+            등의 이미 정해진 내장 객체, 함수 등은 사용자가 바꿀 수 없다.
+            익명함수와 선언 함수 등은 사용자가 정의할 수 있다.
+        */
+
+        // 요소 선택
+        var pTags = document.querySelectorAll('p');
+
+        // HTML의 내용: 요소.innerHTML = '값', innerText
+        // HTML의 속성: 요소.title = '말풍선';
+        // CSS의 속성: 요소.style.CSS속성 = '값';
+
+        // HTML 내용 변경
+        pTags[0].innerHTML = '1';
+
+        // 익명 함수 선언 후 호출해야 동작 : 호이스팅 기능이 없다.
+        var fn1 = function (para1, para2, para3) {
+            // HTML 내용 변경
+            // innerHTML의 경우 줄바꿈 하려면 <br> 사용
+            // innerText의 경우 Enter키 사용한 만큼 줄바꿈 된다.
+            pTags[0].innerHTML = `
+                fn1의 결과:<br>
+                para1 + para2 = ${para1 + para2}<br>
+                para2 + para3 = ${para2 + para3}
+                `;
+            // CSS 속성 변경
+            pTags[0].style.color = 'red';
+        }
+
+        var fn2 = (para1, para2, para3) => {
+            // innerText 사용
+            pTags[1].innerText = `
+            fn2의 결과:
+                para1 = ${para1}
+                para1 + para1 = ${para1 + para1}
+                `;
+                // CSS 속성 변경
+            pTags[1].style.color = 'darkgreen';
+
+        }
+        // 매개변수가 1개일 경우 () 생략
+        var fn3 = para1 => {
+            pTags[2].innerHTML = `
+            fn3의 결과:<br>
+                para1 = ${para1}<br>
+                para1 + para1 = ${para1 + para1}<br>
+            `;
+            // 함수 종료
+            return;
+            // CSS 속성 변경
+            pTags[2].style.color = 'darkorange';
+        }
+        // 명령문이  1개일 경우 {} 생략
+        var fn4 = para1 => pTags[3].innerHTML = `
+        fn4의 결과:<br>
+                para1 =${para1}`;
+
+        // 매개변수가 없을 경우 {} 생략
+        var fn5 = () => pTags[4].innerHTML = `
+        fn5의 결과:<br>
+                para1 =10`;
+
+        // 선언적 함수 선언 전/후 호출 가능: 선언적 함수는 호출되기 전 부터 메모리에 저장되는 호이스팅(Hoisting) 기능이 있기 때문에 선언 먼저 하는게 가능하다.
+        function fn6(a, b, c) {
+            pTags[5].innerHTML = `
+            fn5의 결과:<br>
+            a + b + c = ${a + b + c}`;
+            return a - b - c
+        }
+        /* 매개값을 선언하고 사용하지 않으면 경고 사항이다. */
+
+        /* 익명 함수 */
+        fn1(10, 20, 30);
+
+        /* 화살표 함수 */
+        fn2(10, 20, 30);
+        fn3(10);
+        fn4(10);
+        fn5();
+
+        /* 선언적 함수 */
+        var refVar = fn6(10, 20, 30);
+
+        pTags[6].innerText = 
+        // innerText 사용
+        `fn7의 결과
+        refVar = ${refVar}`
+    </script>
+</body>
+
+</html>

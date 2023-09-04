@@ -31,10 +31,11 @@
         var txt = document.querySelector('p');
         console.log(txt);
 
+        
         txt.addEventListener('click', fn);/*  함수보다 위에 있으며 선언 전 */
         
 
-        // 선언적 함수 선언 전/후 호출 가능
+        // 선언적 함수 선언 전/후 호출 가능: 선언적 함수는 호출되기 전 부터 메모리에 저장되는 호이스팅(Hoisting) 기능이 있기 때문에 선언 먼저 하는게 가능하다.
         function fn() {
             txt.innerHTML = `1<br>`;
             txt.innerHTML += `2<br>`;
@@ -42,7 +43,7 @@
 
         }
 
-        // 익명 함수 선언 후 호출
+        // 익명 함수 선언 후 호출해야 동작 : 호이스팅 기능이 없다.
         var fn = function () {
             txt.innerHTML = `4<br>`;
             txt.innerHTML += `5<br>`;

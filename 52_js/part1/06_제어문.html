@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
+    <style>
+        div {
+            position: fixed;
+            right: 0;
+        }
+    </style>
 </head>
+
 <body>
+    <h1>제어문</h1>
+    <div>
+        <label for="val">a = </label>
+        <input type="text" id="val" placeholder="숫자를 입력하세요.">
+    </div>
+
+    <h2>if</h2>
+    <p class="p1">결과</p>
+    <h2>if~else</h2>
+    <p class="p2">결과</p>
+    <h2>if~else if~else</h2>
+    <p class="p3" title="tooltip">결과</p>
+    <h2>switch~case</h2>
+    <p class="p4">결과</p>
+    <h2>for</h2>
+    <p class="p5">결과</p>
+    <h2>while</h2>
+    <p class="p6">결과</p>
+    <h2>do~while</h2>
+    <p class="p7">결과</p>
+    <h2>break</h2>
+    <p class="p8">결과</p>
+    <h2>continue</h2>
+    <p class="p9">결과</p>
+
     <script>
         /* 
             데이터 유형
@@ -37,7 +70,198 @@
             1. 조건문: if, else
             2. 선택문: switch~case, default
             3. 반복문: for, while, do
+
+            
+            if (조건식) {
+                T코드;
+            }
+            TF코드;
+            
+            조건식이 참이면 T코드 실행 후 제어문 밖에 있는 TF 코드도 실행
+
+            var = 3;
+            if (a >= 5) {
+                T코드;
+            } else {
+                F코드;
+            }
+            조건식이 참이면 T코드, 거짓이면 F코드 실행
+
+            
+            switch~case, default, break
+                표현식이 값과 일치하면 코드 실행
+
+            switch (표현식) {
+                case 값: 코드; [break;]
+                case 값: 코드; [break;]
+                case 값: 코드; [break;]
+                ...
+                [default: 코드;]
+            }
+
         */
+
+        // prompt의 결과는 문자이다.
+        // 입력
+        // let a = prompt('숫자를 입력해주세요','')
+
+        // 요소 선택
+        const pEle = document.querySelectorAll('p');
+        
+
+        /* const inEle = document.querySelector('input')
+        const pEle1 = document.querySelector('.p1');
+        const pEle2 = document.querySelector('.p2');
+        const pEle3 = document.querySelector('.p3');
+        const pEle4 = document.querySelector('.p4');
+        const pEle5 = document.querySelector('.p5');
+        const pEle6 = document.querySelector('.p6');
+        const pEle7 = document.querySelector('.p7');
+        const pEle8 = document.querySelector('.p8');
+        const pEle9 = document.querySelector('.p9'); */
+
+        // 문자열과 숫자를 비교(>,>=,<,<=)하면? false
+        // '십' -> 숫자로 바뀔 수 없는 문자열
+        // '10' -> 숫자로 바뀔 수 있는 문자열
+        // '십' > 5 -> F
+        // '십' < 5 -> F
+
+        // 사전순으로 뒤에 나오는 문자열이 크다.
+        // '가' > '나' -> F
+        // '가' < '나' -> T
+
+        // 한글과 영문 비교시 한글이 크다.
+        // 'ㄱ'> 'z' -> T
+        let a = 3;
+        // if: 하나 실행
+        if (a > 5) {
+            pEle1.style.background = 'red'
+        }
+        pEle1.style.color = 'blue'
+
+        a = 13;
+        // if: 둘 중 하나 실행
+        if (a > 5) {
+            // 참인 경우
+            pEle2.innerText = 'next';
+        } else {
+            // 거짓인 경우
+            pEle2.innerText = 'prev';
+        }
+        /* 
+            property(속성) -> CSS property
+            attribute(속성) -> HTML attribute
+            
+            요소.HTML속성 = '값'
+            요소.setAttribyte(속성,값); 
+            요소.style.CSS속성 = '값'
+        */
+        a = 3;
+        // if: 셋(이상) 중 하나 실행
+        if (a === 1) {
+            // 조건1:T
+            pEle3.title = '첫 번째 조건이 참입니다.'
+        } else if (a === 2) {
+            // 조건1:F, 조건 2:T 
+            pEle3.title = '첫 번째 조건은 거짓이고 두 번째 조건이 참입니다.'
+        } else {
+            // 조건1,2:F
+            // pEle3.title = '두 조건 모두 거짓입니다.'
+            pEle3.setAttribute('title', '두 조건 모두 거짓입니다.')
+        }
+
+
+        // input에 입력한 데이터는 문자열이다.
+        switch (inEle.value) {
+            case '일':
+                pEle4.title = 'a는 일이다.';
+                break;
+            case '이':
+                pEle4.title = 'a는 이이다';
+                break;
+
+            default:
+                pEle4.setAttribute('title', 'a는 일과 이가 아니다.')
+        }
+
+        /* 
+            for (초기식; 조건식; 증감식) {
+                코드;
+            }
+        */
+        //  값이 변하면 let, 변하지 않으면 const
+        for (let i = 0; i < 10 ; i++) {
+                pEle5.innerHTML += '<br>' + i;
+            }
+        /* 
+            step1: let i = 0 -> 0 < 10 -> T -> pEle5.innerHTML = 0 -> i++ -> 1
+            stop2: 1 < 10 -> T -> pEle5.innerHTML = 1 -> i++ -> 2
+            stop2: 2 < 10 -> T -> pEle5.innerHTML = 2 -> i++ -> 3
+            stop2: 3 < 10 -> T -> pEle5.innerHTML = 3 -> i++ -> 4
+                                    ...
+            stop2: 8 < 10 -> T -> pEle5.innerHTML = 8 -> i++ -> 9
+            stop2: 9 < 10 -> T -> pEle5.innerHTML = 9 -> i++ -> 10
+            stop2: 10 < 10 -> False -> for문 탈출.
+        */
+        
+        /* 
+            초기식
+            while (조건식) {
+                // 조건식 true이면 코드 실행
+                // 조건식 false이면 while문 탈출
+                코드;
+                증감식;
+            }
+        */
+
+        let i = 0;
+            while (i < 10) {
+                // 조건식 true이면 코드 실행
+                // 조건식 false이면 while문 탈출
+                pEle6.innerHTML += '<br>' + i;
+                i++;
+            }
+        
+        /* 
+            1번은 무조건 실행
+            초기식
+                do{
+                    // 조건식 true이면 코드 실행
+                    // 조건식 false이면 while문 탈출
+                    코드;
+                    증감식;
+                }while (조건식) 
+        */
+
+        i = 0;
+            do {
+                // 조건식 true이면 코드 실행
+                // 조건식 false이면 while문 탈출
+                pEle7.innerHTML += '<br>' + i;
+                i++;
+            }while (i < 10)
+
+            /* 
+                제어문에서 break를 만나면 제어문을 탈출한다.
+            */
+        for (let i = 0; i < 10; i++) {
+            /* if문에서 실행코드가 1문장이면 중괄호 생략 가능 */
+            if (i===6) break;
+            
+            pEle8.innerHTML += '<br>' + i;
+        }
+            
+            /* 
+                제어문에서 continue를 만나면 
+                continue 아래 있는 코드를 실행하지 않고,
+                제어문의 시작으로 올라간다.
+            */
+            for (let i = 0; i < 10; i++) {
+            /* if문에서 실행코드가 1문장이면 중괄호 생략 가능 */
+            if (i>=3 && i <=6) continue;/* 3보다 크거나 같으면,그리고 6보다 작거나 같으면 continue 아래의 코드가 실행하지 않고 제어문의 시작 위치로 올라가서 실행. */
+            pEle9.innerHTML += '<br>' + i;
+        }
     </script>
 </body>
+
 </html>

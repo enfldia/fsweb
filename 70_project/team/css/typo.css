@@ -1,5 +1,5 @@
 @charset "uft-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap');
 
 /* 초기화 */
 html {
@@ -11,6 +11,10 @@ body {
     font-weight: 400;
 }
 
+a {
+    text-decoration: none;
+    color: #222;
+}
 
 h2{
     font-size: 3rem;
@@ -42,7 +46,7 @@ h3 {
 
 /* 섹션2 */
 .sec2 p {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #008b21;
 }
@@ -76,6 +80,7 @@ h3 {
 
 /* 푸터 */
 .bn a {
+    font-size: 1.3rem;
     color: #222;
 }
 .bn a:hover {
@@ -83,31 +88,106 @@ h3 {
 }
 .bmac {
     font-size: 1.3rem;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
     color: #999;
 }
 .bsm a{
     font-size: 1.3rem;
-    font-weight: 400;
+    font-weight: 300;
     color: #999;
 }
 
-
-@media (min-width:1500px) {
-/* 섹션3 */
-.sec3container p:nth-of-type(1) {
-    font-size: 6rem;
-    font-weight: 900;
-    color: #009223;
-}
-.sec3container span {
-    color: #ffce32;
-}
-
-.sec3container p:nth-of-type(2) {
-    font-size: 16rem;
-    font-weight: 900;
-    color: #009223;
-}
-}
+@media (min-width:992px) {
+    /* 헤더 */
+    
+    /* 내비게이션 */
+    .mainn {
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+    .subn {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+    
+    }/* //@media min992px */
+    
+    @media (min-width:1500px) {
+        /* 헤더 */
+    .wrap a {
+        color: #222;
+    }
+    .wrap a:hover {
+        color: #009223
+    }
+    .mainn {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    .subn {
+        font-size: 1.7rem;
+        font-weight: 400;
+    }
+    
+    /* 섹션2 */
+    .sec2 p {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #008b21;
+    }
+    
+    /* 섹션3 */
+    .sec3container p:nth-of-type(1) {
+        font-size: 6rem;
+        font-weight: 900;
+        color: #009223;
+    }
+    .sec3container span {
+        color: #ffce32;
+    }
+    
+    .sec3container p:nth-of-type(2) {
+        font-size: 16rem;
+        font-weight: 900;
+        color: #009223;
+    }
+    
+    /* 섹션4 */
+    .btn {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .tabc {
+        font-size: 1.8rem;
+    }
+    .btn label:hover {
+        color: #009223;
+    }
+    
+    /* 푸터 */
+    .bn a {
+        color: #222;
+    }
+    .bn a:hover {
+        color: #009223;
+    }
+    .bcon {
+        font-size: 1rem;
+    }
+    .bmn {
+        font-size: 2rem;
+    }
+    .bmac {
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-align: center;
+        color: #999;
+    }
+    .bsm a{
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #999;
+    }
+    
+    }

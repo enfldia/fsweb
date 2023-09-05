@@ -6,12 +6,9 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 10px;
-}
+
 
 body {
-    font-size: 1.6rem;
     width: 100%;
     background: #fff;
 }
@@ -30,10 +27,7 @@ li {
     padding: 0;
 
 }
-a {
-    text-decoration-line: none;
-    color: #000;
-}
+
 li {
     list-style: none;
 }
@@ -69,7 +63,6 @@ footer {
     height: 200px;
     display: flex;
     justify-content: center;
-    font-size: 1rem;
     background:#ffce32
 }
 
@@ -86,7 +79,6 @@ footer {
     display: inline-block;
     height: 40px;
     line-height: 50px;
-    font-size: 2rem;
 }
 
 .bsn li {
@@ -128,15 +120,16 @@ footer {
 }
 
 .logo {
-    width: 320px;
-    display: flex;
-    justify-content: center;
+    width: 238px;
     line-height: 100px;
+    text-align: center;
+
+}
+.logo img{
+    width: 100px;
 }
 
-#gbn {
-    width: 680px;
-}
+
 
 #gbn>ul {
     display: flex;
@@ -144,7 +137,7 @@ footer {
 }
 
 .mainn {
-    width: 170px;
+    width: 119px;
     height: 340px;
     display: inline-block;
     text-align: center;
@@ -152,10 +145,7 @@ footer {
     transition-duration: 0.3s;
 }
 
-.mainn a {
-    font-size: 2.5rem;
-    ;
-}
+
 .mainn:hover {
     background: #ffce32;
 }
@@ -166,11 +156,9 @@ footer {
 .subn li {
     height : 36px
 }
-.subn a {
-    font-size: 1.7rem;
-}
+
 .ms {
-    width: 320px;
+    width: 238px;
     display: flex;
 }
 
@@ -206,3 +194,25 @@ footer {
     width: 300px;
 }
 }/* //@media min992px */
+
+@media (min-width:1285px) {
+    .logo {
+        width: 340px;
+        line-height: 100px;
+        text-align: center;
+    
+    }
+    .mainn {
+        width: 170px;
+        height: 340px;
+        display: inline-block;
+        text-align: center;
+        line-height: 100px;
+        transition-duration: 0.3s;
+    }
+    .ms {
+        width: 340px;
+        display: flex;
+    }
+}/* //@media min1285px */
+

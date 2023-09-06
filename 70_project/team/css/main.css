@@ -99,7 +99,9 @@
 .sec3container a {
     z-index: 99;
 }
-
+.sec3container img {
+    vertical-align: top;
+}
 .sec3container p {
     display: none;
 }
@@ -170,6 +172,58 @@
     }
 }
 
+/* 섹션4 */
+.sec4 {
+    padding: 0 20px;
+}
+.btn {
+    display: flex;
+    justify-content: space-around;
+}
+.btn label {
+    margin: 15px 0 8px 0;
+    width: 110px;
+    text-align: center;
+    background: #038B3C;
+    border-radius: 30px;
+}
+.btn label:hover {
+    transform: translateY(-4px);
+    transition-duration: 0.2s;
+}
+.tabinner input {
+    display: none;
+}
+.tabinner input:checked+div {
+    display: block;
+}
+.tabinner div {
+    display: none;
+}
+.tabc li {
+    border: 1px solid #ccc;
+}
+.tabc li ~ li {
+    margin-top: 8px;
+}
+.tabc li:nth-of-type(3) {
+    margin-bottom: 24px;
+}
+.tabc span {
+    display: block;
+    text-align: center;
+}
+.tabc img {
+    vertical-align: top;
+}
+.tabc li:nth-child(4) {
+    display: none;
+}
+#tab3 img {
+    filter: saturate(0%);
+}
+
+/****min-width:992px********************************/
 @media (min-width:992px) {
 /* scroll_bar */
 /* body::-webkit-scrollbar {
@@ -327,6 +381,7 @@ body::-webkit-scrollbar-track {
     display: flex;
     justify-content: center;
     background: #f6f6f6;
+    padding: 0;
 }
 
 .tabs {
@@ -342,15 +397,17 @@ body::-webkit-scrollbar-track {
 }
 
 .btn {
-    display: flex;
-    justify-content: space-around;
     width: 900px;
 }
-
+.btn label:hover {
+    transform:none;
+}
 .btn label {
+    margin: 0;
     width: 300px;
-    text-align: center;
     line-height: 48px;
+    background: none;
+    border-radius: none;
 }
 
 .tabc img {
@@ -359,15 +416,16 @@ body::-webkit-scrollbar-track {
 }
 
 .tabc {
+    min-width: 1017px;
     display: flex;
     justify-content: space-evenly;
-    align-content: space-evenly;
     flex-wrap: wrap;
 }
 
 .tabc li {
     margin: 8px 0;
     background: #fff;
+    border: none;
 }
 
 .tabc li:hover {
@@ -377,29 +435,22 @@ body::-webkit-scrollbar-track {
 
 .tabc span {
     display: block;
-    text-align: center;
 }
 
+.tabc li:nth-of-type(3) {
+    margin-bottom: 8px;
+}
+.tabc li:nth-child(4) {
+    display: block;
+}
 .tabinner {
     margin-top: 4%;
 }
 
-.tabinner input {
-    display: none;
-}
 
-.tabinner input:checked+div {
-    display: block;
-}
+}/* //@media 992px */
 
-.tabinner div {
-    display: none;
-}
-
-#tab3 img {
-    filter: saturate(0%);
-}
-}
+/*****min-width:1205px*********************************/
 @media (min-width:1205px) {
     .videob {
         height: 623px;
@@ -409,7 +460,9 @@ body::-webkit-scrollbar-track {
         width:1200px;
         height: 514px;
     }
-}
+}/* //@media 1205px */
+
+/*****min-width:1500px*********************************/
 @media (min-width:1500px) {
     .videob {
         height: 726px;
@@ -419,4 +472,4 @@ body::-webkit-scrollbar-track {
         width:1440px;
         height: 617px;
     }
-}
+}/* //@media 1500px */

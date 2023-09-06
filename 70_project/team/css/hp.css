@@ -1,9 +1,8 @@
-@charset "uft-8";
 
 /* 초기화 */
 
 * {
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 
 
@@ -114,57 +113,24 @@ li {
 /* 푸터 */
 
 footer {
-    width: 100%;
-    height: 440px;
+    padding: 15px;
     background: #292929
 }
-
-.bcon {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    background:#ffce32
-}
-
-.bcon>li {
-    height: 200px;
-    width: 320px;
-    text-align: center;
-    line-height: 20px;
-    
-}
-
-
-.bmn {
-    display: inline-block;
-    height: 40px;
-    line-height: 50px;
-}
-
-.bsn li {
-    margin: 3px;
-}
-
-.bmac {
-    width: 100%;
-    height: 200px;
-}
-.bsmc {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+.bn {
+    display: none;
 }
 .bsm {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    
 }
 
 .adcp div{
     margin-top: 32px;
     text-align: center;
 }
-/****min992px****/
+/*****min-width:992px*********************************/
 @media (min-width:992px) {
 /* 헤더 */
 .wrap {
@@ -176,6 +142,7 @@ footer {
     display: flex;
     justify-content: space-around;
     overflow: hidden;
+    transition-duration: 0.3s;
 }
 .wrap:hover {
     transition-duration: 0.3s;
@@ -208,7 +175,7 @@ footer {
 .container {
     display: block;
 }
-.wrap .ms {
+.ms {
     display: block;
 }
 
@@ -269,12 +236,53 @@ footer {
     width: 25px;
 }
 /* 푸터 */
+footer {
+    width: 100%;
+    padding: 0;
+    background: #292929
+}
+.bn {
+    display: block;
+}
+.bcon {
+    display: flex;
+    justify-content: space-evenly;
+    background:#ffce32
+}
+
+.bmn {
+    display: inline-block;
+    width: 110px;
+    text-align: center;
+}
+
+.bsn li {
+    text-align: center;
+}
+
+.bmac {
+    width: 100%;
+    height: 200px;
+}
+.bsmc {
+    margin-top: 10px;
+}
+.bsm {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
 .bsm li {
-    width: 300px;
+    width: 175px;
+}
+.adcp div{
+    margin-top: 32px;
+    text-align: center;
 }
 }/* //@media min992px */
 
+/*****min-width:1285px*********************************/
 @media (min-width:1285px) {
     .logo {
         width: 340px;

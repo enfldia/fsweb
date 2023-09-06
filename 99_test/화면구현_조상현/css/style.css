@@ -557,7 +557,7 @@
         width: 300px;
         line-height: 48px;
         background: none;
-        border-radius: none;
+        border-radius: 0px ;
     }
 
     .tabc img {

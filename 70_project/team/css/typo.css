@@ -16,7 +16,7 @@ a {
     color: #222;
 }
 
-h2{
+h2 {
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
@@ -32,22 +32,27 @@ h3 {
 .wrap a {
     color: #222;
 }
+
 .wrap a:hover {
     color: #009223
 }
+
 .mainn {
     font-size: 1.8rem;
     font-weight: 700;
 }
+
 .subn {
     font-size: 1.5rem;
     font-weight: 400;
 }
-.mobile a{
+
+.mobile a {
     color: #fff;
     font-size: 1.4rem;
     font-weight: 400;
 }
+
 /* 섹션2 */
 .sec2 p {
     font-size: 2rem;
@@ -57,25 +62,28 @@ h3 {
 
 /* 섹션3 */
 .sec3container p:nth-of-type(1) {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 900;
     color: #009223;
 }
+
 .sec3container span {
     color: #ffce32;
 }
 
 .sec3container p:nth-of-type(2) {
-    font-size: 4rem;
+    font-size: 3.6rem;
     font-weight: 900;
     color: #009223;
 }
+
 /* 섹션4 */
 .btn {
     font-size: 1.4rem;
     font-weight: 700;
     color: #ffce32;
 }
+
 .tabc {
     font-size: 1.4rem;
     font-weight: 400;
@@ -86,32 +94,102 @@ h3 {
     font-size: 1rem;
     color: #222;
 }
+
 .bn a:hover {
     color: #009223;
 }
+
 .bmac {
     font-size: 1rem;
     font-weight: 300;
     text-align: center;
     color: #999;
 }
-.bsm a{
+
+.bsm a {
     font-size: 1rem;
     font-weight: 300;
     color: #999;
 }
 
+@media (min-width:600px) {
+    /* 헤더 */
+
+    /* 내비게이션 */
+
+
+    /* 섹션3 */
+    .sec3container p:nth-of-type(1) {
+        font-size: 2.4rem;
+        font-weight: 900;
+        color: #009223;
+    }
+
+    .sec3container span {
+        color: #ffce32;
+    }
+
+    .sec3container p:nth-of-type(2) {
+        font-size: 5rem;
+        font-weight: 900;
+        color: #009223;
+    }
+}
+
+@media (min-width:800px) {
+    /* 헤더 */
+
+    /* 내비게이션 */
+
+
+    /* 섹션3 */
+    .sec3container p:nth-of-type(1) {
+        font-size: 3.4rem;
+        font-weight: 900;
+        color: #009223;
+    }
+
+    .sec3container span {
+        color: #ffce32;
+    }
+
+    .sec3container p:nth-of-type(2) {
+        font-size: 7rem;
+        font-weight: 900;
+        color: #009223;
+    }
+
+}
+
 @media (min-width:992px) {
     /* 헤더 */
-    
+
     /* 내비게이션 */
     .mainn {
         font-size: 2.4rem;
         font-weight: 700;
     }
+
     .subn {
         font-size: 1.3rem;
         font-weight: 400;
+    }
+
+    /* 섹션3 */
+    .sec3container p:nth-of-type(1) {
+        font-size: 4rem;
+        font-weight: 900;
+        color: #009223;
+    }
+
+    .sec3container span {
+        color: #ffce32;
+    }
+
+    .sec3container p:nth-of-type(2) {
+        font-size: 8rem;
+        font-weight: 900;
+        color: #009223;
     }
 
     /* 섹션4 */
@@ -119,9 +197,11 @@ h3 {
         font-size: 2rem;
         color: #222;
     }
+
     .tabc {
         font-size: 1.8rem;
     }
+
     .btn label:hover {
         color: #009223;
     }
@@ -130,90 +210,105 @@ h3 {
     .bn a {
         color: #222;
     }
+
     .bn a:hover {
         color: #009223;
     }
-    .bcon a{
+
+    .bcon a {
         font-size: 1.3rem;
     }
+
     .bmac {
         font-size: 1.3rem;
         font-weight: 400;
         text-align: center;
         color: #999;
     }
-    .bsm a{
+
+    .bsm a {
         font-size: 1.3rem;
         font-weight: 400;
         color: #999;
     }
-    
-    }/* //@media min992px */
-    
-    @media (min-width:1500px) {
-        /* 헤더 */
+
+}
+
+/* //@media min992px */
+
+@media (min-width:1500px) {
+
+    /* 헤더 */
     .wrap a {
         color: #222;
     }
+
     .wrap a:hover {
         color: #009223
     }
+
     .mainn {
         font-size: 2.5rem;
         font-weight: 700;
     }
+
     .subn {
         font-size: 1.7rem;
         font-weight: 400;
     }
-    
+
     /* 섹션2 */
     .sec2 p {
         font-size: 3rem;
         font-weight: 700;
         color: #008b21;
     }
-    
+
     /* 섹션3 */
     .sec3container p:nth-of-type(1) {
         font-size: 6rem;
         font-weight: 900;
         color: #009223;
     }
+
     .sec3container span {
         color: #ffce32;
     }
-    
+
     .sec3container p:nth-of-type(2) {
         font-size: 16rem;
         font-weight: 900;
         color: #009223;
     }
-    
+
     /* 푸터 */
     .bn a {
         color: #222;
     }
+
     .bn a:hover {
         color: #009223;
     }
-    .bcon a{
+
+    .bcon a {
         font-size: 1.3rem;
     }
-    
+
     .bmn {
         font-size: 3rem;
     }
+
     .bmac {
         font-size: 1.3rem;
         font-weight: 400;
         text-align: center;
         color: #999;
     }
-    .bsm a{
+
+    .bsm a {
         font-size: 1.3rem;
         font-weight: 400;
         color: #999;
     }
-    
-    }
+
+}

@@ -10,6 +10,7 @@
         body {
             height: 2000px;
         }
+
         div {
             width: 300px;
             height: 300px;
@@ -17,31 +18,75 @@
             font-size: 50px;
             color: #fff;
         }
+
         .box1 {
             background: red;
         }
+
         .box2 {
             background: blue;
         }
+
+        .box3 {
+            background: brown;
+        }
+
         p {
+            position: fixed;
+            right: 0;
             font-size: 30px;
         }
     </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', loadFn);
+
+        // 전역 함수(Global Function)
+        function loadFn() {
+            /* 
+                요소.addEvnetListener('이벤트', function(){
+                    코드;
+                });
+            
+                요소.addEvnetListener('이벤트', fn);
+    
+                function fn(){
+                    코드;
+                }
+                
+                요소.addEvnetListener('이벤트', function(){fn(para);});
+    
+                function fn(para){
+                    코드;
+                }
+            */
+
+            box3.addEventListener('click', function () {
+                txt.innerText = '박스3를 클릭했습니다.';
+            });
+        }
+    </script>
 </head>
 
 <body>
-    <div class="box1">박스1</div>
+    <p>여기에 출력</p>
+    <!-- 인라인 스크립트: HTML 이벤트 속성으로 지정 -->
+
+
+    <!-- 변수는 값을 저장하는 공간 -->
+    <!-- 함수는 코드를 저장하는 공간 -->
+    <div class="box1" onclick="ev1();">박스1</div>
     <div class="box2">박스2</div>
-    <p></p>
+    <div class="box3">박스3</div>
 
     <script>
         /* 
             Event(이벤트): 웹 문서 영역 안에서 웹 브라우저 또는 사용자가 행하는 동작
 
             이벤트 종류
-            1. 마우스 이벤트: click, mouseenter, mouseleave, mousemove
+            1. 마우스 이벤트: click, mouseenter(mouseover), mouseleave(mouseout), mousemove
             2. 키보드 이벤트: keydown, keypress, keyup
             3. 윈도우 이벤트: scroll, resize
+            4. 휠 이벤트: wheel
 
             이벤트 처리기(이벤트 핸들러): 이벤트가 발생할 때 그 이벤트에 반응하여 실행하는 함수
 
@@ -60,6 +105,90 @@
 
         */
 
+        /* 
+            // 여러 요소에 같은 이벤트를 중복해서 사용할 수 없다.
+            // 각각의 요소에 이벤트를 입력해야한다.
+            요소1.on이벤트속성 = fuction(para){
+                fn(para);
+            }
+            
+            요소2.on이벤트속성 = fuction(){
+                fn();
+            } 
+            // 함수의 (인수)가 없으면 아래와 같이 함축 가능하다.
+            // 인수 = 매개변수값 = parameter
+            요소2.on이벤트속성 = fn;
+
+            
+
+            // 여러 요소에 이벤트를 중복해서 적용할 수 있다.
+            요소1.on이벤트 = fn
+            요소2.on이벤트 = fn
+
+            funtion fn(){
+                코드;
+            }
+        */
+
+        // querySelector 함수 만들기
+            
+            // 선언적 함수
+            /* 
+            function qs(sel) {
+            return document.querySelector(sel);
+            }
+            */
+            
+            // 익명 함수
+            /* 
+            const qs = function(sel){return document.querySelector(sel);}; 
+            */
+
+
+
+            /* 화살표 함수
+            익명함수에서 function(){} 에서 function을 대신해서 => 로 구성된다.
+            (para1, para2, ...) =>{코드1; 코드2; ...}
+            매개변수가 1개이면 () 생략 가능
+            코드가 1개이면 {} 생략 가능
+            1개의 코드가 return문이면 return도 생략 해야한다. */
+        const qs = sel => document.querySelector(sel);
+
+
+        // 요소는 const로
+        const box1 = qs('.box1');
+        const box2 = qs('.box2');
+        const box3 = qs('.box3');
+        const txt = qs('p');
+
+        box1.onmouseenter = ev4;
+        box1.onmouseleave = ev5;
+        box2.onclick = ev2;
+        /*
+            ev()는 호출문이라 이벤트가 발생되지 않아도 바로 호출된다.
+            ()를 빼면 이벤트가 발생되서 호출되면 ev이가 작동된다.
+        */
+
+        function ev1() {
+            txt.innerText = '박스1을 클릭했습니다.';
+
+        }
+        function ev2() {
+            txt.innerText = '박스2을 클릭했습니다.';
+
+        }
+        function ev4() {
+            txt.innerText = '박스1에 들어갔습니다.';
+            box1.style.background = 'yellow';
+        }
+        function ev5() {
+            txt.innerText = '박스1에 나갔습니다.';
+            box1.style.background = 'red';
+        }
+
+        /*
+            addEventListener(이벤트, 함수);
+        */
     </script>
 </body>
 

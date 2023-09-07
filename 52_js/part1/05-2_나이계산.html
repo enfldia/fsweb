@@ -10,16 +10,51 @@
 
 <body>
     <h1>나이 계산하기</h1>
+    <!-- input의 정보가 변경되면 age() 함수 호출 -->
+    <!-- onchange를 쓸때는 초기 value값을 지정해야한다. -->
+    <input type="text" onchange="age();" value="2000">
+    <p>출력은 여기에</p>
 
     <script>
+        /* 
+            [요구 사항]
+            1. input을 이용한 입력.    
+            2. age()함수가 있어야한다.
+            3. cnffurdms p태그 안에 탬플릿 리터럴 방식(``)
+        */
         // 변수 선언 및 할당
+        // date는 날짜/시간 인스턴스(복제본) 객체
+        // 키워드: new, true, false, if, for, ....
+        // 냉장객체(생성장): new Date()
+        const date = new Date();
+        // 날짜/시간에서 현재년도 추출
+        const currentYear = date.getFullYear
+        // 사용자가 입력할 태어난 년도를 지정할 변수 선언
 
-        // 입력
+        // HTML 요소(본 요소)선택
+        const inVal = document.querySelector('input');
+        const result = document.querySelector('p')
+        
+        
+        // 입력: 태어난 년도
+        // NaN(Not a Number) ~ 숫자가 아닌 값을 연산한 결과 값.
+        // 처리: 나이 계산
+        // 나이 = 현재년도 - 태어난연도 
+        // 나이 = 2023 - 1995 -> 23살
+        function age() {
+            // 태어난 년도 입력
+            // 요소.HTML속성 = 값; -> 속성 값을 바꾼다.
+            // [var =] 요소.HTML속성 -> 속성 값을 가져온다.
+            birthYear = inVal.value;
+            // 나이 출력
+            result.innerHTML = `당신의 나이는${currentYear - birthYear}살 입니다.`
+            // birthYear = inVal.value; 값을 변수 선언하지 않고 바로 쓸 수 있다.
+            // result.innerHTML = `당신의 나이는${currentYear - inVal.value}살 입니다.`
+        }
 
-        // 처리
-
-        // 출력
-
+        // 나이 출력
+        // 문자열 + 변수 + 문자열
+        
     </script>
 </body>
 

@@ -14,21 +14,23 @@
 }
 
 .regist_section {
+    width: 100%;
+    position: relative;
     height: 960px;
     background-color: #ccc;
-    /* outline: 2px solid red; */
+    /* outline: 2px solid red; */   
 }
 
 .wrap_regist {
     padding-top: 175px;
-    position: relative;
+    position: absolute;
     width: 500px;
     height: 795px;
     left: calc(50% - 250px);
     top: calc(50% - 350px);
     background-color: #fff;
     padding: 25px 0;
-    border-radius: 15px;
+    border-radius: 0;
     /* margin-bottom: -20px; */
 }
 
@@ -99,17 +101,29 @@ h3 {
     background-color: #aaa;
 }
 
+#modal_wrap {
+    border: 1px solid red;
+    position: relative;
+    width: 100%;    
+}
+
 #modal_box {
     /* 모달창 테스트 */
     display: none;
+    /* position: absolute; */
     position: fixed;
-    left: 600px;
-    top: 200px;
+    /* left: 600px; */
+    /* top: 200px; */
+    left: 25%;
+    top: 15%;
     width: 700px;
-    height: 600px;
+    height: 650px;
+    width: 50%;
+    /* height: 50%; */
     border: 1px solid black;
     background-color: #fff;
     border-radius: 15px;
+    overflow: auto;
 }
 
 
@@ -124,19 +138,28 @@ h3 {
     /* width: 150px; */
     /* height: 150px; */
     /* border: 1px solid pink; */
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
+    /* overflow: scroll; */
 }
 
-.modal_ul li { 
+.modal_ul > li { 
     width: 232px;
+    /* position: relative; */
+    /* width: 33%; */
     height: 200px;
-    border: 1px solid #ccc;
-    
+    /* border: 1px solid #ccc; */
 }
+
+li img {
+    width: 200px;
+}
+
+
 
 .modal_ul li:hover {
  color: #009223;
@@ -150,10 +173,16 @@ h3 {
     height: 150px;
     } */
 
+.modal_close_box {
+    display: none;
+}
+
 #modal_close {
-    position:absolute;
+    position: fixed;
     left: calc(50% - 50px);
-    margin-top: 10px;
+    /* top: 800px; */
+    top: 81%;
+    /* margin-top: 100%; */
     width: 100px;
     height: 50px;
     font-size: 28px;
@@ -163,16 +192,6 @@ h3 {
     background-color: #aaa;
     z-index: 99;
 }
-
-/* li:hover + #modal_box {
-    display: block;
-    background-color: red;
-} */
-
-/* #modal_box:target {
-    display: block;
-    background: yellow;
-} */
 
 #btn {
     /* font-size: 28px; */
@@ -198,21 +217,6 @@ h3 {
     background-color: #009223;
 }
 
- /* #modal_box:active > .modal_close {
-    display: none;
-    scale: 20.0;
-    background-color: black;
-    color: black;
-}  */
-
-/* #modal_close:checked + #modal_box {
-    display:none;
-} */
-
-/* .modal_close:hover #modal_box {
-    display: none;
-} */
-
 .form_box h3 {
     font-size: 30px;
     margin-top: -10px;
@@ -228,4 +232,105 @@ h3 {
     /* z-index: 20; */
     border-radius: 15px 15px 0 0;
     top: -3%;
+}
+
+
+/* mobile */
+@media (max-width:768px) {
+
+
+    .regist_section {
+        position: relative;
+        /* width: 50%; */
+        /* height: 80%; */
+    }
+
+    .wrap_regist {
+        padding-top: 100px;
+        position: absolute;
+        width: 375px;
+        height: 795px;
+        left: calc(50% - 188px);
+        top: calc(50% - 360px);
+        background-color: #fff;
+        padding: 25px 0;
+        /* margin-bottom: -20px; */
+    }
+
+    .boxbox {
+        width: 375px;
+        border-radius: 15px 15px 0 0;
+        top: -3%;
+    }
+
+    .form_box {
+        left: 20%;
+        text-align: center;
+    
+    }
+    
+    .form_box > p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .form_box > input {
+        margin: 10px 0;
+        padding: 5px 0;
+        
+    }
+    
+    .box  {
+        width: 150%;
+        translate: -40px;
+        font-size: 15px;
+    }
+    
+    .favorite_menu_box {
+        position: relative;
+        outline: 1px solid #888;
+        /* width: 200px; */
+        margin: 10px 0;
+        height: 200px;
+        translate: 10px;
+    }
+
+
+
+
+    /* 모달팝업창 */
+
+    #modal_box {
+        width: 75%;
+        height: 550px;
+        left: 13%;
+        top: 11%;
+    }
+
+    .modal_ul > li { 
+        font-size: 12px;
+        width: 33%;
+        height: 180px;
+        /* border: 1px solid green; */
+        /* border: 1px solid #ccc; */
+    }
+
+    li img {
+        width: 100%;
+    }
+
+    #modal_close {
+        top: 670px;
+    }
+
+    .modal_ul li:hover {
+        font-size: 12px;
+       }
+
+}
+
+@media (min-width:1880px) {
+    .modal_ul {
+        justify-content: space-between;
+    }
 }

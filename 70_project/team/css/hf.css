@@ -49,10 +49,49 @@ li {
 
 }
 
-.mobilem {
+#ckb {display: none;}
+
+#ckb + label {
     position: absolute;
+    padding: 10px 0;
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    transform: translate(-100%,-50%);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+
+#ckb:checked + label .mmicn1 {
+    border-top: 2px solid #fff;
+    transform:  translateY(50%) rotateZ(-45deg);
+    transition-duration: 0.1s;
+}
+
+#ckb:checked + label .mmicn2 {
+    display: none;
+}
+
+#ckb:checked + label .mmicn3 {
+    border-top: 2px solid #fff;
+    transform: translateY(-50%) rotateZ(45deg);
+    
+    transition-duration: 0.1s;
+}
+
+.mmicn1, .mmicn2, .mmicn3{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #111;
+}
+
+
+.mobilem {
+    position: fixed;
     z-index: 999;
-    right: -999px;
+    right: -100%;
     top: 0;
     width: 240px;
     height: 100vh;
@@ -61,6 +100,9 @@ li {
     transition-duration: 0.3s;
 }
 
+#ckb:checked + label + .mobilem {
+    right: 0;
+}
 .mobilem li {
     margin-bottom: 30px;
 }
@@ -70,49 +112,6 @@ li {
     transition-duration: 0.3s;
 }
 
-.mmic {
-    position: relative;
-    z-index: 99999;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 23px;
-    height: 23px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around
-}
-
-.mmic:hover+.mobilem {
-    right: 0;
-}
-
-.mmic:hover>.mmicn1 {
-    border-top: 2px solid #fff;
-    transform: rotateZ(-45deg) translate(-2px, 7px);
-    transition-duration: 0.1s;
-}
-
-.mmic:hover>.mmicn2 {
-    border: none;
-}
-
-.mmic:hover>.mmicn3 {
-    border-top: 2px solid #fff;
-    transform: rotateZ(45deg) translate(-3px, -9px);
-    transition-duration: 0.1s;
-}
-
-.mmicn1 {
-    border-top: 2px solid #111;
-}
-
-.mmicn2 {
-    border-top: 2px solid #111;
-}
-
-.mmicn3 {
-    border-top: 2px solid #111;
-}
 
 .mobilem:hover {
     display: block;

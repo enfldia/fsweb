@@ -2,9 +2,10 @@
 
 
 // 숫자값 지정
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const carousel = document.querySelector('.Carousel');
+const qs = sel =>document.querySelector(sel);
+const prevButton = qs('.prev');
+const nextButton = qs('.next');
+const carousel = qs('.Carousel');
 
 let index = 0;
 

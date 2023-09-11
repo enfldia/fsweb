@@ -49,7 +49,6 @@ li {
     
 }
 
-<<<<<<< HEAD
 #ckb {
     display: none;
 }
@@ -102,51 +101,6 @@ li {
     position: fixed;
     z-index: 9;
     right: -999px;
-=======
-#ckb {display: none;}
-
-#ckb + label {
-    position: absolute;
-    padding: 10px 0;
-    width: 22px;
-    height: 22px;
-    top: 50%;
-    transform: translate(-100%,-50%);
-    z-index: 1000;
-    cursor: pointer;
-}
-
-
-#ckb:checked + label .mmicn1 {
-    border-top: 2px solid #fff;
-    transform:  translateY(50%) rotateZ(-45deg);
-    transition-duration: 0.1s;
-}
-
-#ckb:checked + label .mmicn2 {
-    display: none;
-}
-
-#ckb:checked + label .mmicn3 {
-    border-top: 2px solid #fff;
-    transform: translateY(-50%) rotateZ(45deg);
-    
-    transition-duration: 0.1s;
-}
-
-.mmicn1, .mmicn2, .mmicn3{
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: #111;
-}
-
-
-.mobilem {
-    position: fixed;
-    z-index: 999;
-    right: -100%;
->>>>>>> 1b6031caf68a36466333efbf85b91bc1a8c2410b
     top: 0;
     width: 240px;
     height: 100vh;
@@ -155,11 +109,7 @@ li {
     transition-duration: 0.3s;
 }
 
-<<<<<<< HEAD
 #ckb:checked ~ .mobilem {
-=======
-#ckb:checked + label + .mobilem {
->>>>>>> 1b6031caf68a36466333efbf85b91bc1a8c2410b
     right: 0;
 }
 .mobilem li {
@@ -172,13 +122,7 @@ li {
 }
 
 
-<<<<<<< HEAD
 
-=======
-.mobilem:hover {
-    display: block;
-}
->>>>>>> 1b6031caf68a36466333efbf85b91bc1a8c2410b
 
 .container {
     display: none;

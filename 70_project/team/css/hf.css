@@ -24,7 +24,7 @@ ul,
 li {
     margin: 0;
     padding: 0;
-
+    
 }
 
 li {
@@ -46,13 +46,107 @@ li {
 .logo {
     width: 150px;
     height: 100%;
-
+    
 }
 
+<<<<<<< HEAD
+#ckb {
+    display: none;
+}
+.mmic {
+    position: relative;
+    z-index: 99;
+    top: 50%;
+    transform: translate(-50%);
+}
+#ckb:checked + .mmic .mmicn1 {
+    background: #fff;
+    transform: translateY(5px) rotateZ(-45deg) ;
+    transition-duration: 0.1s;
+}
+
+#ckb:checked + .mmic .mmicn2 {
+    display: none;
+}
+
+#ckb:checked + .mmic .mmicn3 {
+    background: #fff;
+    transform: translateY(0) rotateZ(45deg);
+    transition-duration: 0.1s;
+}
+
+.mmicn1 {
+    margin: 3px 0;
+    width: 22px;
+    height: 2px;
+    background: #111;
+    border-radius: 2px;
+}
+
+.mmicn2 {
+    margin: 3px 0;
+    width: 22px;
+    height: 2px;
+    background: #111;
+    border-radius: 2px;
+}
+
+.mmicn3 {
+    margin: 3px 0;
+    width: 22px;
+    height: 2px;
+    background: #111;
+    border-radius: 2px;
+}
 .mobilem {
-    position: absolute;
-    z-index: 999;
+    position: fixed;
+    z-index: 9;
     right: -999px;
+=======
+#ckb {display: none;}
+
+#ckb + label {
+    position: absolute;
+    padding: 10px 0;
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    transform: translate(-100%,-50%);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+
+#ckb:checked + label .mmicn1 {
+    border-top: 2px solid #fff;
+    transform:  translateY(50%) rotateZ(-45deg);
+    transition-duration: 0.1s;
+}
+
+#ckb:checked + label .mmicn2 {
+    display: none;
+}
+
+#ckb:checked + label .mmicn3 {
+    border-top: 2px solid #fff;
+    transform: translateY(-50%) rotateZ(45deg);
+    
+    transition-duration: 0.1s;
+}
+
+.mmicn1, .mmicn2, .mmicn3{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #111;
+}
+
+
+.mobilem {
+    position: fixed;
+    z-index: 999;
+    right: -100%;
+>>>>>>> 1b6031caf68a36466333efbf85b91bc1a8c2410b
     top: 0;
     width: 240px;
     height: 100vh;
@@ -61,6 +155,13 @@ li {
     transition-duration: 0.3s;
 }
 
+<<<<<<< HEAD
+#ckb:checked ~ .mobilem {
+=======
+#ckb:checked + label + .mobilem {
+>>>>>>> 1b6031caf68a36466333efbf85b91bc1a8c2410b
+    right: 0;
+}
 .mobilem li {
     margin-bottom: 30px;
 }
@@ -70,53 +171,14 @@ li {
     transition-duration: 0.3s;
 }
 
-.mmic {
-    position: relative;
-    z-index: 99999;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 23px;
-    height: 23px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around
-}
 
-.mmic:hover+.mobilem {
-    right: 0;
-}
+<<<<<<< HEAD
 
-.mmic:hover>.mmicn1 {
-    border-top: 2px solid #fff;
-    transform: rotateZ(-45deg) translate(-2px, 7px);
-    transition-duration: 0.1s;
-}
-
-.mmic:hover>.mmicn2 {
-    border: none;
-}
-
-.mmic:hover>.mmicn3 {
-    border-top: 2px solid #fff;
-    transform: rotateZ(45deg) translate(-3px, -9px);
-    transition-duration: 0.1s;
-}
-
-.mmicn1 {
-    border-top: 2px solid #111;
-}
-
-.mmicn2 {
-    border-top: 2px solid #111;
-}
-
-.mmicn3 {
-    border-top: 2px solid #111;
-}
-
+=======
 .mobilem:hover {
     display: block;
 }
+>>>>>>> 1b6031caf68a36466333efbf85b91bc1a8c2410b
 
 .container {
     display: none;

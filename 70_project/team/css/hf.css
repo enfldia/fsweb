@@ -61,7 +61,6 @@ li {
 #ckb:checked + .mmic .mmicn1 {
     background: #fff;
     transform: translateY(5px) rotateZ(-45deg) ;
-    transition-duration: 0.1s;
 }
 
 #ckb:checked + .mmic .mmicn2 {
@@ -71,7 +70,6 @@ li {
 #ckb:checked + .mmic .mmicn3 {
     background: #fff;
     transform: translateY(0) rotateZ(45deg);
-    transition-duration: 0.1s;
 }
 
 .mmicn1 {
@@ -80,6 +78,7 @@ li {
     height: 2px;
     background: #111;
     border-radius: 2px;
+    transition-duration: 0.1s;
 }
 
 .mmicn2 {
@@ -88,6 +87,7 @@ li {
     height: 2px;
     background: #111;
     border-radius: 2px;
+    transition-duration: 0.1s;
 }
 
 .mmicn3 {
@@ -96,6 +96,7 @@ li {
     height: 2px;
     background: #111;
     border-radius: 2px;
+    transition-duration: 0.1s;
 }
 .mobilem {
     position: fixed;

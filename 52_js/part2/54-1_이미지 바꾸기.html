@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML + JS</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>배경색 바꾸기</h1>
+    <button>버튼</button>
+    <div class="box"></div>
+    <script>
+        const btn = document.querySelector('button');
+        const box = document.querySelector('div');
+        const arr = [
+            '<img src="../../50_html/assets/images/italy1.jpg">',
+            '<img src="../../50_html/assets/images/italy2.jpg">',
+            '<img src="../../50_html/assets/images/italy3.jpg">',
+        ];
+        let i = 0;
+
+        // 초기 이미지
+        box.innerHTML = arr[i];
+
+        btn.onclick = ()=> {
+            // i++;
+            // if(i===3) i=0;
+            (i===arr.length-1) ? i = 0 : i++; /* 삼항연산자. */
+            box.innerHTML = arr[i];
+        };
+    </script>
+</body>
+</html>

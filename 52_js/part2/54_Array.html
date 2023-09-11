@@ -103,7 +103,7 @@
         } 
         */
         
-        // 배열 선언
+        // 두 번쨰 배열 선언(가급적 첫 번째 방식으로 한다.)
         // 빈 배열로 선언 후 배열 값을 추가,수정 할 수 있다.
         const arr2 = new Array();
         console.log(arr2);
@@ -117,13 +117,13 @@
         arr2[2]= 30;
         
         /* 
-        push(new data): 마지막 인덱스에 새 데이터 삽입
-        unshift(new data): 첫 번째 인덱스에 새 데이터 삽입
-        pop(): 마지막 인덱스에 저장된 데이터 삭제
-        shift(): 첫 번째 인덱스에 저장된 데이터 삭제
+            push(new data): 마지막 인덱스에 새 데이터 삽입
+            unshift(new data): 첫 번째 인덱스에 새 데이터 삽입
+            pop(): 마지막 인덱스에 저장된 데이터 삭제
+            shift(): 첫 번째 인덱스에 저장된 데이터 삭제
         */
         arr2.push(40, 50);/* 순서대로 40, 50 값 추가 */
-        arr2.unshift(60);/* 맨앞에 60 값 추가 */
+        arr2.unshift(60,70);/* 맨앞에 60, 70 값 추가 */
         arr2.pop();/* 맨 뒤 50 삭제됨 */
         arr2.shift();/* 맨 앞 60 삭제됨 */
         list[1].innerHTML =arr2;
@@ -134,11 +134,10 @@
         arr3[2]= '열';
         /* 
             *****배열에서 쓸 수 있는 메서드들*******************
-            
             join(연결문자): 연결문자 기준으로 1개의 문자열 데이터로 반환
             concat(): 2개의 배열 객체를 하나로 결합하여 반환
             
-            sort(): 오름차순 정렬하여 반환
+            sort(): 오름차순(1,2,3,...a,b,c,....가,나,다,...) 정렬하여 반환
             reverse(): 데이터 순서를 거꾸로 바꾼 후 반환
 
             slice(index1, index2): 인덱스1에서 인덱스2 이전까지 반환
@@ -149,7 +148,31 @@
 
         /* 배열.메서드() */
         arr3.join('-')
-        list[2].innerHTML = arr3.join('-');
+        list[2].innerHTML = `
+            arr3.join('-'): ${arr3.join('-')}<br>
+            arr3: ${arr3}<br><br>
+
+            arr2.concat(arr3): ${arr2.concat(arr3)}<br>
+            arr2: ${arr2}<br><br>
+
+            오름차순<br>
+            arr2.sort():${arr2.sort()}<br>
+            arr2: ${arr2}<br><br>
+            
+            내림차순<br>
+            arr2.reverse():${arr2.reverse()}<br>
+            arr2: ${arr2}<br><br>
+
+            인덱스 번호 0 ~ 2 까지<br>
+            arr2.slice(0, 3): ${arr2.slice(0, 3)}<br>
+            arr2: ${arr2}<br><br>
+
+            인덱스 0번 부터 3개
+            arr2.splice(idx, cnt, 값, 값....): ${arr2.splice(0, 3, '문', '자', '열')}<br>
+            arr:${arr2}<br><br>
+        `;
+        
+
 
         </script>
 </body>

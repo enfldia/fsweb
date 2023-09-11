@@ -52,11 +52,11 @@ li {
 #ckb {
     display: none;
 }
+
 .mmic {
     position: relative;
     z-index: 99;
-    top: 50%;
-    transform: translate(-50%);
+    top: 30%;
 }
 #ckb:checked + .mmic .mmicn1 {
     background: #fff;

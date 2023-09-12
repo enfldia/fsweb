@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .photo {
+            width: 300px;
+            height: 300px;
+            background: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>이미지 갤러리(prev/next)</h1>
+    <div>
+        <div class="photo">
+            <img src="/50_html/assets/images/italy1.jpg" alt="이미지">
+        </div>
+        <!-- perv/next 버튼은 a로 많이 한다.-->
+        <div class="ctls">
+            <a href="#">prev</a>
+            <a href="#">next</a>
+        </div>
+    </div>
+    <script>
+        /* 
+            return: 함수 호출문에 결괏값 반환하고 함수 종료
+
+            함수 정의
+                function 함수명() {
+                    코드;
+                    return 데이터(값);
+                }
+
+            함수 호출
+                var 변수 = 함수명();
+        */
+
+        const btn = document.querySelectorAll('a');
+        const img = document.querySelector('img');
+        let cnt = 1;
+
+        for(let i=0; i<btn.length; i++) {
+            btn[i].onclick = function(){
+                if (i === 1) {
+                    // 0->1->2->3->4  리턴 되는건 숙제
+                    cnt++;
+                    if (cnt === 5) cnt = 1;
+                } else {
+                    // 4->3->2->1-0
+                    cnt--;
+                    if (cnt === 0) cnt =4;
+                }
+                console.log(cnt);
+                img.src = `/50_html/assets/images/italy${cnt}.jpg`;
+            };
+        }
+    </script>
+</body>
+
+</html>

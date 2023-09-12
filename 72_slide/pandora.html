@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐로셀 - bxSlider</title>
+    <!-- CSS는 link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .slideWrap {
+            /*  이미지 하나가 348px */
+            width: 1044px;
+            margin: 0 auto;
+        }
+
+        .bx-wrapper {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            height: 100%;
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+
+        .bx-wrapper .bx-pager {
+            bottom: 0px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a.active,
+        .bx-wrapper .bx-pager.bx-default-pager a:focus {
+            background: #000;
+            width: 48px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: #666;
+            text-indent: -9999px;
+            display: block;
+            width: 20px;
+            height: 8px;
+            margin: 0 2px;
+            outline: 0;
+            border-radius: 5px;
+        }
+
+        .bx-wrapper .bx-prev {
+            left: 120px;
+            transform: rotate(45deg);
+            border: 8px solid #111;
+            border-top: none;
+            border-right: none;
+            background-image: none;
+        }
+
+        .bx-wrapper .bx-next {
+            right: 120px;
+            transform: rotate(45deg);
+            border: 8px solid #111;
+            border-left: none;
+            border-bottom: none;
+            background-image: none;
+        }
+
+        /* 
+            
+            미디어(<img>, <video>)의 크기
+            object-fit: cover,contain,..
+            object-position: x위치, y위치
+
+
+            배경이미지:
+            background-size: cover;, contain;
+        */
+    </style>
+</head>
+
+<body>
+    <div id="section">
+        <div class="slideWrap">
+            <div class="slider">
+                <div><img src="images/01.png" alt="이미지1">
+                    <p>투톤 셀러셀 트리플 댕글 참</p>
+                    <p>\130,000</p>
+                    <button>버튼</button>
+                </div>
+                <div><img src="images/02.png" alt="이미지2"></div>
+                <div><img src="images/03.png" alt="이미지3"></div>
+                <div><img src="images/04.png" alt="이미지3"></div>
+                <div><img src="images/05.png" alt="이미지3"></div>
+                <div><img src="images/06.png" alt="이미지3"></div>
+                <div><img src="images/07.png" alt="이미지3"></div>
+                <div><img src="images/08.png" alt="이미지3"></div>
+                <div><img src="images/09.png" alt="이미지3"></div>
+            </div>
+        </div>
+    </div>
+    <!-- JS는 src -->
+    <!-- 제이쿼리:자바스크립트 라이브러리 언어이다. CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+
+    <script>
+        // {}(중가로):객체(object)
+        // 객체.메서드()
+        // 매개변수:자바스트 데이터
+
+        // 객체 정의
+        /* 
+            {
+                속성: 값,
+                속성: 값,
+                속성: 값,
+                ...
+            }
+        */
+
+        // 요소.메서드(매개변수, ...)
+        // $('선택자').메서드();
+        $('.slider').bxSlider({
+            pager: true,
+            slideWidth: 348,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 3,
+        });
+    </script>
+</body>
+
+</html>

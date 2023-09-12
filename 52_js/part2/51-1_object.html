@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <style>
+        img {width: 300px;}
+    </style>
+</head>
+
+<body>
+    <h1>객체</h1>
+    <div></div>
+    <script>
+        /* 
+            객체는 속성과 메서드가 있다.
+            속성의 값이 함수일 경우가 메서드 이다.
+            메서드: 특정 기능을 수행하기 위한 코드들의 집합체.
+            
+            변수
+            const 변수 = 값;
+            let 변수 = 값;
+
+            함수 
+            const 함수 = FUNCTION(){값};
+
+            객체 = const 변수 = {
+                속성:값,
+                메서드:function(){},
+                ...
+            }
+            
+            배열
+            const 변수 = [
+                값, 값, ...
+            ]
+
+
+        */
+        /* 
+            객체?
+            
+            현실세계
+                사람                        object(객체)
+                    특징                        property(속성)
+                    동작                        method(메서드)
+
+            객체는 속성과 메서드(function을 가진 속성)를 가지고 있다.
+            
+
+            객체 선언
+            const obj = {
+                이름: 값,
+                lastname:값,
+                'first name': function(){},
+                ...
+            }
+            객체 사용
+                객체['속성'] 또는 객체.속성
+                객체['lastmane'] 또는 객체.lastname
+                []안에 속성은 문자열로 표기
+                속성의 이름에 공백이 있을 경우(단어 두개 이상)
+                ['first name'].속성
+
+            객체의 메서드를 실행한다.
+                객체.메서드()
+
+            객체.속성 -> 객체의 속성값을 가져온다.
+            객체.속성 = 값 -> 객체의 속성값을 바꾼다.
+        */
+            // 객체 생성(선언)
+            const box = document.querySelector('div');
+            const person = {
+                'first name': '길동',
+                lastName: '홍',
+                age: 20,
+                gender: '남',
+                name: function() {
+                    return person.lastName + person['first name'];
+                }
+            };
+            
+            
+            // 객체의 값을 가져오기
+            // 방법1: 객체.속성
+            // person.gender
+
+            // 방법2: 객체['속성']
+            // person['age']
+
+            // 속성안에 공백이 있을 경우
+            // []안에 속성은 문자열로 표기
+            // person['first name']
+            
+            // 개체의 값을 수정하기
+            // 객체.속성 = 값;
+            // person.lastName = '김'
+
+            // 객체의 메서드를 실행
+            // 객체.매서드()
+            // person.name();
+
+            // 출력
+            box.innerText = `
+                나의 이름은 ${person.name()}입니다.
+                나이는 ${person['age']}세이고요.
+                성별은 ${person.gender}입니다.
+            `;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인터페이스구현_조상현</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            font-size: 1.6rem;
+            width: 100%;
+            background: #777;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+            object-fit: cover;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /* 전체 */
+        .aWrap {
+            width: 1200px;
+            position: relative;
+            left: 50%;
+            top: 50vh;
+            transform: translate(-50%, -50%);
+        }
+
+        /* header */
+        header {
+            position: absolute;
+            padding: 0 20px;
+            width: 100%;
+            z-index: 99;
+            transition: .3s;
+        }
+
+        header:hover {
+            background: #fff;
+        }
+
+        .hWrap {
+            display: flex;
+            justify-content: space-between;
+            height: 95px;
+        }
+
+        /* logo */
+        .logo {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* gnb */
+        .gnb {
+            width: 100%;
+            margin: 0 240px;
+        }
+
+        /* 1뎁스 */
+        .main {
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+            line-height: 95px;
+            text-align: center;
+        }
+
+        .main::after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 95px;
+            width: 100%;
+            height: 0;
+            background: #fff;
+            /* outline: 1px solid black; */
+            transition: .3s;
+        }
+
+        .main:hover::after {
+            height: 240px;
+        }
+
+        .main:hover .subm {
+            display: block;
+            transition: .3s;
+        }
+
+        .main>li {
+            width: 170px;
+        }
+
+        .main>li:hover {
+            background: #ffce32;
+            transition: .4s;
+        }
+
+        /* 2뎁스 */
+        .subm {
+            display: none;
+            line-height: 40px;
+            transition: .3s;
+        }
+
+        .subm li {
+            font-size: 1.4rem;
+        }
+
+        /* sns,membership */
+        .sm {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+        }
+
+        .sns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .sns li {
+            margin: 0 8px 0 0;
+
+        }
+
+        .member {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .member li {
+            margin: 0 8px 0 0;
+        }
+
+        /* 캐로셀 */
+        .slideWrap {
+            height: 500px;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        /* 이미지 슬라이더 */
+        .slide {
+            display: flex;
+            width: 1200px;
+            height: 500px;
+        }
+
+        .slide li {
+            position: absolute;
+            left: 100%;
+            transition: 0.3s;
+        }
+
+        .slide li img {
+            width: 1200px;
+            height: 500px;
+        }
+
+        .pnBtn {
+            position: absolute;
+            z-index: 99;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 5rem;
+        }
+
+        /* 인디케이터 */
+        .indi {
+            display: flex;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            z-index: 99;
+            transform: translate(-50%, -50%);
+        }
+        .indi li {
+            font-size: 0px;
+            width: 12px;
+            height: 12px;
+            border-radius: 6px;
+            background: #777;
+            margin: 0 4px;
+            cursor: pointer;
+        }
+        /* 푸터 */
+        footer {
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aWrap">
+        <!-- header -->
+        <header>
+            <div class="hWrap">
+                <!-- logo -->
+                <div class="logo"><a href="#"><img src="images/logo_sub_header.png" alt="logo"></a></div>
+                <!-- gnb -->
+                <div class="gnb">
+                    <ul class="main">
+                        <li>
+                            <div>메뉴소개</div>
+                            <ul class="subm">
+                                <li><a href="https://www.subway.co.kr/menuList/sandwich">샌드위치</a></li>
+                                <li><a href="https://www.subway.co.kr/menuList/unit">랩,기타</a></li>
+                                <li><a href="https://www.subway.co.kr/menuList/salad">샐러드</a></li>
+                                <li><a href="https://www.subway.co.kr/menuList/morning">아침메뉴</a></li>
+                                <li><a href="https://www.subway.co.kr/menuList/sidedrink">스마일 썹</a></li>
+                                <li><a href="https://www.subway.co.kr/menuList/catering">단체메뉴</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>이용방법</div>
+                            <ul class="subm">
+                                <li><a href="https://www.subway.co.kr/utilizationSubway">써브웨이 이용방법</a></li>
+                                <li><a href="https://www.subway.co.kr/utilizationGroupMenu">단체메뉴 이용방법</a></li>
+                                <li><a href="https://www.subway.co.kr/freshInfo">신선한 재료 소개</a></li>
+                                <li><a href="https://www.subway.co.kr/appFastMenu">App 이용방법</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>새소식</div>
+                            <ul class="subm">
+                                <li><a href="https://www.subway.co.kr/eventList">이벤트.프로모션</a></li>
+                                <li><a href="https://www.subway.co.kr/newsList">뉴스.공지사항</a></li>
+                                <li><a href="https://www.subway.co.kr/tvCommercial">광고영상</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>써브웨이</div>
+                            <ul class="subm">
+                                <li><a href="https://www.mega-mgccoffee.com/bbs/?bbs_category=1">써브웨이 역사</a></li>
+                                <li><a href="https://www.mega-mgccoffee.com/bbs/?bbs_category=3">써브웨이 약속</a></li>
+                                <li><a href="https://www.mega-mgccoffee.com/bbs/?bbs_category=4">샌드위치아티스트</a></li>
+                                <li><a href="https://www.mega-mgccoffee.com/news/voc/">매장찾기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> <!-- //.gnb -->
+                <div class="sm">
+                    <div class="sns">
+                        <li><a href="https://www.instagram.com/subwaykorea/"><img src="images/sns_instagram.png"
+                                    alt="instargram_img"></a></li>
+                        <li><a href="https://www.facebook.com/Subwaykr"><img src="images/sns_facebook.png"
+                                    alt="facebook_img"></a></li>
+                    </div>
+                    <div class="member">
+                        <li><a href="https://www.subway.co.kr/member/login">로그인</a></li>
+                        <li><a href="https://www.subway.co.kr/member/join/step1">회원가입</a></li>
+                        <li></li>
+                    </div>
+                </div>
+            </div><!-- //hWarp -->
+        </header>
+        <!-- 캐로셀 -->
+        <div class="slideWrap">
+            <!-- 콘텐츠 -->
+            <ul class="slide"></ul>
+            <!-- 전후 버튼 -->
+            <ul class="pnBtn">
+                <a href="#" class="prevBtn">&lt;</a>
+                <a href="#" class="nextBtn">&gt;</a>
+            </ul>
+            <!-- 인디게이터 -->
+            <ul class="indi"></ul>
+        </div>
+        <!-- 푸터 -->
+        <footer>
+            <div class="cp">
+                <span>Copyright 조상현. All rights reserved.</span>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // 데이터 정의
+        const imgObj = {
+            imgData1: {
+                imgSrc: 'images/slide1.png',
+                imgAlt: '슬라이드1'
+            },
+            imgData2: {
+                imgSrc: 'images/slide2.png',
+                imgAlt: '슬라이드2'
+            },
+            imgData3: {
+                imgSrc: 'images/slide3.png',
+                imgAlt: '슬라이드3'
+            }
+        }
+        let slideCount = 0;
+
+        // for ~ in 제어문
+        for (let i in imgObj) {
+            slideCount++;
+            // console.log(slideCount);
+        }
+
+        // 요소 선택
+        const img = document.querySelector('.slide');
+        const indic = document.querySelector('.indi');
+        const prevBtn = document.querySelector('.prevBtn');
+        const nextBtn = document.querySelector('.nextBtn');
+
+        // 이미지를 요소에 삽입
+        for (let i = 1; i <= slideCount; i++) {
+            img.innerHTML += `
+            <li><img src="${imgObj['imgData' + i].imgSrc}" alt="${imgObj['imgData' + i].imgAlt}"></li>
+            `;
+        }
+        // 인디케이터 생성
+        for (let i = 1; i <= slideCount; i++) {
+            indic.innerHTML += `
+            <li>${i}</li>`;
+        }
+        const slideImgs = document.querySelectorAll('.slide li')
+
+
+        /* 자동 슬라이드 */
+        setInterval(moveSlide, 3000);
+        slideImgs[0].style.left = '0%'
+        let i = 1;
+        function moveSlide() {
+            slideImgs[i].style.left = '0%';
+            slideImgs[i].style.zIndex = '1';
+            slideImgs[i].style.transition = '.3s'
+            // j는 0,1,2,3,4
+            for (let j = 0; j < slideCount; j++) {
+                if (i !== j) {
+                    slideImgs[j].style.left = '-100%';
+                    slideImgs[j].style.zIndex = '-1';
+                }
+            }
+
+            setTimeout(function () {
+                slideImgs[i].style.transition = 'none'
+                slideImgs[i].style.left = '100%';
+            }, 500);
+
+            i++;
+            if (i === 3) i = 0;
+        }
+
+        /*  prev, next 버튼 */
+        
+        prevBtn.onclick = function () {
+            i--;
+            if (i === 0) i = slideCount;
+            slideImgs[i].style.left = '100%';
+            slideImgs[i].style.transition = '.3s';
+            moveSlide(i);
+        };
+        nextBtn.onclick = function () {
+            i++;
+            if (i === slideCount) i = 0;
+            slideImgs[i].style.left = '-100%';
+            slideImgs[i].style.transition = '.3s';
+            moveSlide(i);
+        };
+        
+        /* 인디게이터 */
+        const indiBtn = document.querySelectorAll('.indi li')
+
+        for (let i=0; i<slideCount; i++)
+        indiBtn[i].onclick =function(){
+            slideImgs[i].style.left = '0%';
+            
+        }
+        
+    </script>
+</body>
+
+</html>

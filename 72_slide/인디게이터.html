@@ -54,11 +54,12 @@
         /* indicator(인디케이터) */
         .indi {
             display: flex;
+            z-index: 9999;
             position: absolute;
             left: 50%;
-            transform: translateY(-50%);
+            transform: translateX(-50%);
             bottom: 20px;
-            color: red;
+            color: #fff;
         }
         .indi li {
             margin: 0 4px;
@@ -123,38 +124,38 @@
                 <li><img src="${imgObj['imgData' + i].imgSrc}" alt="${imgObj['imgData' + i].imgAlt}"></li>
                 `;
         }
-        const listItem = document.querySelectorAll('.slide li')
-        const indiBtn = document.querySelectorAll('.indi li')
-
+        const listItem = document.querySelectorAll('.slide li');
+        const indiBtn = document.querySelectorAll('.indi li');
         let cnt = 0;
 
-        for (let i=0; i<slideCount; i++)
-        indiBtn[i].onclick =function(){
-            listItem[i].style.left = '100%';
-            listItem[i].style.transition = 'none';
-            moveSlide(i)
+        for (let i=0; i<slideCount; i++) {
+            indiBtn[i].onclick = function(){
+                listItem[i].style.left = '100%';
+                listItem[i].style.transition = '.3s';
+                moveSlide(i);
+            };
         }
 
         function moveSlide(i) {
+            console.log(i);
             listItem[i].style.left = '0%';
             listItem[i].style.zIndex = '1';
             listItem[i].style.transition = '.3s';
 
+            // j는 0,1,2,3,4
             for (let j = 0; j < slideCount; j++) {
                 if (i !== j) {
                     listItem[j].style.left = '-100%';
                     listItem[j].style.zIndex = '-1';
                     listItem[j].style.transition = '.3s';
                     setTimeout(function () {
-                        listItem[i].style.left = '100%';
-                        listItem[i].style.transition = 'none';
-                    }, 300);
+                        listItem[j].style.left = '100%';
+                        listItem[j].style.transition = 'none';
+                    }, 2000);
                 }
             }
 
         }
-
-
 
 
     </script>

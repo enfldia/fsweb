@@ -102,7 +102,7 @@
             height: 0;
             background: #fff;
             /* outline: 1px solid black; */
-            transition: .3s;
+            transition: .25s;
         }
 
         .main:hover::after {
@@ -111,7 +111,7 @@
 
         .main:hover .subm {
             display: block;
-            transition: .3s;
+            transition: .4s;
         }
 
         .main>li {
@@ -120,7 +120,7 @@
 
         .main>li:hover {
             background: #ffce32;
-            transition: .4s;
+            transition: .6s;
         }
 
         /* 2뎁스 */
@@ -211,6 +211,7 @@
             z-index: 99;
             transform: translate(-50%, -50%);
         }
+
         .indi li {
             font-size: 0px;
             width: 12px;
@@ -220,6 +221,7 @@
             margin: 0 4px;
             cursor: pointer;
         }
+
         /* 푸터 */
         footer {
             height: 100px;
@@ -359,55 +361,70 @@
 
         /* 자동 슬라이드 */
         setInterval(moveSlide, 3000);
-        slideImgs[0].style.left = '0%'
+        slideImgs[0].style.left = '0%';
+        
+
         let i = 1;
         function moveSlide() {
             slideImgs[i].style.left = '0%';
             slideImgs[i].style.zIndex = '1';
             slideImgs[i].style.transition = '.3s'
-            // j는 0,1,2,3,4
             for (let j = 0; j < slideCount; j++) {
                 if (i !== j) {
                     slideImgs[j].style.left = '-100%';
                     slideImgs[j].style.zIndex = '-1';
                 }
             }
-
             setTimeout(function () {
                 slideImgs[i].style.transition = 'none'
                 slideImgs[i].style.left = '100%';
-            }, 500);
-
+            }, 50);
+            indicator(i)
             i++;
             if (i === 3) i = 0;
         }
 
         /*  prev, next 버튼 */
-        
+
         prevBtn.onclick = function () {
-            i--;
-            if (i === 0) i = slideCount;
-            slideImgs[i].style.left = '100%';
+            if (i === slideCount) i = 0;
+            slideImgs[i].style.left = '0%';
+            console.log(i)
             slideImgs[i].style.transition = '.3s';
-            moveSlide(i);
         };
         nextBtn.onclick = function () {
-            i++;
             if (i === slideCount) i = 0;
-            slideImgs[i].style.left = '-100%';
+            slideImgs[i].style.left = '0%';
+            console.log(i)
             slideImgs[i].style.transition = '.3s';
-            moveSlide(i);
         };
-        
+
         /* 인디게이터 */
         const indiBtn = document.querySelectorAll('.indi li')
-
-        for (let i=0; i<slideCount; i++)
-        indiBtn[i].onclick =function(){
-            slideImgs[i].style.left = '0%';
-            
-        }
         
+        for (let i=0; i<slideCount; i++) {
+            indiBtn[i].onclick = function(){
+                slideImgs[i].style.left = '0%';
+                console.log(i)
+            };
+        }
+
+
+
+
+        indiBtn[0].style.background = '#333';
+        indiBtn[0].style.width = '20px';
+        function indicator(index) {
+            indiBtn[i].style.background = '#333';
+            indiBtn[i].style.width = '20px';
+            for (let j = 0; j < slideCount; j++) {
+                if (i !== j) {
+                    indiBtn[j].style.width = '12px';
+                    indiBtn[j].style.background = '#777';
+                }
+            }
+
+        }
     </script>
 </body>
 

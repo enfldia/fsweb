@@ -383,20 +383,19 @@
             i++;
             if (i === 3) i = 0;
         }
+        
 
         /*  prev, next 버튼 */
 
         prevBtn.onclick = function () {
-            if (i === slideCount) i = 0;
-            slideImgs[i].style.left = '0%';
-            console.log(i)
-            slideImgs[i].style.transition = '.3s';
+            if(i <-1) return;
+            
+            console.log(i);
         };
         nextBtn.onclick = function () {
-            if (i === slideCount) i = 0;
-            slideImgs[i].style.left = '0%';
-            console.log(i)
-            slideImgs[i].style.transition = '.3s';
+            if(i>=slideCount) return;
+            moveSlide(i);
+            console.log(i);
         };
 
         /* 인디게이터 */
@@ -404,8 +403,9 @@
         
         for (let i=0; i<slideCount; i++) {
             indiBtn[i].onclick = function(){
-                slideImgs[i].style.left = '0%';
+                moveSlide(i) 
                 console.log(i)
+
             };
         }
 

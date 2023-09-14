@@ -34,5 +34,12 @@ footer {
     color: #fff;
     text-align: center;
 }
-footer a {color: #fff;}
 footer .copy {color: #777;}
+.sns a {
+    font-size: 24px;
+    color: #777;
+}
+
+.sns footer a:hover {
+    color: #fff;
+}

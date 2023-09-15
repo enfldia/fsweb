@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <p>여기 출력</p>
+    <script>
+        /* 
+            window.innerWidth: 창 외 콘텐츠(스크롤바 포함) 너비(읽기 전용)
+            window.innerHeight: 창 외 콘텐츠(스크롤바 포함) 높이(읽기 전용)
+            window.outerWidth: 창 전체(도구 모음 등) 너비 (읽기 전용)
+            window.outerHeight: 창 전체(도구 모음 등) 높이 (읽기 전용)
+        */
+
+        const p = document.querySelector('p');
+        p.innerText= `
+            window.innerWidth:${window.innerWidth}
+            window.innerHeight:${window.innerHeight}
+            window.outerWidth:${window.outerWidth}
+            window.outerHeight:${window.outerHeight}
+        `;
+    </script>
+</body>
+</html>

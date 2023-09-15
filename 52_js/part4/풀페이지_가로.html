@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* resset */
+        body {
+            margin: 0;
+        }
+        html {
+            scroll-behavior:smooth;
+        }
+
+        /* fullPage Layout */
+        #wrap {
+            display: flex;
+            /* 세로 스크롤바 숨김 */
+            height: 100vh;
+            overflow-y: hidden;
+        }
+
+        /* 섹션 전체 */
+        .sec {
+            flex-shrink: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #sec1 {
+            background: lightblue;
+        }
+
+        #sec2 {
+            background: lightsalmon;
+        }
+
+        #sec3 {
+            background: lightcyan;
+        }
+
+        #sec4 {
+            background: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <section id="sec1" class="sec">
+            <h2>섹션1</h2>
+        </section>
+        <section id="sec2" class="sec">
+            <h2>섹션2</h2>
+        </section>
+        <section id="sec3" class="sec">
+            <h2>섹션3</h2>
+        </section>
+        <section id="sec4" class="sec">
+            <h2>섹션4</h2>
+        </section>
+    </div>
+    <script>
+        /* 
+            document.documentElement ~ <html> 요소 반환
+            document.body ~ <body> 요소 반환
+
+            요소.scrollTop ~ 요소의 수직 스크롤한 픽셀 양 반환(읽기 전용이 아니라 값 입력도 가능)
+            요소.scrollLeft ~ 요소의 수평 스크롤한 픽셀 양 반환(읽기 전용이 아니라 값 입력도 가능
+        */
+        /* 
+            스크롤바를 아래로 내리면
+            아래 박스가 위로 올라온다.
+        */
+
+        // 변수 선언
+        // const 변수 1= 값, 변수 2=값, ...;
+        const wrap = document.querySelector('#wrap');
+        const sec = document.querySelector('.sec');
+
+        wrap.onwheel = (e) => {
+
+            if (e.deltaY > 0) {
+                // deltaY는 정해진 키워드
+                // 마우스휠 Y축(=상하=세로) 스크롤량 반환.
+                // 읽기 전용 속성임. (즉, 값 설정 불가)
+                // 마우스휠 내림
+                wrap.scrollLeft += wrap.offsetWidth;
+            } else {
+                // 마우스휠 올림
+                wrap.scrollLeft -= wrap.offsetWidth;
+            }
+        };
+    </script>
+</body>
+
+</html>

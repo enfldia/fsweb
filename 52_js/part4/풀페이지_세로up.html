@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* resset */
+        body,h2{
+            margin: 0;
+        }
+        html {
+            scroll-behavior:smooth;
+        }
+
+        /* fullPage Layout */
+        #wrap {
+            height: 100vh;
+
+        }
+
+        /* 섹션 전체 */
+        .sec {
+            flex-shrink: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #sec1 {
+            background: lightblue;
+        }
+
+        #sec2 {
+            background: lightsalmon;
+        }
+
+        #sec3 {
+            background: lightcyan;
+        }
+
+        #sec4 {
+            background: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <section id="sec1" class="sec">
+            <h2>섹션1</h2>
+        </section>
+        <section id="sec2" class="sec">
+            <h2>섹션2</h2>
+        </section>
+        <section id="sec3" class="sec">
+            <h2>섹션3</h2>
+        </section>
+        <section id="sec4" class="sec">
+            <h2>섹션4</h2>
+        </section>
+    </div>
+    <script>
+        /* 
+            document.documentElement ~ <html> 요소 반환
+            document.body ~ <body> 요소 반환
+
+            요소.scrollTop ~ 요소의 수직 스크롤한 픽셀 양 반환(읽기 전용이 아니라 값 입력도 가능)
+            요소.scrollLeft ~ 요소의 수평 스크롤한 픽셀 양 반환(읽기 전용이 아니라 값 입력도 가능
+        */
+        /* 
+            스크롤바를 아래로 내리면
+            아래 박스가 위로 올라온다.
+        */
+
+        // 변수 선언
+        // const 변수 1= 값, 변수 2=값, ...;
+        const docEle = document.documentElement;
+        const sec = document.querySelectorAll('.sec');
+        
+        
+    // 익명함수에서의 this는 이벤트의 주체를 가르킨다.
+    // 화살표 함수에서의 this는 이벤트 발생한 주체의 부모객체
+    // 화살표 함수에서 e.currentTarhet 가 익명함수의 this와 같은 값을 같는다.이벤트 요소가 발생한 요소
+
+        for(let i=0;i<sec.length; i++){
+        sec[i].onwheel = function(e) {
+            // 기본 이벤트 방지
+            if (e.deltaY > 0) {
+                // deltaY는 정해진 키워드
+                // 마우스휠 Y축(=상하=세로) 스크롤량 반환.
+                // 읽기 전용 속성임. (즉, 값 설정 불가)
+                // 마우스휠 내림
+                
+                //스크롤시  sec[0]~sec[3]을 전부 다시 읽는다.
+                let next = sec[i].nextElementSibling.offsetTop;
+                docEle.scrollTop = next;
+
+                // 이벤트 함수 안에서 사용한 this는 이벤트가 발생한 주체(요소)
+                // ex) sec[1]에서 이벤트가 발생하면 sec[1]만 읽는다.
+
+                // let next = this.nextElementSibling.offsetTop;
+                // docEle.scrollTop = next;
+            } else {
+                // 마우스휠 올림
+                let prev = this.previousElementSibling.offsetTop;
+                docEle.scrollTop = prev;
+            }
+        };
+    }
+    </script>
+</body>
+
+</html>

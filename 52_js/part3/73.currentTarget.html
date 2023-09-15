@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+<body>
+    <h1>target</h1>
+    <ul class="list1">
+        <li>this</li>
+        <li>currentTarhet</li>
+        <li>target</li>
+    </ul>
+    <ul class="list2">
+        <li>this</li>
+        <li>currentTarhet</li>
+        <li>target</li>
+    </ul>
+    <script>
+        
+        const list1 = document.querySelectorAll('.list1 li');
+        const list2 = document.querySelectorAll('.list2 li');
+
+        // for ~ of 에서 i는 인덱스 번호가 아니라 요소이다.
+        // for(let i of list){
+
+        // for문에서 i는 인덱스 번호로 활용된다.
+        for(let i = 0; i<list1.length; i++){
+        list1[i].addEventListener('click',fn);
+
+        list2[i].addEventListener('click',fn);
+
+        function fn(){
+            event.currentTarget.style.color = 'red';
+        }
+    }
+    </script>
+</body>
+</html>

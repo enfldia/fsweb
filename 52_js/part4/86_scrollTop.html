@@ -7,29 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
     <style>
-        body {
-            height: 3000px;
+        section {
+            height: 100vh;
         }
 
-        p {
-            position: fixed;
-            top: 0;
-            left: 0;
-            font-size: 30px;
+        div {
+            width: 360px;
+            height: 240px;
+            background: lightcoral;
+            transform: translateY(600px);
+            transition: .5s;
         }
     </style>
 </head>
 
 <body>
-    <p></p>
-
+    <section>
+        <h2>섹션1</h2>
+    </section>
+    <section>
+        <h2>섹션2</h2>
+        <div>박스</div>
+    </section>
     <script>
         /* 
             document.documentElement ~ <html> 요소 반환
-            document.querySelector('html')
-            document.documentElement.scrollTop ~ 창에서 스크롤한 양 반환
+            document.body ~ <body> 요소 반환
+
+            요소.scrollTop ~ 요소의 스크롤 양 반환
+            요소.scrollLeft ~ 요소의 스크롤 양 반환
+        */
+        /* 
+            스크롤바를 아래로 내리면
+            아래 박스가 위로 올라온다.
         */
 
+        // 변수 선언
+        // const 변수 1= 값, 변수 2=값, ...;
+        const docEle = document.documentElement,
+        box = document.querySelector('div');
+
+        window.onscroll = () => {
+            let st = docEle.scrollTop;
+            console.log(st);
+
+            if (st > 700) {
+                box.style.transform = 'translateY(0)';
+            } else {
+                box.style.transform = 'translateY(600px)';
+            }
+        };
     </script>
 </body>
 

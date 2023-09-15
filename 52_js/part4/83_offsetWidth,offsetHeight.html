@@ -14,19 +14,48 @@
             border: 5px solid blue;
             margin: 50px;
             background: blue;
+            overflow: scroll;/* 강제 스크롤 */
         }
     </style>
 </head>
 
 <body>
     <div></div>
+    <p>여기에 출력</p>
+    <button>버튼</button>
 
     <script>
-        /* 
-            요소.offsetWidth ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 너비(픽셀 단위)를 반환
-            요소.offsetHeight ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 높이(픽셀 단위)를 반환
-        */
+        /*  
+            요소의 크기
+                요소.offsetWidth ~ 패딩+보더+스크롤바 너비(읽기 전용 속성)
+                요소.offsetHeight ~ 패딩+보더+스크롤바 높이(읽기 전용 속성)
+                요소.clienWidth~    패딩 포함 너비
+                요소.clienHeight~   패딩 포함 높이
 
+            가져오기
+                요소.box.offsetHeight;
+            
+            설정하기
+                요소.box.offsetHeight = 값;
+        */
+        const box = document.querySelector('div');
+        const txt = document.querySelector('p');
+        const btn = document.querySelector('button');
+        //가져오기 
+        oh = box.offsetHeigth;
+
+        
+        btn.onclick = () => {
+        
+            oh = 200;
+        }    
+        /* 출력 */
+        txt.innerHTML = `
+        box.offsetWidth = ${box.offsetWidth}<br>
+        box.offsetheight = ${box.offsetHeight}<br>
+        box.clientWidth = ${box.clientWidth}<br>
+        box.clientheight = ${box.clientHeight}<br>
+        `;
     </script>
 </body>
 

@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* 초기화 */
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    /* 페이지내 링크로 이동시 바로 이동이 아니라 스크롤 이동 */
+}
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}

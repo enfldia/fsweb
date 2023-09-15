@@ -21,11 +21,21 @@
 <body>
     <button>버튼</button><span></span>
     <div></div>
-
+    <p>여기에 출력</p>
     <script>
         /* 
             요소.offsetTop ~ 창 끝에서 요소의 y축 위치 반환
+            요소.offsetLeft ~ 창 끝에서 요소의 x축 위치 반환
         */
+        const box = document.querySelector('div');
+        const txt = document.querySelector('p');
+
+        box.offsetTop = 값;
+
+        txt.innerText= `
+            box.offsetTop = ${box.offsetTop}
+            box.offsetLeft = ${box.offsetLeft}
+        `;
 
     </script>
 </body>

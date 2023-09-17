@@ -154,8 +154,8 @@
     <div class="sec sec3">
         <div class="sec3container">
             <a href="#"><img src="images/main/pm_img.png" alt="promotion_img"></a>
-            <p>차은우만의 <span>써브웨이 꿀 조합</span></p>
-            <p>차은우 메뉴</p>
+            <p class="p1">차은우만의 <span>써브웨이 꿀 조합</span></p>
+            <p class="p2">차은우 메뉴</p>
             <img class="balloon" src="images/main/balloon.png" alt="말풍선">
         </div>
     </div><!-- //.sec sec3 -->
@@ -279,6 +279,22 @@
             pager: true,
             // slideWidth: 1200
         });
+        const docEle = document.documentElement,
+        p1= document.querySelector('.p1'),
+        p2= document.querySelector('.p2');
+
+        window.onscroll = () => {
+            let st = docEle.scrollTop;
+            console.log(st);
+
+            if (st > 1300) {
+                p1.style.display = 'block';
+                p2.style.display = 'block';
+            } else {
+                p1.style.display = 'none';
+                p2.style.display = 'none';
+            }
+        };
     </script>
 </body>
 

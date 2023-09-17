@@ -54,9 +54,11 @@ li {
 }
 
 .mmic {
-    position: relative;
-    z-index: 99;
-    top: 30%;
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
 }
 #ckb:checked + .mmic .mmicn1 {
     background: #fff;

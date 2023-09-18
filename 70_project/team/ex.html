@@ -1,0 +1,61 @@
+<script>
+    const qs = sel => document.querySelector(sel);
+    const out1 = qs('.outer1');
+    const out2 = qs('.outer2');
+
+    out1.onmouseover = mover2;
+    out1.onmouseout = mout2;
+    out2.onmouseover = mover1;
+    out2.onmouseout = mout1;
+
+    function mover1() {
+        let m;
+        m = document.getElementsByClassName('outer1')
+        m[0].style.background = ('#fff');
+        color =('#000')
+    }
+    function mout1() {
+        let m;
+        m = document.getElementsByClassName('outer2')
+        m[0].style.backgroundImage = "url('../images/sub3/bg_store.jpg')";
+    }
+    function mover2() {
+        let m;
+        m = document.getElementsByClassName('outer2')
+        m[0].style.background = ('#fff');
+    }
+    function mout2() {
+        let m;
+        m = document.getElementsByClassName('outer1')
+        m[0].style.backgroundImage = "url('../images/sub3/bg_nation.jpg')";
+    }
+
+    /* 애니메이션 페이드인 */
+    function animateElement(elementId, slideInClass, slideOutClass) {
+        const element = document.getElementById(elementId); // id로 해당 요소 찾기
+        const rect = element.getBoundingClientRect(); // 요소 위치 구하기
+        // 요소가 화면 안쪽으로 들어왔을 경우 isVisible로 인식
+        const isVisible = rect.top <= window.innerHeight && rect.bottom>= 0;
+        if (isVisible) {
+        element.classList.add(slideInClass);
+        element.classList.add("show");
+        element.classList.remove(slideOutClass);
+        } else {
+        element.classList.add(slideOutClass);
+        element.classList.add("hide");
+        element.classList.remove(slideInClass);
+        }
+    }
+    window.addEventListener("scroll", function () {
+        animateElement("element-1", "slide-in-right", "slide-out-right");
+        animateElement("element-2", "slide-in-left", "slide-out-left");
+    });
+</script>
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}

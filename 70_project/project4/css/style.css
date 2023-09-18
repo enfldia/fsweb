@@ -20,7 +20,7 @@ html {
 /* 섹션 전체 */
 .sec {
     flex-shrink: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -41,12 +41,85 @@ html {
 }
 /* 해더 */
 /* 섹션1 */
+/* 캐로셀(carousel) */
+#slideWrap {
+    /* 화면의 가로/세로 가운데 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.slide li {
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    height: 100%;
+}
+
+.slide li:first-of-type {
+    left: 0;
+}
+
+/* next/prev Button */
+#slideWrap .ctls {
+    z-index: 9999;
+    /* 수직중앙 */
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#slideWrap .ctls a {
+    position: absolute;
+    color: #fff;
+    text-shadow: 0 0 3px #111;
+}
+
+/* prev button */
+#slideWrap #pb {
+    left: 5%;
+}
+
+/* next button */
+#slideWrap #nb {
+    right: 5%;
+}
+
+/* indi */
+#slideWrap .indi {
+    z-index: 9999;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+}
+
+#slideWrap .indi li {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    text-indent: -9999em;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #fff;
+}
+
+#slideWrap .indi li.on {
+    background: red;
+}
 /* 섹션2 */
 /* 섹션3 */
 /* 패럴렉스 이미지 */
 #sec3 {
     background: url(../images/230814_1_pc_pick_bg.jpg)
-    no-repeat 50% 50%/ cover ;
+    no-repeat 50% 50%/ cover fixed;
     position: relative;
 }
 #sec3 .container {
@@ -56,17 +129,33 @@ html {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 1400px;
-    background: yellow;
 }
 #sec3 .des {
     width: 400px;
-    background: red;
+    text-align: right;
+}
+#sec3 .tit1 {
+    transform: translateX(-400px);
+    transition: 1.5s;
+    opacity: 0;
+}
+#sec3 .tit2 {
+    margin: 48px 0;
+    transform: translateX(-400px);
+    transition: 1.5s .3s;
+    opacity: 0;
+}
+#sec3 .tit2 p:first-of-type() {
+    line-height: 1.3;
+    margin-bottom: 16px;
 }
 /* 고스트 버튼 */
-#sec3 a{
+#sec3 .proBtn{
     border: 2px solid #fff;
     border-radius: 5px;
     padding: 6px 24px;
+    transition: 1.5s;
+    opacity: 0;
 }
 /* 상품이미지 */
 #product {

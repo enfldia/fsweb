@@ -1,0 +1,84 @@
+
+.sec1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* vertical-align: top; */
+}
+
+/* 캐로셀(carousel) */
+#slideWrap {
+  /* 화면의 가로/세로 가운데 */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide li {
+  /* 애니메이션 대상이 li */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* li 모두 */
+  left: 100%;
+}
+
+.slide li:first-of-type {
+  left: 0;
+}
+
+/* next/prev Button */
+.ctls {
+  z-index: 9999;
+  /* 수직 가운데 */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.ctls a {
+  position: absolute;
+  color: #fff;
+  text-shadow: 0 0 1px #111;
+}
+
+/* prev button */
+#pb {
+  left: 10%;
+}
+
+/* next button */
+#nb {
+  right: 10%;
+}
+
+/* indi */
+.indi {
+  z-index: 9999;
+  display: flex;
+  /* 수평 가운데 */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 7%;
+}
+
+.indi li {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  /* 숫자 숨기기 */
+  text-indent: -9999em;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #fff;
+}
+
+.indi li.on {
+  background: #f00;
+}

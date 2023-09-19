@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullPage - 가로up</title>
+    <style>
+        /* reset.css */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            /* 세로 스크롤바 숨김 */
+            overflow: hidden;
+        }
+
+        /* fullPage Layout */
+        #wrap {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sec {
+            flex-shrink: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #sec1 {
+            background: lightblue;
+        }
+
+        #sec2 {
+            background: lightcoral;
+        }
+
+        #sec3 {
+            background: lightseagreen;
+        }
+
+        #sec4 {
+            background: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <section id="sec1" class="sec">
+            <h2>섹션1</h2>
+        </section>
+        <section id="sec2" class="sec">
+            <h2>섹션2</h2>
+        </section>
+        <section id="sec3" class="sec">
+            <h2>섹션3</h2>
+        </section>
+        <section id="sec4" class="sec">
+            <h2>섹션4</h2>
+        </section>
+    </div>
+
+    <script>
+        // http://www.barleytea.co.kr/barleytea_1505/index.asp
+        const docEle = document.documentElement;
+        const sec = document.querySelectorAll('.sec');
+        const ww = window.innerWidth;
+
+        for (let i = 0; i < sec.length; i++) {
+            sec[i].onwheel = (e) => {
+                // 기본 이벤트 방지
+                e.preventDefault();
+                if (e.deltaY > 0) {
+                    // 마우스휠 내림
+                    // e.currentTarget는 이벤트가 발생한 요소
+                    if (docEle.scrollLeft > ww * (sec.length - 2)+100) return;
+                    let next = e.currentTarget.nextElementSibling.offsetLeft;
+                    console.log('앗!', ww * (sec.length - 1)-100, next);
+                    docEle.scrollLeft = next;
+                } else if (e.deltaY < 0) {
+                    // 마우스휠 올림
+                    if (docEle.scrollLeft < ww - 100) return;
+                    let prev = e.currentTarget.previousElementSibling.offsetLeft;
+                    console.log(prev);
+                    docEle.scrollLeft = prev;
+                }
+            };
+        }
+    </script>
+</body>
+
+</html>

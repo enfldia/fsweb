@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset.css */
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-size: 1.5rem;
+            background: yellowgreen;
+        }
+
+        body,
+        h1 {
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* 헤더 */
+        header {
+            background: #fdd000;
+            padding: 10px 20px;
+            transition: .3s;
+            overflow: hidden;
+        }
+
+        header:hover {
+            background: #fff;
+        }
+
+        header h1 {
+            width: 150px;
+        }
+
+        /* 모바일 버튼 */
+        .mBtn {
+            z-index: 9999;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 20px;
+            height: 16px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .mBtn span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            border-top: 3px solid #000;
+            transition: .3s;
+        }
+
+        .mBtn span:first-of-type {
+            top: 0;
+        }
+
+        .mBtn span:last-of-type {
+            top: 100%;
+        }
+
+        .mBtn.active span:first-of-type {
+            opacity: 0;
+        }
+
+        .mBtn.active span:first-of-type,
+        .mBtn.active span:last-of-type {
+            top: 50%;
+        }
+
+        .mBtn.active span:nth-of-type(2) {
+            transform: rotate(45deg);
+            border-top: 3px solid #fff;
+        }
+
+        .mBtn.active span:nth-of-type(3) {
+            transform: rotate(-45deg);
+            border-top: 3px solid #fff;
+        }
+
+        /* 모바일 헤더 */
+        #mHeader {
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 50%;
+            height: 100vh;
+            background: #222;
+            padding: 60px 30px;
+        }
+
+        #mHeader .gnb {
+            margin-top: 48px;
+        }
+
+        #mHeader .main {
+            font-size: 1.8rem;
+        }
+
+        #mHeader .main>li {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        #mHeader .main>li::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            content: '>';
+            color: #fff;
+            transition: .3s;
+        }
+
+        #mHeader .main>li.on::after {
+            transform: rotate(90deg);
+        }
+
+        #mHeader a {
+            color: #fff;
+        }
+
+        #mHeader .sub {
+            font-size: 1.4rem;
+            margin-top: 16px;
+            padding-left: 32px;
+            height: 0;
+            overflow: hidden;
+
+        }
+
+        #mHeader .sub li {
+            margin: 8px;
+        }
+
+        #mHeader .sub a {
+            color: #777;
+        }
+
+        #mHeader .sub a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a href="#"><img src="megacoffee/logo_b.png" alt="megacoffee"></a></h1>
+        <button type="button" class="mBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div id="mHeader">
+            <div><a href="#"><img src="megacoffee/logo_w.png" alt="megacoffee"></a></div>
+            <div class="gnb">
+                <ul class="main">
+                    <li><a href="#">메가스토리</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드</a></li>
+                            <li><a href="#">BI</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴소개</a>
+                        <ul class="sub">
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">상품</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">매장</a>
+                        <ul class="sub">
+                            <li><a href="#">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">창업안내</a>
+                        <ul class="sub">
+                            <li><a href="#">개설비용</a></li>
+                            <li><a href="#">인테리어</a></li>
+                            <li><a href="#">창업문의</a></li>
+                            <li><a href="#">창업뉴스</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메가소식</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">고객의 소리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">채용</a>
+                        <ul class="sub">
+                            <li><a href="#">채용안내</a></li>
+                        </ul>
+                    </li>
+                </ul><!-- //.mian -->
+            </div><!-- //.gnb -->
+        </div><!-- //.mHeader -->
+    </header>
+    <script>
+        const mBtn = document.querySelector('.mBtn');
+        // 버튼을 클릭하면
+        mBtn.onclick = () => {
+            mBtn.classList.toggle('active');
+        };
+        // 햄버거 -> x로 변경 - > mBtn에 active 클래스 추가
+    </script>
+</body>
+
+</html>

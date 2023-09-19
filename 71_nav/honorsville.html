@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경남아너스빌</title>
+    <!-- https://www.honorsville.co.kr/ -->
+    <style>
+        /* reset.css */
+        @import url('/assets/css/reset.css');
+        body {
+            margin: 0;
+            overflow-y: hidden;
+        }
+
+        #fullpage .section {
+            height: 100vh;
+        }
+
+        .section  {
+            position: relative;
+        }
+
+        #section1 {
+            background: #FF5F45;
+        }
+
+        #section2 {
+            background: #0798EC;
+        }
+
+        #section3 {
+            background: #FC6C7C;
+        }
+
+        #section4 {
+            background: #FEC401;
+        }
+
+        /* header */
+        #header {
+            z-index: 9999;
+            position: fixed;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            /* position: relative; */
+            transition: .4s ease-in-out;
+        }
+
+        #header:hover {
+            background: #0F2244 !important;
+        }
+
+        #header::after {
+            content: '';
+            position: absolute;
+            top: 95px;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: #fff;
+            transition: height .5s ease-out;
+        }
+
+        #header:hover::after {
+            height: 200px;
+        }
+
+        /* logo */
+        .logo {
+            width: 207px;
+        }
+
+        .inner {
+            height: 95px;
+            margin: 0 auto;
+        }
+
+        .gnb {
+            position: relative;
+            z-index: 1;
+            height: 95px;
+            overflow: hidden;
+            transition: .4s ease-in-out;
+        }
+
+        #header:hover .gnb {
+            height: 295px;
+        }
+
+        .gnb .main {
+            display: flex;
+        }
+
+        .gnb .main>li {
+            text-align: center;
+            line-height: 95px;
+        }
+
+        .gnb .main>li>a {
+            position: relative;
+        }
+
+        .gnb .main>li>a::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 0%;
+            width: 100%;
+            height: 2px;
+            background: #b0b3b1;
+            display: block;
+            transform: scaleX(0);
+            transition: .3s;
+        }
+
+        .gnb .main>li>a:hover::after {
+            transform-origin: 50% 50%;
+            transform: scaleX(1);
+        }
+
+        .gnb .main>li+li {
+            margin-left: 50px;
+        }
+
+        .gnb .main>li>a {
+            transition: .3s;
+            color: #fff;
+            font-size: 1.8rem;
+        }
+
+        .gnb .sub li {
+            line-height: 2;
+        }
+
+        .gnb .sub li:first-of-type {
+            padding-top: 16px;
+        }
+
+        .gnb .sub li a {
+            color: #555;
+            font-size: 1.6rem;
+        }
+
+        .gnb li a:hover {
+            color: #b0b3b1;
+        }
+
+        /* util */
+        .util,
+        .util ul {
+            display: flex;
+            line-height: 95px;
+            /* align-items: center; */
+            font-size: 1.3rem;
+        }
+
+        .util a {
+            color: #fff;
+        }
+
+        #header:hover .util a {
+            color: #bab3ac;
+        }
+
+        .sns {
+            position: relative;
+            width: 32px;
+            margin-right: 16px;
+            font-size: 1.8rem;
+            transition: .3s;
+            background: no-repeat 0% 50%/100%;
+        }
+
+        .sns img {
+            position: absolute;
+            top: 35%;
+            left: 2px;
+            opacity: 0;
+            transition: .3s;
+        }
+
+        .sns:hover span {
+            opacity: 0;
+        }
+
+        .sns:hover img {
+            opacity: 1;
+        }
+
+        .sns::after {
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 49%;
+            width: 4px;
+            height: 4px;
+            border-radius: 100%;
+            background: #fff;
+            margin-left: 10px;
+        }
+
+        #header:hover .sns::after {
+            background: #bab3ac;
+        }
+
+        .member li {
+            margin: 0 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <header id="header">
+            <!-- logo -->
+            <h1 class="logo"><a href="#"><img src="/50_html/assets/images/header_logo.png" alt="honorsville"></a></h1>
+            <div class="inner">
+                <!-- nav -->
+                <nav class="gnb">
+                    <ul class="main">
+                        <li>
+                            <a href="#">분양단지</a>
+                            <ul class="sub">
+                                <li><a href="#">분양중인 단지</a></li>
+                                <li><a href="#">분양예정 단지</a></li>
+                                <li><a href="#">분양완료 단지</a></li>
+                                <li><a href="#">연간분양계획</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">브랜드</a>
+                            <ul class="sub">
+                                <li><a href="#">브랜드 스토리</a></li>
+                                <li><a href="#">브랜드 아이덴티티</a></li>
+                                <li><a href="#">특화아이템</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">아너스빌 멤버스</a>
+                            <ul class="sub">
+                                <li><a href="#">아너스빌 소식</a></li>
+                                <li><a href="#">청약가이드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">마이아너스빌</a>
+                            <ul class="sub">
+                                <li><a href="#">자주 묻는 질문</a></li>
+                                <li><a href="#">1:1문의</a></li>
+                                <li><a href="#">A/S 문의</a></li>
+                                <li><a href="#">관심단지 관리</a></li>
+                                <li><a href="#">개인정보 변경</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div><!-- //.inner -->
+            <div class="util">
+                <div class="sns"><a href="#"><span>SNS</span><img src="honorsville/btn_youtube.png" alt="youtube"></a>
+                </div>
+                <ul class="member">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+        </header>
+
+
+        <div id="section1" class="section">섹션1</div>
+        <div id="section2" class="section">섹션2</div>
+        <div id="section3" class="section">섹션3</div>
+        <div id="section4" class="section">섹션4</div>
+    </div>
+
+    <script>
+        // 변수 선언
+        const header = document.querySelector('#header');
+        let wh = window.innerHeight;
+
+        window.onscroll = () => {
+            //변수 선언
+            let st = this.scrollY;
+
+            console.log(st, wh);
+            if (st > wh - 100) {
+                //참일 경우
+                header.style.background = '#0F2244';
+            } else {
+                //거짓일 경우
+                header.style.background = 'transparent';
+            }
+        };
+
+        const sec = document.querySelectorAll('.section');
+
+        for (let i = 0; i < sec.length; i++) {
+            sec[i].onwheel = function (e) {
+                if (e.deltaY < 0) {
+                    let prev = this.previousElementSibling.offsetTop;
+                    console.log(prev);
+                    document.documentElement.scrollTop = prev;
+                } else {
+                    let next = this.nextElementSibling.offsetTop;
+                    console.log(next);
+                    document.documentElement.scrollTop = next;
+                }
+            };
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset.css */
+        * {box-sizing: border-box;}
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-size: 1.6rem;
+            margin: 0;
+        }
+
+        video {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* 섹션 */
+        section {
+            position: relative;
+            height: 100vh;
+        }
+        
+        .container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 3.6rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 80px;
+        }
+
+        /* 비디오 */
+        .vid {
+            position: relative;
+            width: 780px;
+            margin: 0 auto 80px;
+        }
+        /* 비디오 플레이어 버튼 */
+        .vid .btn {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            left:50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background: rgba(0,0,0,0.5);
+            cursor: pointer;
+            display: none;
+            /* span의 수직 중앙 맞춤을 위해 적당히 */
+            padding-top: 30px;
+        }
+        .vid .btn span {
+            display: inline-block;
+            width: 10px;
+            height: 40px;
+            background: #fff;
+            margin: 0 6px;
+        }
+
+        .vid .btn span.on {
+            width:0;
+            height:0;
+            margin-left: 15px;
+
+            /* 보더로 삼각형 만들기 */
+            background: transparent;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 30px solid #fff;
+            border-right: 0px solid transparent;
+        }
+        .vid .btn span.on+span {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>'문 앞으로 배달되는 일상의 행복'이라는<br>비전으로</h2>
+        <p>우아한형제들은 배달이 일상을 조금 더 행복하게 하도록 오늘도 달리고 있어요</p>
+        <div class="vid">
+            <video>
+                <source src="../../50_html/assets/video/mov_bbb.mp4" type="video/mp4">
+            </video>
+            <div class="btn"><span class="on"></span>
+                <span></span>
+            </div>
+        </div>
+        <h2>오늘이 전설이 될 수 있도록</h2>
+        <p>세계 진출, 배민로봇 개발, 인공지능을 연구하며<br>우아한형제들은 미래를 더 가깝게 만들고 있어요.</p>
+    </div>
+    <script>
+        const vidBtn = document.querySelector('.vid .btn')
+        const vidBtnSpan = vidBtn.querySelector('span')
+        const vidWrap = document.querySelector('.vid')
+        const vid = vidWrap.querySelector('video')
+        let vidState = 0; 
+        // 비디오 위에 마우스를 올리면
+        vidWrap.onmouseenter = ()=>{
+            // 비디오 플레이 버튼(삼각형)이 보인다.
+            vidBtn.style.display = 'block';
+        };
+        // 비디오 영역 밖으로 벗어나면
+        vidWrap.onmouseleave = () =>{
+            // 비디오 플레이 버튼을 숨긴다.
+            vidBtn.style.display = 'none';
+        };
+
+        // 버튼(paly/pause)을 클릭하면
+        vidBtn.onclick = ()=>{
+            if (vidState === 0){
+                // 비디오가 play 된다.
+                vid.play();
+                vidState = 1;
+            } else {
+                // 비디오 일시정지
+                vid.pause();
+                vidState = 0;
+            }
+            //
+            //  span에 on클래스 제거되면 버튼 모양이 정지모양으로 바꾼다.
+            //  span에 on클래스 추가되면 버튼 모양이 삼각형으로 바꾼다.
+            // toggl(''); 은 add와 remove를 번갈아 적용시킨다.
+            vidBtnSpan.classList.toggle('on');
+        }
+    </script>
+</body>
+</html>

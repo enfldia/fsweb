@@ -40,6 +40,177 @@ html {
     background: lightgreen;
 }
 /* 해더 */
+#header {
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    /* position: relative; */
+    transition: .4s ease-in-out;
+}
+
+#header:hover {
+    background: #0F2244 !important;
+}
+
+#header::after {
+    content: '';
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #fff;
+    transition: height .5s ease-out;
+}
+
+#header:hover::after {
+    height: 200px;
+}
+
+/* logo */
+.logo {
+    width: 207px;
+}
+
+.inner {
+    height: 95px;
+    margin: 0 auto;
+}
+
+.gnb {
+    position: relative;
+    z-index: 1;
+    height: 95px;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+}
+
+#header:hover .gnb {
+    height: 295px;
+}
+
+.gnb .main {
+    display: flex;
+}
+
+.gnb .main>li {
+    text-align: center;
+    line-height: 95px;
+}
+
+.gnb .main>li>a {
+    position: relative;
+}
+
+.gnb .main>li>a::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background: #b0b3b1;
+    display: block;
+    transform: scaleX(0);
+    transition: .3s;
+}
+
+.gnb .main>li>a:hover::after {
+    transform-origin: 50% 50%;
+    transform: scaleX(1);
+}
+
+.gnb .main>li+li {
+    margin-left: 50px;
+}
+
+.gnb .main>li>a {
+    transition: .3s;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.gnb .sub li {
+    line-height: 2;
+}
+
+.gnb .sub li:first-of-type {
+    padding-top: 16px;
+}
+
+.gnb .sub li a {
+    color: #555;
+    font-size: 1.6rem;
+}
+
+.gnb li a:hover {
+    color: #b0b3b1;
+}
+
+/* util */
+.util,
+.util ul {
+    display: flex;
+    line-height: 95px;
+    /* align-items: center; */
+    font-size: 1.3rem;
+}
+
+.util a {
+    color: #fff;
+}
+
+#header:hover .util a {
+    color: #bab3ac;
+}
+
+.sns {
+    position: relative;
+    width: 32px;
+    margin-right: 16px;
+    font-size: 1.8rem;
+    transition: .3s;
+    background: no-repeat 0% 50%/100%;
+}
+
+.sns img {
+    position: absolute;
+    top: 35%;
+    left: 2px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.sns:hover span {
+    opacity: 0;
+}
+
+.sns:hover img {
+    opacity: 1;
+}
+
+.sns::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 49%;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background: #fff;
+    margin-left: 10px;
+}
+
+#header:hover .sns::after {
+    background: #bab3ac;
+}
+
+.member li {
+    margin: 0 6px;
+}
 /* 섹션1 */
 /* 캐로셀(carousel) */
 #slideWrap {
@@ -115,6 +286,117 @@ html {
     background: red;
 }
 /* 섹션2 */
+#sec2  {
+    position: relative;
+}
+#sec2 h2 {
+    font-size: 4.4rem;
+    text-align: center;
+}
+
+#sec2 p {
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+/* 섹션 */
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1400px;
+    height: 700px;
+}
+
+/* 탭 버튼 */
+#tabs .btn {
+    z-index: 9999;
+    position: absolute;
+    right: 335px;
+}
+
+#tabs .btn a {
+    /* 버튼의 공통 글자 색 */
+    color: #555;
+}
+
+#tabs .btn li.on a {
+    /* li 중에서 on 클래가 있는 것만 글자 색 변경 */
+    color: #007fa8;
+}
+
+#tabs .btn li {
+    display: inline-block;
+    padding: 8px;
+}
+
+#tabs .btn li+li::before {
+    content: '|';
+    margin-right: 20px;
+}
+
+/*  탭 내용 */
+#tabs div {
+    display: none;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    width: 1120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#tabs div.on {
+    display: flex;
+}
+
+#tabs figure {
+    flex-shrink: 0;
+    width: 576px;
+}
+
+#tabs figcaption {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 8px 0;
+    letter-spacing: -1.4px;
+}
+
+#tabs figure:first-of-type::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    content: "1위";
+    width: 60px;
+    height: 60px;
+    background: #007fa8;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#tabs figure:first-of-type~figure {
+    width: 224px;
+}
+
+#tabs figure:first-of-type figcaption {
+    position: absolute;
+    /* 왼쪽 맞춤 때문에 left로 지정해야함 */
+    left: 633px;
+    top: 60px;
+    /* 1위 캡션의 글자 크기 재 설정 */
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: -1.8px;
+}
+
+#tabs figure:first-of-type+figure {
+    margin-left: 30px;
+}
 /* 섹션3 */
 /* 패럴렉스 이미지 */
 #sec3 {
@@ -165,4 +447,69 @@ html {
     background: url(../images/autumn_img.png) no-repeat 0 0/ contain;
 }
 /* 섹션4 */
+#sec4 {
+    position: relative;
+}
+#sec4 .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#sec4 h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#sec4p {
+    margin-bottom: 80px;
+}
+
+/* 비디오 */
+.vid {
+    position: relative;
+    width: 780px;
+    margin: 0 auto 40px;
+}
+/* 비디오 플레이어 버튼 */
+.vid .btn {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+    display: none;
+    /* span의 수직 중앙 맞춤을 위해 적당히 */
+    padding-top: 30px;
+}
+.vid .btn span {
+    display: inline-block;
+    width: 10px;
+    height: 40px;
+    background: #fff;
+    margin: 0 6px;
+}
+
+.vid .btn span.on {
+    width:0;
+    height:0;
+    margin-left: 15px;
+
+    /* 보더로 삼각형 만들기 */
+    background: transparent;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid #fff;
+    border-right: 0px solid transparent;
+}
+.vid .btn span.on+span {
+    display: none;
+}
 /* 푸터 */

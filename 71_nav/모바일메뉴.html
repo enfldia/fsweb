@@ -104,11 +104,13 @@
         #mHeader {
             position: absolute;
             top: 0;
+            /* 장치 밖 오른쪽 배치 */
             right: -100%;
             width: 50%;
             height: 100vh;
             background: #222;
             padding: 60px 30px;
+            transition: .3s;
         }
 
         #mHeader .gnb {
@@ -141,13 +143,15 @@
             color: #fff;
         }
 
+        /* 2뎁스 */
         #mHeader .sub {
             font-size: 1.4rem;
             margin-top: 16px;
             padding-left: 32px;
+            /* 높이 0으로 숨김; */
             height: 0;
             overflow: hidden;
-
+            transition: .3s;
         }
 
         #mHeader .sub li {
@@ -167,7 +171,7 @@
 
 <body>
     <header>
-        <h1><a href="#"><img src="megacoffee/logo_b.png" alt="megacoffee"></a></h1>
+        <h1><a href="#"><img src="hyundai/logo_b.png" alt="megacoffee"></a></h1>
         <button type="button" class="mBtn">
             <span></span>
             <span></span>
@@ -224,11 +228,57 @@
     </header>
     <script>
         const mBtn = document.querySelector('.mBtn');
-        // 버튼을 클릭하면
+        const mHeader = document.querySelector('#mHeader');
+        const mainMenu = mHeader.querySelectorAll('.main > li')
+        const mainMenuLink = mHeader.querySelectorAll('.main > li >a')
+        const subMenu = mHeader.querySelectorAll('.sub')
+        let mState = 0;
+        let btnState = 0;
+
+        // 모바일 버튼 클릭
         mBtn.onclick = () => {
+            // 햄버거 -> x로 변경 - > mBtn에 active 클래스 추가
             mBtn.classList.toggle('active');
+            if (mBtn.classList.contains('active')) {
+                // #mHeader가 화면에 나타나게
+                mHeader.style.right = 0;
+            } else {
+                // right: -100%로 오른 쪽에 숨김.
+                mHeader.style.right = '-100%';
+            }
         };
-        // 햄버거 -> x로 변경 - > mBtn에 active 클래스 추가
+
+        /* 
+        mBtn.onclick - () => {
+            mBtn.classLis.toggle('active');
+            if(btnState) {
+                mHeader.style.right = '-100%';
+                btnState = 0;
+            } else {
+                mHeader.style.right = 0;
+                btnState = 1;
+            }
+        }
+        */
+
+
+        for (let i = 0; i < mainMenu.length; i++) {
+            mainMenu[i].onclick = (e) => {
+                e.preventDefault();
+                // .sub의 height를 auto로 지정한다.
+                if (mState === 0) {
+                    subMenu[i].style.height = '120px';
+                    mainMenu[i].classList.add('on');
+                    mainMenuLink[i].style.color = '#fdd000';
+                    mState = 1;
+                } else {
+                    subMenu[i].style.height = '0';
+                    mainMenu[i].classList.remove('on');
+                    mainMenuLink[i].style.color = '#fff';
+                    mState = 0;
+                }
+            };
+        }
     </script>
 </body>
 

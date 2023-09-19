@@ -29,7 +29,7 @@ const tabCont = document.querySelectorAll('#tabs div');
 
 // 탭 버튼을 클릭하면
 for (let i = 0; i < tabBtn.length; i++) {
-    tabBtn[i].onclick = () => {
+    tabBtn[i].onclick = (e) => {
         e.preventDefault();
         // tabs div의 on클래스 모두 제거
         for (let j = 0; j < tabBtn.length; j++) {

@@ -1,153 +1,28 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>조상현</title>
-    <link rel="shortcut icon" href="images/face.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
 </head>
 <body>
-    <!-- 헤더 -->
-    <header>
-        <nav id="gnb">
-            <ul>
-                <li><a href="#sec1">HOME</a></li>
-                <li><a href="#sec2"><i class="fa-solid fa-user"></i>ABOUT</a></li>
-                <li><a href="#sec3"><i class="fa-solid fa-code"></i>PORTFOLIO</a></li>
-                <li><a href="#sec4"><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+    <script>
+        
+/* string(문자열) 객체
+문자열a.indexof('문자열b') ~a에 b가 존재하면 idx(색인 번호)를 출력, 아니면 - 1;
+문자열.toLowerCase() ~문자열을 소문자로 변환 */
+/* 
+    http://id.dothome.co.kr/index.html  ->데스크탑
+    http://id.dothome.co.kr/m/index.html-> 모바일
+*/
+const ua = navigator.userAgent.toLowerCase();
 
-    <!-- 섹션1 -->
-    <section id="sec1" class="parallax">
-        <h1>CHO SANG-HYUN</h1>
-    </section>
+if (ua.indexOf('window') > 0) {
+    location.href = 'http://enf.dothome.co.kr/main.html';
+} else {
+    location.href = 'http://enf.dothome.co.kr/m/index.html';
+};
 
-    <!-- 섹션2 -->
-    <section id="sec2" class="sec">
-        <h2>About ME</h2>
-        <p><em>I like web Programming</em></p>
-        <div class="container">
-            <div class="basic clearfix">
-                <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby
-                    photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div class="profile2">
-                    <div class="my_pic">
-                        <p><b>조상현</b></p>
-                        <img src="images/my.png" alt="내 사진">
-                    </div>
-                    <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-            </div>
-
-            <!-- 스킬(skill) -->
-            <div class="skill">
-                <h3>Im really good at:</h3>
-                <p><i class="fa-brands fa-figma"></i>Web Planning</p>
-                <div class="progress">
-                    <div class="progressbar">90%</div>
-                </div>
-                <p><i class="fa-brands fa-html5"></i>Frontend Programming</p>
-                <div class="progress">
-                    <div class="progressbar">85%</div>
-                </div>
-                <p><i class="fa-brands fa-java"></i>Backend Programming</p>
-                <div class="progress">
-                    <div class="progressbar">75%</div>
-                </div>
-            </div><!-- //.skill -->
-        </div><!-- //.container -->
-
-        <!-- 카운터 -->
-        <div class="counter">
-            <ul>
-                <li><span>20+</span>Total Pages</li>
-                <li><span>4+</span>Web Projects</li>
-                <li><span>2+</span>App Projects</li>
-                <li><span>2+</span>National Technical Qualification</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- 섹션3 -->
-    <section id="sec3" class="sec">
-        <div class="parallax"><span>PORTFOLIO</span></div>
-        <h2>나의 작업</h2>
-        <p><em>아래 작품은 나의 최근 작품입니다. <br>이미지를 클릭하면 큰 이미지로 볼 수 있습니다.</em></p>
-        <div class="container">
-            <div class="pf">
-                    <ul>
-                        <li><a href="https://enfldia.github.io/fsweb/70_project/project1" target="_blank"><img src="images/pf1.png" alt="볼보"></a></li>
-                        <li><a href="https://enfldia.github.io/fsweb/70_project/project2" target="_blank"><img src="images/pf2.png" alt="Fomula One"></a></li>
-                        <li><img src="images/pf1.png" alt="CANNONDEAL"></li>
-                        <li><img src="images/pf2.png" alt="미니 게임"></li>
-                        <li><img src="images/pf1.png" alt="팀 프로젝트"></li>
-                        <li><img src="images/pf2.png" alt="작품6"></li>
-                        <li><img src="images/pf1.png" alt="작품7"></li>
-                        <li><img src="images/pf2.png" alt="작품8"></li>
-                    </ul>
-            </div><!-- //.pf -->
-            <div class="pfBtn"><a href="#">작품 더보기</a></div>
-        </div><!-- //.container -->
-    </section>
-
-    <!-- 섹션4 -->
-    <section id="sec4" class="sec">
-        <div class="parallax"><span>CONTACT</span></div>
-        <h2>나의 위치</h2>
-        <p><em>당신의 연락을 기다립니다.</em></p>
-        <div class="container pos">
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12701.524246592026!2d126.94056742105823!3d37.26238998151852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b69d860bdfc87%3A0xb1c46bc2ea07fe66!2z6rK96riw64-EIOyImOybkOyLnCDqtozshKDqtawg7Zi466ek7Iuk64-Z!5e0!3m2!1sko!2skr!4v1694679069152!5m2!1sko!2skr"></iframe>
-            </div>
-            <div class="right">
-                <div class="addr">
-                    <ul>
-                        <li><i class="fa-solid fa-house"></i>경기도 안양시</li>
-                        <li><i class="fa-solid fa-phone"></i>Phone: +82 10-1234-1234</li>
-                        <li><i class="fa-solid fa-envelope"></i>Email:hong@gmail.com</li>
-                    </ul>
-                    <p>Swing by for a cup of <i class="fa-solid fa-mug-hot"></i>, or leave me a note:</p>
-                </div>
-                <form action="main.jpg">
-                    <input type="text" placeholder="이름">
-                    <input type="email" placeholder="메일">
-                    <input type="text" placeholder="메시지">
-                    <div><button type="submit"><i class="fa-solid fa-paper-plane"></i>메시지 전송하기</button></div>
-                </form>
-            </div><!-- //.right -->
-        </div><!-- //.container -->
-    </section>
-
-    <!-- 푸터 -->
-    <footer>
-        <div class="toTop"><a href="#top"><i class="fa-solid fa-arrow-up"></i>위로 가기</a></div>
-        <div class="sns">
-            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-snapchat"></i></a>
-            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-        <p class="copy">&copy; 2023 CSH. All rights reserved.</p>
-    </footer>
-    <script src="js/ua.js"></script>
+    </script>
 </body>
 </html>

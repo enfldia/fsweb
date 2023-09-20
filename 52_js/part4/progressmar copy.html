@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스킬바</title>
+</head>
+<style>
+    .progress {
+        width: 100%;
+        background-color: #ddd;
+        margin: 20px 0;
+    }
+
+    .progressBar {
+        width: 0%;
+        height: 30px;
+        background-color: #04AA6D;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+
+    }
+</style>
+
+<body>
+    <h1>Progress Bar</h1>
+
+    <div class="progress">
+        <div class="progressBar">0%</div>
+    </div>
+    <div class="progress">
+        <div class="progressBar">0%</div>
+    </div>
+    <div class="progress">
+        <div class="progressBar">0%</div>
+    </div>
+
+    <br>
+    <button class="prgBtn">Click Me</button>
+</body>
+<script>
+    const myBar = document.querySelectorAll('.progressBar');
+    const prgBtn = document.querySelector('.prgBtn');
+    let persent = [];
+
+    function fill(idx) {
+        persent = [65, 90, 75];
+        let counter = 0;
+        setInterval(() => {
+            for (let i = 0; i < myBar.length; i++) {
+                if (counter === persent[idx]) {
+                    clearInterval();
+                } else {
+                    counter++;
+                    myBar[idx].style.width = `${counter}%`;
+                    myBar[idx].innerHTML = counter + "%";
+                }
+            }
+        }, 30)
+    }
+
+    prgBtn.addEventListener('click', () => {
+        fill(0);
+        fill(1);
+        fill(2);
+    });
+
+</script>
+
+</html>

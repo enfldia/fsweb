@@ -326,8 +326,9 @@
 
         /**************************************** String *********************************************/
         
-        let str1 = 'Hello Javascript';
-        let str2 = '200920-1234567';
+        let str1 = 'Name:홍길동, id:Hello Javascript, pw:1234';
+        // let str1 = 'Hello Javascript';
+        let str2 = '2023-09-20-14-30-25';
 
         // 문자열객체.charAt(index): index 번호에 해당하는 문자열 반환
         ele[2].innerHTML += `
@@ -352,25 +353,77 @@
             str1.lastIndexOf('J') = ${str1.lastIndexOf('J')}<br>
             str1.lastIndexOf('a', 8) = ${str1.lastIndexOf('a', 8)}<br>
         `;
-
+        
         // match('찾을문자'): 객체의 왼쪽부터 문자열을 찾아 최초 일치하는 문자열을 반환 (없으면 null)
+        ele[2].innerHTML += `
+            str1.match('J') = ${str1.match('J')}<br>
+            str1.match('j') = ${str1.match('j')}<br>
+        `;
         // search('찾을문자'): 객체의 왼쪽부터 문자열을 찾아 최초 일치하는 index 번호 반환 (없으면 -1)
+        ele[2].innerHTML += `
+            str1.search('J') = ${str1.search('J')}<br>
+            str1.search('j') = ${str1.search('j')}<br>
+        `;
         // substr(index, 개수): 인덱스 번호부터 개수만큼 문자열 반환
-        // substring(index1, index2): 인덱스1부터 인덱스2 이전 구간의 문자열 반환, (단, 음수인 경우 인덱스 0을 가리킴)
-        // replace('바꿀문자', '새문자'): 객체의 왼쪽부터 바꿀 문자열을 찾아 일치하는 문자열을 새 문자열로 치환
+        ele[2].innerHTML += `
+            str1.substr(6, 4) = ${str1.substr(6, 4)}<br>
+        `;
 
+        // substring(index1, index2): 인덱스1부터 인덱스2 이전 구간의 문자열 반환, (단, 음수인 경우 인덱스 0을 가리킴)
+        ele[2].innerHTML += `
+            str1.substring(6, 4) = ${str1.substring(6, 4)}<br>
+            str1.substring(6, 10) = ${str1.substring(6, 10)}<br>
+            str1.substring(-6, 10) = ${str1.substring(-6, 10)}<br>
+        `;
+
+        // replace('바꿀문자', '새문자'): 객체의 왼쪽부터 바꿀 문자열을 찾아 일치하는 문자열을 새 문자열로 치환
+        ele[2].innerHTML += `
+            str1.replace('Javascript', 'HTML') = ${str1.replace('Javascript', 'HTML')}<br>
+        `;
 
         // toLowerCase(): 소문자로 반환
+        ele[2].innerHTML += `
+            str1.toLowerCase() = ${str1.toLowerCase()}<br>;
+        `;
         // toUpperCase(): 대문자로 반환
+        ele[2].innerHTML += `
+            str1.toUpperCase() = ${str1.toUpperCase()}<br>;
+        `;
         // length: 문자열의 문자 총 개수 반환
-
+        ele[2].innerHTML += `
+            str1.length = ${str1.length}<br>;
+        `;
         
-        // slice(a, b): 왼쪽에서 a개의 문자를 자르고, b번째 이후에 문자열을 자른 후 남은 문자열을 반환 (단, b가 -1인 경우 뒤에서부터 1글자를 가리킴)
+        // slice(a개수, b): 왼쪽에서 a개의 문자를 자르고, b번째 이후에 문자열을 자른 후 남은 문자열을 반환 (단, b가 -1인 경우 뒤에서부터 1글자를 가리킴)
+        ele[2].innerHTML += `
+            str1.slice(6, 10) = ${str1.slice(6, 10)}<br>;
+            str1.slice(6, -1) = ${str1.slice(6, -1)}<br>;
+        `;
         // split('문자'): 지정한 문자를 기준으로 문자열 데이터를 나누어 배열에 저장하여 반환
+        ele[2].innerHTML += `
+            str1.split(',') = ${str1.split(',')}<br>;
+            str2.split('-') = ${str2.split('-')}<br>;
+        `;
+        
         // concat('새문자열'): 문자열에 새 문자열 결합
+        ele[2].innerHTML += `
+            str1.concat('','남') = ${str1.concat('','남')}<br>;
+        `;
+        
+        // String.fromCharCode(아스키코드값): 아스키코드 값에 해당하는 문자열 반환
+        ele[2].innerHTML += `
+            String.fromCharCode(65) = ${String.fromCharCode(65)}<br>;
+            String.fromCharCode(68) = ${String.fromCharCode(68)}<br>;
+        `;
+
         // charCodeAt(index): 인덱스 번호에 해당하는 문자열의 아스키코드 값을 반환 (인덱스를 생략하면 0)
-        // fromCharCode(아스키코드값): 아스키코드 값에 해당하는 문자열 반환
+        ele[2].innerHTML += `
+            str1.charCodeAt(5) = ${str1.charCodeAt(5)}<br>;
+        `;
         // trim(): 문자열 앞 또는 뒤에 공백 문자열 삭제
+        ele[2].innerHTML += `
+            's   t   r   i    n   g'.trim()= ${'s   t   r   i    n   g'.trim()}<br>;
+        `;
     </script>
 </body>
 

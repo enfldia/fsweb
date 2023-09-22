@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 10px;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tab {
+            width: 160px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .tab_menu {
+            display: flex;
+        }
+        .tab_menu li {
+            padding: 4px;
+        }
+        .tab_list  li {
+            display: none;
+        }
+        .onBtn {
+            background: red;
+        }
+        .tab_list li.on {
+            display: block;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <ul class="tab_menu">
+            <li class="onBtn">공지사항</li>
+            <li>갤러리</li>
+            <li>정보마당</li>
+        </ul>
+        <ul class="tab_list">
+            <li class="on">
+                <div>공지사항입니다.</div>
+                <div>공지사항입니다.</div>
+                <div>공지사항입니다.</div>
+            </li>
+            <li>
+                <div>갤러리입니다.</div>
+                <div>갤러리입니다.</div>
+                <div>갤러리입니다.</div>
+            </li>
+            <li>
+                <div>정보마당입니다.</div>
+                <div>정보마당입니다.</div>
+                <div>정보마당입니다.</div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const tabBtn = document.querySelectorAll('.tab_menu li');
+        const tabCont = document.querySelectorAll('.tab_list li');
+
+        for(let i=0;i<tabBtn.length;i++){
+            tabBtn[i].onclick = () => {
+                console.log(i);
+                for(let j=0;j<tabBtn.length;j++){
+                    tabBtn[j].classList.remove('onBtn');
+                    tabCont[j].classList.remove('on');
+                };
+                tabBtn[i].classList.add('onBtn');
+                tabCont[i].classList.add('on');
+            }
+        };
+
+    </script>
+</body>
+
+</html>

@@ -8,8 +8,10 @@
     <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
     <script>
         $(function(){
-            $(".main").click(function(e){
-                $(this).add('on');
+            $(".main").hover(function(){
+                $(this).children('ul').addClass('on');
+            }, function(){
+                $(this).children('ul').removeClass('on');
             });
         });
     </script>
@@ -29,7 +31,6 @@
         position: relative;
         width: 1000px;
         height: 100px;
-        border: 1px solid red;
         background: #beac58;
     }
 
@@ -42,16 +43,21 @@
         display: flex;
         justify-content: space-evenly;
         background: #6ed373;
-        border: 1px solid red;
     }
     nav>ul>li {
         width: 120px;
         text-align: center;
         line-height: 40px;
+        
     }
     .sub{
         display: none;
     }
+    .sub.on{
+        display: block;
+        background: #6ed373;
+    }
+    
     .sec1 {
         width: 100%;
         height: 300px;
@@ -106,8 +112,8 @@
         <header>
             <nav>
                 <ul>
-                    <li>
-                        <a href="" class="main">mane1</a>
+                    <li class="main">
+                        <a href="" >mane1</a>
                         <ul class="sub">
                             <li>sub1</li>
                             <li>sub2</li>
@@ -115,8 +121,8 @@
                             <li>sub4</li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="" class="main">mane2</a>
+                    <li class="main">
+                        <a href="" >mane2</a>
                         <ul class="sub">
                             <li>sub1</li>
                             <li>sub2</li>
@@ -124,8 +130,8 @@
                             <li>sub4</li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="" class="main">mane3</a>
+                    <li class="main">
+                        <a href="" >mane3</a>
                         <ul class="sub">
                             <li>sub1</li>
                             <li>sub2</li>
@@ -133,8 +139,8 @@
                             <li>sub4</li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="" class="main">mane4</a>
+                    <li class="main">
+                        <a href="" >mane4</a>
                         <ul class="sub">
                             <li>sub1</li>
                             <li>sub2</li>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(function(){
+            var he;
+            $(window).resize(function(){
+                he = $(window).height();
+                $('section>div').height(he);
+            });
+            $(window).trigger('resize');
+
+            $(window).scroll(function(){
+                var sct = $(window).scrollTop();
+                $('#sTop').text(sct);
+                if (sct>=100){
+                    $('nav').adClass('fixed');
+                } else {
+                    $('nav').removeClass('fixed');
+                }
+            });
+            
+            $('dl dd').hide();
+            $("dl dd:eq(0)").show();
+
+            $("dl>dt").click(function(){
+                var kkk = $(this).next('dd').css('display');
+                if(kkk==='none'){
+                    $("dd").slideUp();
+                    $(this).next('dd').slideDown();
+                } else {
+                    $(this).next('dd').slideUp();
+                }
+                return false;
+            });
+            
+            $(".tab_menu li").click(function(){
+                var i = $(this).index();
+            $(".tab_menu li").removeClass('on');
+            $('.tab_menu li').eq(i).addClass('on');
+            $(".tab_list li").removeClass('on');
+            $(".tab_list li").eq(i).addClass('on')
+            });
+
+
+
+        });
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

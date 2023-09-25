@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+
+
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bigbox {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #333;
+        }
+
+        /*.bigbox를 정중앙에 배치*/
+        .radius1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: yellow;
+            position: absolute;
+        }
+
+        .radius2 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: yellow;
+            position: absolute;
+            left: 400px;
+        }
+
+        .radius3 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: yellow;
+            position: absolute;
+            left: 400px;
+            top: 400px;
+        }
+
+        .radius4 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: yellow;
+            position: absolute;
+            top: 400px;
+        }
+
+        .box1 {
+
+            animation: box1 2s forwards;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+
+        .box2 {
+            animation: box2 2s 2s forwards;
+            position: absolute;
+            left: 450px;
+            top: 50px;
+        }
+
+        .box3 {
+            animation: box3 2s 4s forwards;
+            position: absolute;
+            left: 450px;
+            top: 450px;
+        }
+
+        .box4 {
+            animation: box4 2s 6s forwards;
+            position: absolute;
+            left: 50px;
+            top: 450px;
+        }
+
+        .box5 {
+            animation: box5 2s 8s forwards;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            background: url(woman.png) no-repeat 50% 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes box1 {
+            0% {
+                width: 0;
+                border: 1px solid black;
+
+            }
+
+            100% {
+                border: 1px solid black;
+                width: 400px;
+            }
+        }
+
+        @keyframes box2 {
+            0% {
+                height: 0;
+                border: 1px solid black;
+
+            }
+
+            100% {
+                border: 1px solid black;
+                height: 400px;
+            }
+        }
+
+        @keyframes box3 {
+            0% {
+                width: 0;
+                border: 1px solid black;
+
+            }
+
+            100% {
+                border: 1px solid black;
+                width: 400px;
+                left: 50px;
+            }
+        }
+
+        @keyframes box4 {
+            0% {
+                height: 0;
+                border: 1px solid black;
+
+            }
+
+            100% {
+                border: 1px solid black;
+                height: 400px;
+                top: 50px;
+            }
+        }
+
+        @keyframes box5 {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="radius1"></div>
+        <div class="radius2"></div>
+        <div class="radius3"></div>
+        <div class="radius4"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+
+    </div>
+</body>
+
+</html>

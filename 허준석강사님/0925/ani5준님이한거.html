@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bigbox {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+        .circle {
+            position: absolute;
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            /* clip-path: circle(50% at 50% 50%); */
+            background-color: yellow;
+        }
+
+        .circle:nth-child(1) {
+            left: 0;
+            top: 0;
+        }
+
+        .circle:nth-child(2) {
+            left: 0;
+            bottom: 0;
+        }
+
+        .circle:nth-child(3) {
+            right: 0;
+            top: 0;
+        }
+
+        .circle:nth-child(4) {
+            right: 0;
+            bottom: 0;
+        }
+
+        .circle span {
+            opacity: 0;
+            z-index: 2;
+            width: 1px;
+            height: 1px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% -50%);
+            position: absolute;
+            background-color: black;
+        }
+
+        .circle:nth-child(1) span {
+            animation: lefttop 4s both;
+        }
+
+        .circle:nth-child(3) span {
+            animation: righttop 4s 4s both;
+        }
+
+        .circle:nth-child(4) span {
+            transform-origin: right;
+            animation: rightbottom 4s 8s both;
+        }
+
+        .circle:nth-child(2) span {
+            transform-origin: bottom;
+            animation: leftbottom 4s 12s both;
+        }
+
+        .smallbox {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+        }
+
+        .smallbox {
+            position: relative;
+            text-align: center;
+        }
+
+        .smallbox img {
+            text-align: center;
+            transform: translateY(50%);
+            opacity: 0;
+            animation: imgappear 4s 17s both;
+        }
+
+        @keyframes lefttop {
+            0% {
+                opacity: 1;
+            }
+            
+            100% {
+                width: 365px;
+                opacity: 1;
+            }
+        }
+        
+        @keyframes righttop {
+            0% {
+                opacity: 1;
+            }
+            
+            
+            100% {
+                height: 365px;
+                opacity: 1;
+            }
+        }
+        
+        @keyframes rightbottom {
+            0% {
+                opacity: 1;
+            }
+            
+            100% {
+                transform: scaleX(365);
+                opacity: 1;
+            }
+        }
+
+        @keyframes leftbottom {
+            0% {
+                opacity: 1;
+            }
+            
+            100% {
+                transform: scaleY(365);
+                opacity: 1;
+            }
+        }
+
+        @keyframes imgappear {
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ani">
+        <div class="bigbox">
+            <div class="circle">
+                <span></span>
+            </div>
+            <div class="circle">
+                <span></span>
+            </div>
+            <div class="circle">
+                <span></span>
+            </div>
+            <div class="circle">
+                <span></span>
+            </div>
+            <div class="smallbox">
+                <img src="img/woman.png" alt="aa">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        /* 초기화 */
+        body {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* 네비게이션 */
+        nav {
+            position: fixed;
+            background: blue;
+            height: 120px;
+        }
+
+        .main {
+            width: 1200px;
+        }
+
+        .main {
+            display: flex;
+            height: 120px;
+            justify-content: end;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        .main>li {
+            background: yellow;
+            height: 50px;
+            padding: 20px;
+        }
+
+        .sub {
+            text-align: center;
+        }
+
+        .sub>li {
+            background-color: #fff;
+            width: 100%;
+        }
+
+        /* 섹션1 */
+        #sec1 {
+            background: red;
+            height: 300px;
+        }
+
+        #sec2 {
+            height: 150px;
+        }
+        #sec2::after {
+            content: "";
+            display: block;
+        }
+
+        #sec2 div {
+            float: left;
+            height: 150px;
+            width: 33.33%;
+            background: plum;
+            border: 1px solid red;
+        }
+
+        footer {
+            display: flex;
+            position: relative;
+            height: 120px;
+            background: darkred;
+        }
+        .one {width: 30%;}
+        .two {
+            border: 1px solid red;
+            width: 70%;
+            background: #000;
+        }
+        .two div {
+            border: 1px solid red;
+            height: 60px
+        }
+
+
+        
+    </style>
+    <script>
+        $(function () {
+            $(".sub").hide();
+            $(".main>li").mouseover(function () {
+                var i = $(this).index();
+                // console.log(i);
+                $(".sub").eq(i).show();
+            });
+            $(".main>li").mouseleave(function () {
+                var i = $(this).index();
+                // console.log(i);
+                $(".sub").eq(i).hide(); 
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <ul class="main">
+                <li>
+                    <a href="#">MENU-1</a>
+                    <ul class="sub">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">MENU-2</a>
+                    <ul class="sub">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">MENU-3</a>
+                    <ul class="sub">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">MENU-4</a>
+                    <ul class="sub">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                    </ul>
+                </li>
+            </ul> <!-- //.main -->
+        </nav> <!-- //nav -->
+        <div id="sec1"></div>
+        <div id="sec2">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <footer>
+            <div class="one"></div>
+            <div class="two">
+                <div></div>
+                <div></div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // $(".main>li").mouseenter(function () {
+        //     var i = $(this).index();
+        //     console.log(i);
+        //     $(".sub").eq(i).css("display", "block");
+        //     // $(".tab_list li").eq(i).addClass('on')
+        // });
+    </script>
+</body>
+
+</html>

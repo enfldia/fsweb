@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>site</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    body {
+      width: 1200px;
+    }
+
+    /* color */
+    header {
+      background: rgb(248, 192, 185);
+    }
+
+    #nav>ul>li,
+    #nav>ul>li>ul {
+      background: rgb(209, 191, 243);
+    }
+
+    #sec1 {
+      background: rgb(252, 210, 175);
+    }
+
+    #sec2 {
+      background: rgb(248, 243, 168);
+    }
+
+    #sec3 {
+      background: rgb(180, 223, 182);
+    }
+
+    #sec4 {
+      background: rgb(194, 207, 241);
+    }
+
+    .btlogo {
+      background: rgb(209, 191, 243);
+    }
+
+    .btdes1 {
+      background: rgb(247, 197, 224);
+    }
+
+    .btdes2 {
+      background: rgb(245, 208, 178);
+    }
+
+
+
+    /*  header */
+    header {
+      height: 100px;
+      position: relative
+    }
+
+    /* nav */
+    #nav {
+      position: absolute;
+      right: 6%;
+      top: 32%;
+    }
+
+    #nav>ul {
+      display: flex;
+      text-align: center;
+    }
+
+    #nav>ul>li {
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    #nav>ul>li ul {
+      padding: 12px 0;
+      line-height: 30px;
+      display: none;
+    }
+
+    /* sec1 */
+    #sec1 {
+      height: 300px
+    }
+
+    /* secContainer */
+    .secContainer {
+      display: flex;
+      height: 200px;
+    }
+
+    /* sec2 */
+    #sec2 {
+      width: 400px;
+    }
+
+    /* sec3 */
+    #sec3 {
+      width: 400px;
+    }
+
+    /* sec4 */
+    #sec4 {
+      width: 400px;
+    }
+
+    /* 푸터 */
+    footer {
+      display: flex;
+    }
+
+    /* btlogo */
+    .btlogo {
+      width: 200px;
+      height: 100px;
+    }
+
+    /* btdes1 */
+    .btdes1 {
+      width: 1000px;
+      height: 50px;
+    }
+
+    /* btdes2 */
+    .btdes2 {
+      width: 1000px;
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <navi id="nav">
+      <ul>
+        <li>MENU-1
+          <ul>
+            <li>SubMenu-1</li>
+            <li>SubMenu-2</li>
+            <li>SubMenu-3</li>
+            <li>SubMenu-4</li>
+          </ul>
+        </li>
+        <li>MENU-2
+          <ul>
+            <li>SubMenu-1</li>
+            <li>SubMenu-2</li>
+            <li>SubMenu-3</li>
+            <li>SubMenu-4</li>
+          </ul>
+        </li>
+        <li>MENU-3
+          <ul>
+            <li>SubMenu-1</li>
+            <li>SubMenu-2</li>
+            <li>SubMenu-3</li>
+            <li>SubMenu-4</li>
+          </ul>
+        </li>
+        <li>MENU-4
+          <ul>
+            <li>SubMenu-1</li>
+            <li>SubMenu-2</li>
+            <li>SubMenu-3</li>
+            <li>SubMenu-4</li>
+          </ul>
+        </li>
+      </ul>
+    </navi>
+  </header>
+
+  <div id="sec1">
+
+  </div><!-- //#sec1 -->
+
+  <div class="secContainer">
+    <div id="sec2">
+    </div><!-- //#sec2 -->
+    <div id="sec3">
+    </div><!-- //#sec3 -->
+    <div id="sec4">
+    </div><!-- //#sec4 -->
+  </div><!-- //.secContainer -->
+
+  <footer>
+    <div class="btlogo"></div><!-- //.btlogo -->
+    <div class="btContainer">
+      <div class="btdes1"></div><!-- //.btdes1 -->
+      <div class="btdes2"></div><!-- //.btdes2 -->
+    </div><!-- //.btContainer -->
+  </footer>
+
+  <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+  <script>
+    const menu = document.querySelectorAll("#nav>ul>li");
+
+
+    // 방법1 호버
+    $(menu).hover(function () {
+      $(this).css("background-color", "rgb(248, 243, 168)");
+      $(this).children().css("display", "block");
+    }, function () {
+      $(this).css("background-color", "rgb(209, 191, 243)");
+      $(this).children().css("display", "none");
+    });
+
+
+    /*
+    //  방법2 클릭
+    $(menu).click(function (e) { 
+      e.preventDefault();
+      i = $(this).index();
+      // console.log(i)
+
+      $(menu).css("background-color", "rgb(209, 191, 243)")
+      $(menu).eq(i).css("background-color", "rgb(248, 243, 168)");
+
+      $(menu).children().css("display", "none")
+      $(menu).eq(i).children().css("display", "block")
+    });
+    */
+  </script>
+</body>
+
+</html>

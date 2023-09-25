@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        img {
-            width: 300px;
+        ul {
+            margin: 0;
+            padding: 0;
         }
-        #wrap{
+
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #wrap {
             width: 100%;
             height: 100vh;
             position: relative;
         }
+
         #slidebox {
             position: absolute;
             width: 960px;
-            height: 480px;
+            height: 240px;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
-            border: 1px solid red;
-            /* overflow: hidden; */
+            transform: translate(-50%, -50%);
+            /* border: 1px solid red; */
+            overflow: hidden;
         }
+
         .slide {
             height: 100%;
         }
-        .slide li{
+
+        .slide li {
             position: absolute;
             width: 100%;
             left: 100%;
@@ -34,6 +50,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="wrap">
         <div id="slidebox">
@@ -45,28 +62,37 @@
         </div>
     </div>
     <script>
-        const slide = document.querySelector('.slide'),
-        slideList = slide.querySelectorAll("li");
 
+        // 변수 선언
         let idx = 0;
-        const speed = 300;
+        const speed = 700;
 
-        setInterval(()=>nextSlide(),speed *4);
+        // 요소 선택
+        const slide = document.querySelector('.slide'),
+            slideList = slide.querySelectorAll('li');
 
-        function nextSlide(){
-            slideList[idx].style.left = '-100%'
+        slideList[0].style.left = '0%';
+
+        // setInterval(함수,시간) 시간(밀리초) 후 반복
+        setInterval(() => nextSlide(), speed * 4);
+        
+        function nextSlide() {
+            slideList[idx].style.left = '-100%';
             slideList[idx].style.transition = `left ${speed / 1000}s`;
-            if (idx === sliedList.length) idx = 0;
-            slideList[idx].style.left = '0%';
-            slideList[idx].style.transition = `left ${speed / 1000}s`;
-            setTimeout(function(){
-                if (idx === -1)idx = slideList.length;
+            if(idx == slideList.length -1 ) idx = -1;
+            slideList[idx + 1].style.left = '0%';
+            slideList[idx + 1].style.transition = `left ${speed / 1000}s`;
+            // setTiomeout(함수, 시간): 시간 후 1회
+            // setInterval(함수, 시간): 시간 후 반복
+            setTimeout(function () {
+                if(idx === -1) idx = slideList.length -1;
                 slideList[idx].style.left = '100%';
-                slideList[idx].ltyle.transition = 'none';
+                slideList[idx].style.transition = 'none';
                 idx++;
-                if(idx === slideList.length) idx = 0;
-            },speed);
+                if (idx === slideList.length) idx = 0;
+            }, speed);
         }
     </script>
 </body>
+
 </html>

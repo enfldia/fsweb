@@ -79,13 +79,13 @@
         function nextSlide() {
             slideList[idx].style.left = '-100%';
             slideList[idx].style.transition = `left ${speed / 1000}s`;
-            if(idx == slideList.length -1 ) idx = -1;
+            if(idx < slideList.length ) idx = -1;
             slideList[idx + 1].style.left = '0%';
             slideList[idx + 1].style.transition = `left ${speed / 1000}s`;
             // setTiomeout(함수, 시간): 시간 후 1회
             // setInterval(함수, 시간): 시간 후 반복
             setTimeout(function () {
-                if(idx === -1) idx = slideList.length -1;
+                if(idx === -1) idx < slideList.length;
                 slideList[idx].style.left = '100%';
                 slideList[idx].style.transition = 'none';
                 idx++;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script>
+        $(function () {
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                captions: true,
+                slideWidth: 1200
+            });
+        });
+    </script>
+    <style>
+        .bx-wrapper {
+            margin: 0 auto;
+            top: 50vh;
+            transform: translateY(-50%);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .bx-wrapper .bx-controls-direction a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: 0;
+            width: 100px;
+            height: 100px;
+            text-indent: -9999px;
+            z-index: 9999;
+        }
+
+        .bx-wrapper .bx-prev {
+            left: 10px;
+            background: url(bx/images/controls1.png) no-repeat 0 -100px;
+        }
+
+        .bx-wrapper .bx-next {
+            right: 10px;
+            background: url(bx/images/controls1.png) no-repeat -100px -100px;
+        }
+
+        .bx-wrapper .bx-next:hover,
+        .bx-wrapper .bx-next:focus {
+            background-position: -100px 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="bxslider">
+        <div><img src="bx/img/images(1).jpg" title="Coffee 1" /></div>
+        <div><img src="bx/img/images(2).jpg" title="Coffee 2" /></div>
+        <div><img src="bx/img/images(3).jpg" title="Coffee 3" /></div>
+    </div>
+</body>
+
+</html>

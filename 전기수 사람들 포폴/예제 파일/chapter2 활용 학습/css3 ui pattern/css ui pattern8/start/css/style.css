@@ -1,0 +1,32 @@
+﻿@charset "utf-8";
+
+html, body, div, a {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	font: inherit;
+	font-size: 100%;
+	border: 0;
+}
+html {
+	line-height: 1;
+}
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #f1f1f1;
+	color: #555;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}
+.container {
+	margin-top: 35px;
+}

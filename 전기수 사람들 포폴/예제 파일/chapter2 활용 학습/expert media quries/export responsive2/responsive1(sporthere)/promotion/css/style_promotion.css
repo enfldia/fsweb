@@ -1,0 +1,305 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+dfn,
+del,
+p,
+blockquote,
+fieldset,
+input,
+textarea,
+select,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+button,
+canvas,
+video {
+	margin: 0;
+	padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+address,
+caption,
+cite,
+code,
+th,
+dfn,
+del {
+	font-weight: normal;
+	font-style: normal;
+}
+ul,
+ol {
+	list-style: none;
+}
+fieldset,
+img {
+	border: none;
+}
+caption,
+th {
+	text-align: left;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button {
+	cursor: pointer;
+	line-height: normal;
+}
+button,
+input {
+	line-height: normal;
+}
+input[type="hidden"],
+[hidden],
+.hidden {
+	display: none;
+}
+textarea {
+	overflow: auto;
+	resize: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section,
+.clearfix {
+	display: block;
+}
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+a>img {
+	vertical-align: bottom;
+}
+strong,
+b {
+	font-weight: bold;
+}
+em,
+i {
+	font-style: italic;
+}
+del {
+	text-decoration: line-through;
+}
+:focus {
+	outline: none;
+}
+.clear {
+	display: block;
+	clear: both;
+	line-height: 0;
+	height: 0;
+	font-size: 0;
+}
+.clearfix:after,
+.wrap:after,
+aside:after,
+section:after,
+article:after,
+.text:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	visibility: hidden;
+}
+.align-left {
+	float: left !important;
+}
+.align-right {
+	float: right !important;
+}
+.overflow-hidden {
+	display: block;
+	overflow: hidden;
+}
+
+/* common CSS */
+html {
+	height: 100%;
+	background-color: #fff;
+}
+body {
+	height: 100%;
+	line-height: 26px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	color: #6a6a6a;
+}
+a {
+	color: #26a6d1;
+	-webkit-transition: color 0.15s linear;
+	transition: color 0.15s linear;
+}
+a:hover {
+	color: #1e85a7;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #324d5b;
+}
+h1, h2, h3 {
+	margin: 0 0 22px;
+	line-height: 40px;
+	font-size: 1.875em;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.main {
+	min-height: 100%;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wrap {
+	margin: 0 auto;
+	padding: 0 30px;
+	max-width: 940px;
+}
+
+/* promotion CSS */
+.promo {
+	background-color: #3db39e;
+	color: #fff;
+}
+.promo .wrap {
+	position: relative;
+	min-height: 634px;
+}
+.promo .promo-text {
+	padding-top: 100px;
+	width: 460px;
+	line-height: 30px;
+	font-size: 1.125em;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.promo .promo-text p {
+	padding: 35px 0 0;
+	font-weight: 300;
+	font-size: 0.875em;
+	font-weight: 400;
+}
+.promo .wrap img {
+	position: absolute;
+	right: 18px;
+	bottom: 0;
+}
+.promo .promo-title {
+	line-height: 60px;
+	font-size: 3em;
+	font-weight: bold;
+}
+.promo .promo-button {
+	display: inline-block;
+	padding: 0 30px;
+	height: 52px;
+	line-height: 52px;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	font-size: 1.250em;
+	font-weight: 600;
+	background-color: #fff;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+}
+.promo .promo-button:hover {
+	background-color: #e2f9f5;
+	color: #26a5d1;
+}
+.promo .promo-button:active {
+	background-color: #e2f9f5;
+	color: #188bb2;
+	-webkit-box-shadow: inset 0 2px 0 rgba(0,0,1,.1);
+	-moz-box-shadow: inset 0 2px 0 rgba(0,0,1,.1);
+	box-shadow: inset 0 2px 0 rgba(0,0,1,.1);
+}
+.promo .promo-link {
+	margin: 0 0 0 35px;
+	line-height: 52px;
+	text-transform: uppercase;
+	white-space: nowrap; /* 줄바꿈 처리하지 않습니다. */
+	font-size: 1.250em;
+	font-weight: bold;
+	color: #fff;
+}
+.promo .promo-link:hover {
+	color: #c9f9f0;
+}
+
+/* responsive CSS */
+@media only screen and (max-width: 860px) {
+	.promo .wrap img {
+		display: block;
+		position: relative;
+		right: auto;
+		bottom: auto;
+		margin: 0 auto;
+	}
+	.promo .promo-text {
+		display: block;
+		padding: 65px 0 48px;
+		width: auto;
+		height: auto;
+		text-align: center;
+	}
+	.promo .promo-title {
+		line-height: 50px;
+		font-size: 2.5em;
+	}
+	.promo .promo-link,
+	.promo .promo-button {
+		margin: 0 15px 15px;
+	}
+}

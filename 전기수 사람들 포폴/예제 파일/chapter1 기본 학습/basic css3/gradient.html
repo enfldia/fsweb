@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>basic :: CSS3 gradient</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin-top: 50px;
+}
+li:first-child {
+	margin-top: 0;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.example span {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 0.875em;
+}
+.example div {
+	width: 200px;
+	height: 100px;
+}
+.example .gradient1 {
+	background: -webkit-linear-gradient(left, #8ac007, #cbff75);
+	background: -o-linear-gradient(right, #8ac007, #cbff75);
+	background: -moz-linear-gradient(right, #8ac007, #cbff75);
+	background: linear-gradient(to right, #8ac007, #cbff75);
+}
+.example .gradient2 {
+	background: -webkit-linear-gradient(left, #8ac007, #cbff75 , #ffb400);
+	background: -o-linear-gradient(right, #8ac007, #cbff75, #ffb400);
+	background: -moz-linear-gradient(right, #8ac007, #cbff75, #ffb400);
+	background: linear-gradient(to right, #8ac007, #cbff75, #ffb400);
+}
+.example .gradient3 {
+	background: -webkit-linear-gradient(left top, #8ac007, #cbff75 , #ffb400);
+	background: -o-linear-gradient(bottom right, #8ac007, #cbff75 , #ffb400);
+	background: -moz-linear-gradient(bottom right, #8ac007, #cbff75 , #ffb400);
+	background: linear-gradient(to bottom right, #8ac007, #cbff75 , #ffb400);
+}
+.example .gradient4 {
+	background: -webkit-linear-gradient(0deg, #8ac007, #cbff75);
+	background: -o-linear-gradient(0deg, #8ac007, #cbff75);
+	background: -moz-linear-gradient(0deg, #8ac007, #cbff75);
+	background: linear-gradient(0deg, #8ac007, #cbff75);
+}
+.example .gradient5 {
+	background: -webkit-linear-gradient(90deg, #8ac007, #cbff75);
+	background: -o-linear-gradient(90deg, #8ac007, #cbff75);
+	background: -moz-linear-gradient(90deg, #8ac007, #cbff75);
+	background: linear-gradient(90deg, #8ac007, #cbff75);
+}
+.example .gradient6 {
+	background: -webkit-linear-gradient(180deg, #8ac007, #cbff75);
+	background: -o-linear-gradient(180deg, #8ac007, #cbff75);
+	background: -moz-linear-gradient(180deg, #8ac007, #cbff75);
+	background: linear-gradient(180deg, #8ac007, #cbff75);
+}
+.example .gradient7 {
+	background: -webkit-linear-gradient(-90deg, #8ac007, #cbff75);
+	background: -o-linear-gradient(-90deg, #8ac007, #cbff75);
+	background: -moz-linear-gradient(-90deg, #8ac007, #cbff75);
+	background: linear-gradient(-90deg, #8ac007, #cbff75);
+}
+.example .gradient8 {
+	background: -webkit-linear-gradient(left, #8ac007 10%, #cbff75 85% , #ffb400 90%);
+	background: -o-linear-gradient(right, #8ac007 10%, #cbff75 85% , #ffb400 90%);
+	background: -moz-linear-gradient(right, #8ac007 10%, #cbff75 85% , #ffb400 90%);
+	background: linear-gradient(to right, #8ac007 10%, #cbff75 85% , #ffb400 90%);
+}
+.example .gradient9 {
+	background: -webkit-repeating-linear-gradient(left, #8ac007, #cbff75 10%, #ffb400 20%);
+	background: -o-repeating-linear-gradient(right, #8ac007, #cbff75 10%, #ffb400 20%);
+	background: -moz-repeating-linear-gradient(right, #8ac007, #cbff75 10%, #ffb400 20%);
+	background: repeating-linear-gradient(to right, #8ac007, #cbff75 10%, #ffb400 20%);
+}
+.example .gradient10 {
+	background: -webkit-radial-gradient(#8ac007, #cbff75);
+	background: -o-radial-gradient(#8ac007, #cbff75);
+	background: -moz-radial-gradient(#8ac007, #cbff75);
+	background: radial-gradient(#8ac007, #cbff75);
+}
+.example .gradient11 {
+	background: -webkit-radial-gradient(circle, #8ac007, #cbff75);
+	background: -o-radial-gradient(circle, #8ac007, #cbff75);
+	background: -moz-radial-gradient(circle, #8ac007, #cbff75);
+	background: radial-gradient(circle, #8ac007, #cbff75);
+}
+.example .gradient12 {
+	background: -webkit-radial-gradient(ellipse, #8ac007, #cbff75);
+	background: -o-radial-gradient(ellipse, #8ac007, #cbff75);
+	background: -moz-radial-gradient(ellipse, #8ac007, #cbff75);
+	background: radial-gradient(ellipse, #8ac007, #cbff75);
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: CSS3 gradient</h1>
+<div class="container">
+	<ul class="example">
+		<li><span>2 color</span><div class="gradient1"></div></li>
+		<li><span>3 color</span><div class="gradient2"></div></li>
+		<li><span>3 color (left top ~ right bottom)</span><div class="gradient3"></div></li>
+		<li><span>2 color (0deg)</span><div class="gradient4"></div></li>
+		<li><span>2 color (90deg)</span><div class="gradient5"></div></li>
+		<li><span>2 color (180deg)</span><div class="gradient6"></div></li>
+		<li><span>2 color (-90deg)</span><div class="gradient7"></div></li>
+		<li><span>3 color (10%, 85%, 90%)</span><div class="gradient8"></div></li>
+		<li><span>3 repeat color (0, 10%, 20%)</span><div class="gradient9"></div></li>
+		<li><span>2 color radial gradient</span><div class="gradient10"></div></li>
+		<li><span>2 color radial circle gradient</span><div class="gradient11"></div></li>
+		<li><span>2 color radial ellipse gradient</span><div class="gradient12"></div></li>
+	</ul>
+</div>
+</body>
+</html>

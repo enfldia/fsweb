@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>CSS3 Media Quries</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	overflow-x: hidden;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1rem;
+	background: #f1f1f1;
+	color: #555;
+}
+.title {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: #555;
+}
+.container {
+	margin-top: 35px;
+}
+
+/* step1 : 여백이 없는 경우 */
+/*
+.box {
+	float: left;
+	margin-bottom: 10px;
+	width: 25%;
+	height: 200px;
+	border-right: 1px solid #999;
+	box-sizing: border-box;
+}
+.box:first-child {
+	border-left: 1px solid #999;
+}
+
+@media only screen and (max-width: 800px) {
+	.box {
+		width: 50%;
+	}
+	.box:nth-child(odd) {
+		border-left: 1px solid #999;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.box {
+		width: 100%;
+		border-left: 1px solid #999;
+	}
+}
+*/
+
+/* step2 : 마진 정렬1(%) */
+/*
+.box {
+	float: left;
+	margin-left: 2%;
+	margin-bottom: 10px;
+	width: 23.5%;
+	height: 200px;
+	background-color: #999;
+}
+.box:first-child {
+	margin-left: 0;
+}
+*/
+
+/* step3 : 마진 정렬2(px) */
+body {
+	overflow-x: hidden; /* 반응형 처리 시에 기본 속성입니다. */
+}
+.box_group {
+	width: calc(100% + 10px);
+}
+.box {
+	float: left;
+	margin-left: 10px; /* px로 고정했기 때문에 예쁜 디자인을 표현할 수 있습니다. */
+	margin-bottom: 10px;
+	width: calc(25% - 10px);
+	height: 200px;
+	background-color: #ccc;
+}
+.box:first-child {
+	margin-left: 0;
+}
+
+@media only screen and (max-width: 800px) {
+	.box {
+		width: calc(50% - 10px);
+	}
+	.box:nth-child(odd) {
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.box_group {
+		width: 100%;
+	}
+	.box {
+		margin-left: 0;
+		width: 100%;
+	}
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">CSS3 Media Quries</h1>
+<div class="container">
+	<div class="box_group">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+</div>
+</body>
+</html>

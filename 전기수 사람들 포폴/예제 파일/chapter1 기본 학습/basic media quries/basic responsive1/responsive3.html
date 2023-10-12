@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>basic :: Media Quries</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background: #555;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.container div {
+	float: left;
+	height: 100px;
+}
+#layout1 {
+	width: 30%;
+	background-color: #e8e7e5;
+}
+#layout2 {
+	margin-left: 5%;
+	width: 45%;
+	background-color: #fed1be;
+}
+#layout3 {
+	margin-left: 5%;
+	width: 15%;
+	background-color: #bfb1d5;
+}
+
+@media only screen and (max-width: 520px) {
+	#layout1 {
+		width: 30%;
+		background-color: #e8e7e5;
+	}
+	#layout2 {
+		margin-left: 5%;
+		width: 65%;
+		background-color: #fed1be;
+	}
+	#layout3 {
+		margin-left: 0;
+		margin-top: 5%;
+		width: 100%;
+		background-color: #bfb1d5;
+	}
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: Media Quries</h1>
+<div class="container">
+	<div id="layout1"></div>
+	<div id="layout2"></div>
+	<div id="layout3"></div>
+</div>
+</body>
+</html>

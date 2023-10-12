@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>basic :: CSS3 border image</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.container .description {
+	font-size: 0.875em;
+}
+.example li {
+	margin-top: 80px;
+}
+.example .description,
+.example li {
+	font-size: 0.875em;
+}
+.example .border_img1 {
+	padding: 15px;
+	border: 10px solid transparent;
+	-webkit-border-image: url(images/border.png) 28 round;
+	border-image: url(images/border.png) 28 round;
+}
+.example .border_img2 {
+	padding: 15px;
+	border: 10px solid transparent;
+	-webkit-border-image: url(images/border.png) 30 stretch;
+	border-image: url(images/border.png) 30 stretch;
+}
+.example .border_img3 {
+	padding: 15px;
+	border: 10px solid transparent;
+	-webkit-border-image: url(images/border.png) 50 round;
+	border-image: url(images/border.png) 50 round;
+}
+.example .border_img4 {
+	padding: 15px;
+	border: 10px solid transparent;
+	-webkit-border-image: url(images/border.png) 20% round;
+	border-image: url(images/border.png) 20% round;
+}
+.example .border_img5 {
+	padding: 15px;
+	border: 10px solid transparent;
+	-webkit-border-image: url(images/border.png) 30% round;
+	border-image: url(images/border.png) 30% round;
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: CSS3 border image</h1>
+<div class="container">
+	<p class="description">original</p><img src="images/border.png">
+	<ul class="example">
+		<li><p class="border_img1">repeated image</p></li>
+		<li><p class="border_img2">stretched image</p></li>
+		<li><p class="border_img3">border-image: url(border.png) 50 round;</p></li>
+		<li><p class="border_img4">border-image: url(border.png) 20% round;</p><li>
+		<li><p class="border_img5">border-image: url(border.png) 30% round;</p></li>
+	</ul>
+</div>
+</body>
+</html>

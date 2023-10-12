@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>basic :: Media Quries</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+#wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+#container {
+	margin: 0 auto;
+	width: 450px;
+	height: 150px;
+	background-color: #fff;
+}
+#container div {
+	float: left;
+	margin-left: 50px;
+	margin-top: 50px;
+	padding: 5px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	font-size: 0.875em;
+	font-weight: 400;
+}
+.info {
+	margin-top: 50px;
+	padding-left: 10px;
+	line-height: 24px;
+	font-size: 0.875em;
+}
+
+@media only screen and (orientation: landscape) {
+	#wrapper {
+		background-color: #fcb354;
+	}
+	#container div {
+		background-color: #fcb354;
+		color: #fff;
+	}
+}
+@media only screen and (orientation: portrait) {
+	#wrapper {
+		background-color: #f1779e;
+	}
+	#container div {
+		background-color: #f1779e;
+		color: #fff;
+	}
+}
+@media only screen and (max-width: 400px) {
+	#wrapper {
+		background-color: #24bbaf;
+	}
+	#container {
+		width: 350px;
+	}
+	#container div {
+		background-color: #24bbaf;
+		color: #fff;
+	}
+	#box3 {
+		display: none;
+	}
+}
+@media only screen and (max-width: 350px) {
+	#wrapper {
+		background-color: #8ac007;
+	}
+	#container {
+		width: 250px;
+	}
+	#container div {
+		background-color: #8ac007;
+		color: #fff;
+	}
+	#box2, #box3 {
+		display: none;
+	}
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<!-- 현재의 해상도를 얻는 자바스크립트 -->
+<script>
+$(function(){
+	$(window).resize(function(){
+		var w=$(window).width();
+		var h=$(window).height();
+		var txt="width : "+w+"px, height : "+h+"px";
+		$(".info").text(txt);
+	});
+
+	$(window).trigger("resize");
+});
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="container">
+		<div id="box0">box0</div>
+		<div id="box1">box1</div>
+		<div id="box2">box2</div>
+		<div id="box3">box3</div>
+	</div>
+</div>
+<div class="info"></div>
+</body>
+</html>

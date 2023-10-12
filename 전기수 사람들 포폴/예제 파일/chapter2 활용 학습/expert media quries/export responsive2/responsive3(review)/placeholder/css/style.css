@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	font: inherit;
+	font-size: 100%;
+	border: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+img {
+	max-width: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+hr {
+	display: block;
+	margin: 16px 0;
+	padding: 0;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+}
+input, select {
+	vertical-align: middle;
+}
+html {
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+
+/* http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css */
+::-webkit-input-placeholder { /* WebKit browsers */
+	font-family: "Open Sans", sans-serif;
+	color: #ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	font-family: "Open Sans", sans-serif;
+	color: #ccc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	font-family: "Open Sans", sans-serif;
+	color: #ccc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	font-family: "Open Sans", sans-serif;
+	color #ccc;
+}
+
+/* search */
+.search {
+	padding: 80px 0;
+	text-align: center;
+	background-color: #f1f1f1;
+}
+.search .title {
+	margin: 0 0 25px;
+	font-size: 1.25em;
+	color: #555;
+}
+.search .form {
+	display: inline-block;
+	margin: 0 0 25px;
+}
+.search .form .email {
+	float: left;
+	margin: 0 0 0 10px;
+	padding: 15px;
+	width: 400px;
+	height: 52px;
+	line-height: 22px;
+	font-size: 1.125em;
+	background-color: #fff;
+	color: #333;
+	border: 1px solid #fff;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.search .form .email:hover {
+	border: 1px solid #666;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+.search .form .fa-search-plus {
+	display: block;
+	float: left;
+	margin: 0 10px;
+	width: 80px;
+	height: 52px;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	font-family: "FontAwesome";
+	font-size: 1.5em;
+	background-color: #666;
+	color: #fff;
+	border: 1px solid #666;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.search .form .fa-search-plus:hover {
+	background-color: #fff;
+	color: #666;
+}
+.search .form .fa-search-plus:before {
+	display: inline-block;
+}
+
+/* responsive CSS */
+@media (max-width: 767px) {
+	.search .form .email {
+		width: 200px;
+	}
+}
+@media (max-width: 450px) {
+	.search .form .email {
+		margin-bottom: 10px;
+		width: 100%;
+		text-align: center;
+	}
+	.search .form .fa-search-plus {
+		width: 100%;
+	}
+}

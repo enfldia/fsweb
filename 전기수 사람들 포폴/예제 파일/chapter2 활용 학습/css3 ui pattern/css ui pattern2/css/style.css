@@ -1,0 +1,65 @@
+﻿@charset "utf-8";
+
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+#navigation {
+	width: 850px; /* 50px*2, 150*5 */
+	height: 45px;
+	background-color: #b1b1b1;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+
+	/* http://www.colorzilla.com/gradient-editor/ */
+	/* (top ~ bottom) (#b1b1b1) (#626262) */
+	background: -moz-linear-gradient(top, #b1b1b1 0%, #626262 100%);
+	background: -webkit-linear-gradient(top, #b1b1b1 0%, #626262 100%);
+	background: linear-gradient(to bottom, #b1b1b1 0%, #626262 100%);
+}
+#navigation > li {
+	display: block;
+	float: left;
+	width: 150px;
+	height: 45px;
+}
+#navigation > li.edge {
+	width: 50px;
+}
+#navigation > li > a {
+	display: block;
+	width: 150px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 2px 1px 1px rgba(0,0,0,.3);
+	font-size: 1em;
+	color: #fff;
+}
+#navigation > li > a:hover {
+	background-color: #9ee000;
+	-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,.1);
+	box-shadow: inset 0 0 10px rgba(0,0,0,.1);
+	background: -moz-linear-gradient(top, #9ee000 0%, #8cc10c 100%);
+	background: -webkit-linear-gradient(top, #9ee000 0%, #8cc10c 100%);
+	background: linear-gradient(to bottom, #9ee000 0%, #8cc10c 100%);
+}

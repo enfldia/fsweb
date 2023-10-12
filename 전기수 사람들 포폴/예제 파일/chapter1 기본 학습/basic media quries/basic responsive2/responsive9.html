@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>basic :: Media Quries</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+h1 {
+	margin: 0;
+	padding: 0;
+}
+#wrapper {
+	position: relative;
+	margin: 0 auto;
+	background-color: #8ac007;
+}
+#wrapper div {
+	padding: 10px;
+	width: 280px;
+	height: 280px;
+	background-color: #fff;
+	color: #8ac007;
+}
+#wrapper h1 {
+	font-size: 1em;
+	font-weight: normal;
+}
+.info {
+	margin-top: 50px;
+	padding-left: 10px;
+	line-height: 24px;
+	font-size: 0.875em;
+}
+
+@media only screen and (orientation: landscape) {
+	#wrapper {
+		width: 940px;
+		height: 500px;
+	}
+	#wrapper #box1 {
+		display: block;
+		position: absolute;
+		margin: 0;
+		left: 10px;
+		top: 10px;
+		z-index: 1;
+	}
+	#wrapper #box2 {
+		display: block;
+		position: absolute;
+		margin: 0;
+		left: 320px;
+		top: 10px;
+		z-index: 2;
+	}
+	#wrapper #box3 {
+		display: block;
+		position: absolute;
+		margin: 0;
+		left: 630px;
+		top: 10px;
+		z-index: 3;
+	}
+}
+/*
+@media only screen and (orientation: portrait) {
+	#wrapper {
+		display: block;
+		padding-top: 10px;
+		width: 98%;
+		height: 980px;
+	}
+	#wrapper #box1,
+	#wrapper #box2,
+	#wrapper #box3 {
+		display: block;
+		position: static;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+}
+*/
+@media only screen and (max-width: 950px) {
+	#wrapper {
+		display: block;
+		padding-top: 10px;
+		width: 630px;
+		height: 500px;
+	}
+	#wrapper #box1 {
+		display: block;
+		position: absolute;
+		margin: 0;
+		left: 10px;
+		top: 10px;
+		z-index: 1;
+	}
+	#wrapper #box2 {
+		display: block;
+		position: absolute;
+		margin: 0;
+		left: 320px;
+		top: 10px;
+		z-index: 2;
+	}
+	#wrapper #box3 {
+		display: none;
+	}
+}
+@media only screen and (max-width: 650px) {
+	#wrapper {
+		display: block;
+		width: 100%;
+		height: 930px;
+	}
+	#wrapper #box1,
+	#wrapper #box2,
+	#wrapper #box3 {
+		display: block;
+		position: static;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<!-- 현재의 해상도를 얻는 자바스크립트 -->
+<script>
+$(function(){
+	$(window).resize(function(){
+		var w=$(window).width();
+		var h=$(window).height();
+		var txt="width : "+w+"px, height : "+h+"px";
+		$(".info").text(txt);
+	});
+
+	$(window).trigger("resize");
+});
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+	<!-- relative div 하위에 abolute div -->
+	<div id="box1"><h1>box1</h1></div>
+	<div id="box2"><h1>box2</h1></div>
+	<div id="box3"><h1>box3</h1></div>
+</div>
+<div class="info"></div>
+</body>
+</html>

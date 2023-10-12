@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* font CSS */
+@font-face {
+	font-family: "SECGCWB";
+	src: url("https://media.samsungwa.com/media/fonts/SECGCWB/SECGCWM.eot");
+	src: url("https://media.samsungwa.com/media/fonts/SECGCWB/SECGCWM.eot?#iefix") format("embedded-opentype"),
+	url("https://media.samsungwa.com/media/fonts/SECGCWB/SECGCWM.woff") format("woff"),
+	url("https://media.samsungwa.com/media/fonts/SECGCWB/SECGCWM.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* general CSS */
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1200px;
+	height: auto;
+}
+::selection {
+	background-color: #353434;
+	color: #fff;
+}
+::-moz-selection {
+	background-color: #353434;
+	color: #fff;
+}
+.testimonials #t_navigation a,
+header nav ul li a,
+header ul.social li a,
+.feature a,
+.cta a.cta_btn {
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}

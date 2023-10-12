@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>basic :: Layout Shifter</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+#wrap {
+	margin: 0 auto;
+	width: 1000px;
+}
+#box_a {
+	float: left;
+	width: 20%;
+	height: 400px;
+	background-color: #fcb354;
+}
+#box_b {
+	float: left;
+	width: 80%;
+	height: 200px;
+	background-color: #f1779e;
+}
+#box_c {
+	float: left;
+	width: 80%;
+	height: 200px;
+	background-color: #24bbaf;
+}
+
+@media only screen and (max-width: 1024px) {
+	#wrap {
+		width: 90%;
+	}
+}
+@media only screen and (max-width: 800px) {
+	#wrap {
+		width: 100%;
+	}
+	#box_a {
+		float: none;
+		width: 100%;
+	}
+	#box_b {
+		float: none;
+		width: 100%;
+	}
+	#box_c {
+		float: none;
+		width: 100%;
+	}
+}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+	<div id="box_a"></div>
+	<div id="box_b"></div>
+	<div id="box_c"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+body > * {
+	min-width: 750px;
+}
+.hero .caption p {
+	background: url(../images/ie_title_bg.png) no-repeat;
+}
+.subject .feature.edge {
+	margin-right: 0;
+}

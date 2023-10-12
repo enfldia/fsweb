@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>basic :: Media Quries</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	color: #666;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.container {
+	padding: 20px;
+	border: 1px solid #eaeaea;
+}
+.header {
+	padding: 20px;
+	font-size: 100%;
+}
+.header h1 {
+	font-size: 4em;
+	font-weight: 400;
+}
+.keyvisual {
+	background-color: #eaeaea;
+}
+.keyvisual img {
+	width: 100%; /* max-width: 100%; */
+	vertical-align: middle;
+}
+.contents {
+	margin-top: 20px;
+}
+.contents::before, .contents:after {
+	content: "";
+	display: table;
+}
+.contents:after {
+	clear: both;
+}
+.contents li {
+	float: left;
+	margin-right: 4%;
+	margin-bottom: 4%;
+	padding: 10px;
+	width: 22%;
+	height: 200px;
+	border: 1px solid #eaeaea;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+.contents li:nth-child(4n) {
+	margin-right: 0;
+}
+.contents li:last-child {
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+	.contents li {
+		margin-right: 2%;
+		margin-bottom: 2%;
+		width: 32%;
+		height: 150px;
+	}
+	.contents li:nth-child(4n+0),
+	.contents li:nth-child(3n+0),
+	.contents li:nth-child(2n+0) {
+		margin-right: 2%;
+	}
+	.contents li:nth-child(3n+0) {
+		margin-right: 0;
+	}
+}
+@media only screen and (max-width: 800px) {
+	body {
+		margin: 20px 0;
+		padding: 20px 0;
+		font-size: 0.875em;
+	}
+	.contents li {
+		margin-right: 4%;
+		margin-bottom: 4%;
+		width: 48%;
+		height: 100px;
+	}
+	.contents li:nth-child(4n+0),
+	.contents li:nth-child(3n+0),
+	.contents li:nth-child(2n+0) {
+		margin-right: 4%;
+	}
+	.contents li:nth-child(2n+0) {
+		margin-right: 0;
+	}
+}
+@media only screen and (max-width: 550px) {
+	body {
+		font-size: 0.750em;
+	}
+	.contents li {
+		margin-right: 0;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	.contents li:nth-child(4n+0),
+	.contents li:nth-child(3n+0),
+	.contents li:nth-child(2n+0) {
+		margin-right: 0;
+	}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+		<h1>header</h1>
+	</div>
+	<div class="keyvisual">
+		<img src="images/keyvisual.jpg" alt="">
+	</div>
+	<div class="contents">
+		<ul>
+			<li>list1</li>
+			<li>list2</li>
+			<li>list3</li>
+			<li>list4</li>
+			<li>list5</li>
+			<li>list6</li>
+			<li>list7</li>
+			<li>list8</li>
+			<li>list9</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

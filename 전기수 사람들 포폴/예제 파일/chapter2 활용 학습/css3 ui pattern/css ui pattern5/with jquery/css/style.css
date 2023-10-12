@@ -1,0 +1,80 @@
+﻿@charset "utf-8";
+
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #f1f1f1;
+	color: #555;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}
+.accordionMenu {
+	margin: 0;
+	margin-top: 35px;
+	width: 500px;
+	line-height: 1.35em;
+	font-size: 0.875em;
+	color: #424242;
+}
+/*
+.accordionMenu h1 {
+	margin: 0 0 12px 0;
+	line-height: 1.75em;
+	font-size: 1.5em;
+	font-weight: 500;
+}
+*/
+.accordionMenu h2 {
+	margin: 0;
+	padding: 0;
+	line-height: 1.35em;
+}
+.accordionMenu h2 a {
+	display: block;
+	margin: 0;
+	padding: 10px;
+	padding-left: 20px;
+	text-decoration: none;
+	font-family: "Open Sans", sans-serif; 
+	font-size: 0.875em;
+	font-weight: 400;
+	background: #8f8f8f;
+	color: #fff;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background: -webkit-linear-gradient(#cecece, #8f8f8f);
+	background: -o-linear-gradient(#cecece, #8f8f8f);
+	background: -moz-linear-gradient(#cecece, #8f8f8f);
+	background: linear-gradient(#cecece, #8f8f8f);
+}
+.accordionMenu p {
+	margin: 0;
+	padding: 8px 10px 0 20px;
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height 0.5s ease-out;
+	transition: height 0.5s ease-out;
+}
+/* .accordionMenu div:target h2 a, */
+.accordionMenu div.active h2 a,
+.accordionMenu h2 a:hover {
+	background: #28d;
+	background: -webkit-linear-gradient(#8ac007, #618900);
+	background: -o-linear-gradient(#8ac007, #618900);
+	background: -moz-linear-gradient(#8ac007, #618900);
+	background: linear-gradient(#8ac007, #618900);
+	color: #fff;
+}
+/* .accordionMenu div:target p { */
+.accordionMenu div.active p {
+	padding-bottom: 20px;
+	height: 60px;
+}

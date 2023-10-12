@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Pure CSS 2Depth Menu with CSS3</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="css/style.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	$("nav li").hover(
+		function(){
+			// $(this).find("ul").css({display:"block"});
+			$(this).find("ul").slideDown(300);
+		},
+		function(){
+			$(this).find("ul").css({display:"none"});
+			// $(this).find("ul").slideUp(300);
+		}
+	);
+});
+</script>
+</head>
+
+<body>
+<h1 class="title">Pure CSS 2Depth Menu</h1>
+<div class="container">
+	<nav>
+		<ul>
+			<li>
+				<a href="#">HTML</a>
+				<ul>
+					<li><a href="#">HTML Forms</a></li>
+					<li><a href="#">HTML5</a></li>
+					<li><a href="#">HTML Graphics</a></li>
+					<li><a href="#">HTML Media</a></li>
+					<li><a href="#">HTML APIs</a></li>
+					<li><a href="#">HTML Examples</a></li>
+					<li><a href="#">HTML References</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">CSS</a>
+				<ul>
+					<li><a href="#">CSS3</a></li>
+					<li><a href="#">CSS Resonsive</a></li>
+					<li><a href="#">CSS Examples</a></li>
+					<li><a href="#">CSS References</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">JavaScript</a>
+				<ul>
+					<li><a href="#">JS Forms</a></li>
+					<li><a href="#">JS Objects</a></li>
+					<li><a href="#">JS Functions</a></li>
+					<li><a href="#">JS HTML DOM</a></li>
+					<li><a href="#">JS Examples</a></li>
+					<li><a href="#">JS References</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">jQuery</a>
+				<ul>
+					<li><a href="#">jQuery Effects</a></li>
+					<li><a href="#">jQuery HTML</a></li>
+					<li><a href="#">jQuery Traversing</a></li>
+					<li><a href="#">jQuery AJAX</a></li>
+					<li><a href="#">jQuery Examples</a></li>
+					<li><a href="#">jQuery References</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Tutorial</a>
+				<ul>
+					<li><a href="#">HTML/CSS</a></li>
+					<li><a href="#">JavaScript</a></li>
+					<li><a href="#">Graphics</a></li>
+					<li><a href="#">Web</a></li>
+					<li><a href="#">XML</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div>
+</body>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>basic :: CSS3 background</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.container .description {
+	margin-top: 35px;
+}
+.example li {
+	margin-top: 80px;
+	font-size: 0.875em;
+}
+.example li:first-child {
+	margin-top: 35px;
+}
+.example span {
+	display: block;
+	line-height: 46px;
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: CSS3 background</h1>
+<div class="container">
+	<ul class="example">
+		<li><div class="background1">background</div></li>
+		<li><div class="background2">original</div></li>
+		<li><div class="background3">resize</div></li>
+		<li><span>background-size: auto;</span><div class="background4"></div><li>
+		<li><span>background-size: contain;</span><div class="background5"></div></li>
+		<li><span>background-size: cover;</span><div class="background6"></div></li>
+		<li><span>background-size: 50px, 130px, auto;</span><div class="background7"></div></li>
+		<li><span>background-origin: padding-box;</span><div class="background8"></div></li>
+		<li><span>background-origin: border-box;</span><div class="background9"></div></li>
+		<li><span>background-origin: content-box;</span><div class="background10"></div></li>
+		<li><span>background-clip: border-box;</span><div class="background11"></div></li>
+		<li><span>background-clip: padding-box;</span><div class="background12"></div></li>
+		<li><span>background-clip: content-box;</span><div class="background13"></div></li>
+	</ul>
+</div>
+</body>
+</html>

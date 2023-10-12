@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>basic :: CSS3 text</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin-top: 60px;
+}
+li:first-child {
+	margin-top: 0;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.example li {
+	font-size: 0.875em;
+}
+.example span {
+	line-height: 36px;
+}
+.example div {
+	padding: 20px;
+	width: 200px;
+	line-height: 24px;
+	background-color: #8ac007;
+	color: #fff;
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: CSS3 text</h1>
+<div class="container">
+	<ul class="example">
+		<li><span>text-overflow: clip;</span><div class="text1">Long text that does not fit into the container.</div></li>
+		<li><span>text-overflow: ellipsis;</span><div class="text2">Long text that does not fit into the container.</div></li>
+		<li><span>text-overflow: ellipsis;</span><div class="text3">Long text that does not fit into the container.</div></li>
+		<li><span>word-wrap: initial;</span><div class="text4">Long text that does not fit into the container. : wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</div></li>
+		<li><span>word-wrap: break-word;</span><div class="text5">Long text that does not fit into the container. : wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</div></li>
+		<li><span>word-break: break-all;</span><div class="text6">Long text that does not fit into the container. : word-break: break-all;</div></li>
+		<li><span>word-break: break-all;</span><div class="text6">Long text that does not fit into the container. : wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</div></li>
+	</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>basic :: CSS3 color</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	font-size: 0.875em;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.rgba {
+	margin-top: 35px;
+}
+.rgba .rgba1 {
+	background-color: rgba(255,0,0,.3);
+}
+.rgba .rgba2 {
+	background-color: rgba(0,255,0,.3);
+}
+.rgba .rgba3 {
+	background-color: rgba(0,0,255,.3);
+}
+.hsl {
+	margin-top: 80px;
+}
+.hsl .hsl1 {
+	background-color: hsl(120,100%,50%);
+}
+.hsl .hsl2 {
+	background-color: hsl(120,100%,75%);
+}
+.hsl .hsl3 {
+	background-color: hsl(120,60%,70%);
+}
+.hsla {
+	margin-top: 80px;
+}
+.hsla .hsla1 {
+	background-color: hsla(120,100%,50%,.3);
+}
+.hsla .hsla2 {
+	background-color: hsla(120,100%,75%,.3);
+}
+.hsla .hsla3 {
+	background-color: hsla(120,60%,70%,.3);
+}
+.opacity {
+	margin-top: 80px;
+}
+.opacity .opacity1 {
+	background-color: rgb(255,0,0);
+	opacity: 0.6;
+}
+.opacity .opacity2 {
+	background-color: rgb(0,255,0);
+	opacity: 0.6;
+}
+.opacity .opacity3 {
+	background-color: rgb(0,0,255);
+	opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: CSS color</h1>
+<div class="container">
+	<ul class="rgba">
+		<li><p class="description">RGBA :</p></li>
+		<li><p class="rgba1">Red</p></li>
+		<li><p class="rgba2">Green</p></li>
+		<li><p class="rgba3">Blue</p></li>
+	</ul>
+	<ul class="hsl">
+		<li><p class="description">HSL :</p></li>
+		<li><p class="hsl1">Green</p></li>
+		<li><p class="hsl2">Light green</p></li>
+		<li><p class="hsl3">Pastel green</p><li>
+	</ul>
+	<ul class="hsla">
+		<li><p class="description">HSLA :</p></li>
+		<li><p class="hsla1">Green</p></li>
+		<li><p class="hsla2">Light green</p></li>
+		<li><p class="hsla3">Pastel green</p><li>
+	</ul>
+	<ul class="opacity">
+		<li><p class="description">Opacity :</p></li>
+		<li><p class="opacity1">Red</p></li>
+		<li><p class="opacity2">Green</p></li>
+		<li><p class="opacity3">Blue</p><li>
+	</ul>
+</div>
+</body>
+</html>

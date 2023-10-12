@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>basic :: CSS3 Animation</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin-top: 60px;
+}
+li:first-child {
+	margin-top: 0;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.example span {
+	display: block;
+	margin-bottom: 20px;
+}
+.example div {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	background-color: #8ac007;
+	border-radius: 50%;
+	/*
+	-webkit-animation-name: move;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-delay: 2s;
+	-webkit-animation-iteration-count: infinite;
+	animation-name: move;
+	animation-duration: 6s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	*/
+	/*
+	-webkit-animation: move 6s 2s infinite;
+	animation: move 6s 2s infinite;
+	*/
+}
+.ball1 {
+	-webkit-animation: move 6s 2s infinite;
+	animation: move 6s 2s infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+.ball2 {
+	-webkit-animation: move 6s 2s infinite;
+	animation: move 6s 2s infinite;
+	-webkit-animation-timing-function: ease;
+	animation-timing-function: ease;
+}
+.ball3 {
+	-webkit-animation: move 6s 2s infinite;
+	animation: move 6s 2s infinite;
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+}
+.ball4 {
+	-webkit-animation: move 6s 2s infinite;
+	animation: move 6s 2s infinite;
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+}
+.ball5 {
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes move {
+	from {
+		left: 0;
+	} to {
+		left: 300px;
+	}
+}
+@keyframes move {
+	from {
+		left: 0;
+	} to {
+		left: 300px;
+	}
+}
+</style>
+</head>
+
+<body>
+<h1 class="title">basic :: CSS3 Animation</h1>
+<div class="container">
+	<ul class="example">
+		<li><span>animation-timing-function: linear;</span><div class="ball1"></div></li>
+		<li><span>animation-timing-function: ease;</span><div class="ball2"></div></li>
+		<li><span>animation-timing-function: ease-in;</span><div class="ball3"></div></li>
+		<li><span>animation-timing-function: ease-out;</span><div class="ball4"></div></li>
+		<li><span>animation-timing-function: ease-in-out;</span><div class="ball5"></div></li>
+	</ul>
+</div>
+</body>
+</html>

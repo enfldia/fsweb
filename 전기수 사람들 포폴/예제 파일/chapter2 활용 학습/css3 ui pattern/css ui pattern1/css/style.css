@@ -1,0 +1,54 @@
+﻿@charset "utf-8";
+
+body {
+	margin: 20px;
+	padding: 20px;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-color: #555;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.container {
+	margin-top: 35px;
+}
+.polaroid {
+	padding: 10px 10px 20px 10px;
+	width: 294px;
+	background-color: #999;
+	-webkit-box-shadow: 4px 4px 5px rgba(0,0,0,.2);
+	box-shadow: 4px 4px 5px rgba(0,0,0,.2);
+}
+.rotate_left {
+	float: left;
+	-webkit-transform: rotate(7deg);
+	transform: rotate(7deg);
+}
+.rotate_right {
+	float: left;
+	margin: 10px 0 0 20px;
+	-webkit-transform: rotate(-8deg);
+	transform: rotate(-8deg);
+}
+.polaroid .box {
+	height: 213px;
+}
+.polaroid .caption {
+	/* display: block; */
+	overflow: hidden;
+	line-height: 22px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 0.875em;
+	color: #000;
+}

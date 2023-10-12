@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>basic :: template3</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<style>
+/* reset */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img {
+	border: 0;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: block;
+}
+.clearfix:after {
+	clear: both;
+}
+
+/* header */
+.container {
+	/* position: relative; *//* 수정 */
+	overflow: hidden; /* 추가 */
+}
+.header {
+	float: left;
+	width: 250px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.header .logo {
+	margin: 40px auto 50px;
+	width: 105px;
+	height: 150px;
+}
+.header .logo a {
+	-webkit-transition: opacity 0.25s ease-in-out;
+	transition: opacity 0.25s ease-in-out;
+}
+.header .logo a:hover {
+	opacity: 0.5;
+}
+.header .nav {
+	margin-left: 40px;
+	margin-bottom: 50px;
+	width: 210px;
+}
+.header .nav li a {
+	display: block;
+	margin-right: 40px;
+	padding: 12px 0;
+	line-height: 22px;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 400;
+	color: #999;
+	border-bottom: 1px dashed #e6e6e6;
+}
+.header .nav li a:hover {
+	color: #000;
+}
+.header .widget {
+	margin: 0 auto;
+	margin-bottom: 100px;
+	width: 170px;
+	height: 30px;
+}
+.header .widget li {
+	display: inline-block;
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+}
+.header .widget li a {
+	display: block;
+	width: 100%;
+	color: #999;
+	-webkit-transition: color 0.25s ease-in-out;
+	transition: color 0.25s ease-in-out;
+}
+.header .widget li a:hover {
+	color: #000;
+}
+.header .widget li a span {
+	display: block;
+	width: 0;
+	height: 0;
+	text-indent: -9999px;
+}
+
+/* .slider */
+.slider {
+	position: relative;
+	margin-left: 250px;
+	/* max-height: 800px; *//* 수정 */
+}
+.slider img {
+	max-width: 100%;
+}
+.slider .control {
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	width: 124px;
+	height: 40px;
+}
+.slider .control div {
+	float: left;
+	margin-left: 2px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	-webkit-transition: background-color 0.25s ease-in-out;
+	transition: background-color 0.25s ease-in-out;
+}
+.slider .control div:first-child {
+	margin-left: 0;
+}
+.slider .control .prev {
+	background: rgba(0,0,0,.8) url('images/nav_theme.png') no-repeat 50% -40px;
+}
+.slider .control .next {
+	background: rgba(0,0,0,.8) url('images/nav_theme.png') no-repeat 50% 0;
+}
+.slider .control .fullscreen {
+	background: rgba(0,0,0,.8) url('images/fullscreen_theme.png') no-repeat 50% 0;
+}
+.slider .control .prev:hover,
+.slider .control .next:hover,
+.slider .control .fullscreen:hover {
+	background-color: #ff2e2e;
+}
+
+/* info */
+.info {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 10px 0;
+	width: 100%;
+	text-align: center;
+	font-size: 13px;
+	background: #fff;
+	border-top: 4px solid #444;
+}
+.info .plugin_button {
+	display: inline-block;
+	margin: auto 10px;
+	padding: 5px 10px 6px;
+	font-weight: 600;
+	background-color: #222;
+	color: #fff;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.6);
+	box-shadow: 0 1px 3px rgba(0,0,0,.6);
+}
+</style>
+<!-- http://sensphoto.fr/ -->
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+		<div class="logo"><a href="#"><img src="images/logo.png" alt="logo"></a></div>
+		<div class="nav">
+			<ul>
+				<li><a href="">Portfolio</a></li>
+				<li><a href="">Prestations</a></li>
+				<li><a href="">L’Auteur</a></li>
+				<li><a href="">Blog</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</div>
+		<div class="widget">
+			<ul>
+				<li><a href="#" class="icon-facebook" title="Facebook"><span>Facebook<span></a></li>
+				<li><a href="#" class="icon-twitter" title="Twitter"><span>Twitter</span></a></li>
+				<li><a href="#" class="icon-google-plus" title="Google plus"><span>Google plus</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="slider">
+		<img src="images/hero_model1.jpg" alt="hero">
+		<div class="control clearfix">
+			<div class="prev"></div>
+			<div class="next"></div>
+			<div class="fullscreen"></div>
+		</div>
+	</div>
+</div>
+<div class="info">
+	<span>Nous utilisons des cookies pour vous offrir la meilleure expérience utilisateur sur notre site. L'utilisation du site sensphoto.fr suppose votre acceptation des cookies du site et de ses partenaires. <a href="" class="plugin_button">Accepter</a> <a href="#">En savoir plus</a></span>
+</div>
+
+<script>
+$(function(){
+	var $window=$(window);
+	var $container=$(".container");
+	var $slider=$(".slider");
+	var $img=$(".slider img");
+	var $info=$(".info");
+
+	function resize(){
+		var w=$window.width()-250;
+		// console.log("width : "+width);
+
+		$img.css({width:w+"px"});
+		// console.log("width : "+$img.width()+", height : "+$img.height());
+		// console.log("height : "+$info.outerHeight());
+		$container.css({"margin-bottom":$info.outerHeight(), height:$img.height()});
+	}
+
+	if($window.width()-250 > 1200){
+		resize();
+	}
+	$(window).on("resize", function(){
+		resize();
+	});
+});
+</script>
+</body>
+</html>

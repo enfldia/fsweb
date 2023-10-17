@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
 }
 
-h1 {
+h1.htop {
     position: fixed;
     right: 10px;
     bottom: 10px;
@@ -62,15 +62,17 @@ nav ul li.on a {
     color: orange;
 }
 
-section>div {
-    height: 700px;
+section>div .main  {
+    height: 931px;
 }
 
 section>div p {
     color: #fff;
     padding: 8px;
 }
-
+section div p .p1{
+    color: black;
+}
 #area1 {
     background-color: aquamarine;
 }
@@ -203,3 +205,45 @@ section>div p {
 #leftdiv .leftdiv_title.on{
     background: url(../images/remote_mainon.png) no-repeat 0 0;
 }/*홈(집) 색상오랜지*/
+
+#area4{
+    position: relative;
+}
+.s4_cover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 900px;
+    margin-left: -450px;
+    height: 200px;
+    text-align: center;
+    border: 1px solid red;
+    display: flex;
+}
+.s4_cover > div{
+    background-color: rgba(255,255,255,0.7);
+    width:200px;
+    padding: 30px 0;
+    margin-top: 70px;
+    margin-left: 20px;
+    opacity: 0;
+    transition: all 0.8s;  
+}
+
+.s4_cover > div.active{
+    margin-top: 0;
+    opacity: 1;
+}
+
+.s4_cover > div.s4_1{
+    transition: all 0.8s;
+}
+.s4_cover > div.s4_2{
+    transition: all 0.8s 0.4s;
+}
+.s4_cover > div.s4_3{
+    transition: all 0.8s 0.8s;
+}
+.s4_cover > div.s4_4{
+    transition: all 0.8s 1.2s;
+}

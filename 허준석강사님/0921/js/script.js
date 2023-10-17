@@ -26,6 +26,9 @@ $(function () {
         } else {
             $('nav').removeClass('fixed');
         }
+        if (sct >= 2700) {
+            $('.s4_cover>div').addClass('active');
+        }
 
         for (i = 0; i < 6; i++) {
             $("#floatdiv").stop().animate({ top: dTop + sct }, 500);

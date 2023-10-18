@@ -61,6 +61,9 @@ $(function () {
         $("html,body").stop().animate({ scrollTop: offset_f }, 1000)
     });
 
+
+
+
     $('#popup').draggable();
     if ($.cookie('pop') != "no") {
         $('#popup').show();

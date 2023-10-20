@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script>
+        document.write("<h1>현재날짜/시간 정보</h1>");
+        var today = new Date();
+        var nyear = today.getFullYear();
+        var nmonth = today.getMonth()+1;
+        var nDate = today.getDate();
+        var nDay = today.getDay()
+        var nHours = today.getHours();
+        var nMinutes = today.getMinutes();
+        var nSeconds = today.getSeconds();
+
+
+        document.write("년: "+nyear+"<br>")
+        document.write("월: "+nmonth+"<br>")
+        document.write("일: "+nDate+"<br>")
+        document.write("요일: "+nDay+"<br>")
+        document.write("시: "+nHours+"<br>")
+        document.write("분: "+nMinutes+"<br>")
+        document.write("초: "+nSeconds+"<br>")
+    </Script>
+</head>
+<body>
+    
+</body>
+</html>

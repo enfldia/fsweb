@@ -40,21 +40,38 @@ $(function () {
     var dTop = $('#floatdiv').offset().top; //250
 
     //팝업
-    $('#popup').draggable();
-    if ($.cookie('pop') != "no") {
-        $('#popup').show();
+    // $('#popup').draggable();
+    // if ($.cookie('pop') != "no") {
+    //     $('#popup').show();
+    // }
+    // $('.pop_bom1 .btn1').click(function () {
+    //     $.cookie('pop', 'no', { expires: 1 });
+    //     $('#popup').fadeOut('fast');
+    // });
+
+    // $('.pop_bom1 .btn2').click(function () {
+    //     $('#popup').fadeOut('fast');
+    // });
+
+    // if ($.cookie('popup') == 'none') {
+    //     $('#notice_wrap').hide();
+    // }
+
+    $('.popup1').draggable();
+
+
+    if ($.cookie('popup1') == 'none') {
+        $('.popup1').hide();
     }
-    $('#popup area:eq(0)').click(function () {
-        $('#popup').fadeOut('fast');
-    });
-    $('#popup area:eq(1)').click(function () {
-        $.cookie('pop', 'no', { expires: 1 });
-        $('#popup').fadeOut('fast');
+
+
+    $('.btn2').click(function () {
+        $('.popup1').fadeOut('fast');
     });
 
-    if ($.cookie('popup') == 'none') {
-        $('#notice_wrap').hide();
-    }
-
+    $('.btn1').click(function () {
+        $.cookie('popup1', 'none', { expires: 1 });
+        $('.popup1').fadeOut('fast');
+    });
 
 });
